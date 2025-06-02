@@ -1,18 +1,34 @@
-use erp
+use erpDM
 go
 
-select * from db_erp_sige.pedido
-select * from db_erp_sige.estado_pedido
-select * from db_erp_sige.delivery
-go	
+create table dimChofer(
+	idChofer int primary key not null,
+	nombre varchar(255)
+)
+go
 
-select * from db_erp_sige.conduce
-select * from db_erp_sige.vehiculo
-select * from db_erp_sige.chofer
-select * from db_erp_sige.transporte
-select * from db_erp_sige.detalle_conduce
+select * from erp.db_erp_sige.chofer
+select * from dimChofer
+go
 
-select * from db_erp_sige.secuencia_documento
-select * from db_erp_sige.tipo_documento
 
-select * from db_erp_sige.factura_temporal
+create table dimVehiculo(
+	idVehiculo int primary key not null,
+	nombre varchar(255) not null,
+	placa varchar(255) not null
+)
+go
+select * from erp.db_erp_sige.vehiculo
+select * from dbo.dimVehiculo
+
+create table dimEstadoPedido(
+	idEstadoPedido int primary key not null,
+	nombre varchar(255) not null
+)
+go
+
+select 
+	pedido.estado, pedido.fecha, pedido.cliente, estado_pedido.codigo 
+	from erp.db_erp_sige.pedido inner join erp.db_erp_sige.estado_pedido 
+	on pedido.estado=estado_pedido.codigo
+	where pedido.fecha_anulado is null

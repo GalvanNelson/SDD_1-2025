@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="AYRTON-LAPTOP_MSSQLSERVER3.VentasDM"
+  DTS:DTSID="{6105F1DE-DB44-4F9A-9624-B48B5A3017E4}"
+  DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=AYRTON-LAPTOP\MSSQLSERVER3;Initial Catalog=VentasDM;Integrated Security=True;TrustServerCertificate=True;Application Name=SSIS-EjVentas-{6105F1DE-DB44-4F9A-9624-B48B5A3017E4}AYRTON-LAPTOP\MSSQLSERVER3.VentasDM;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
