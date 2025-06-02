@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="DESKTOP-2KH48SF.VentasDM.sa"
+  DTS:DTSID="{8BD5924F-9488-49C0-8ADD-57F6F8C81987}"
+  DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=DESKTOP-2KH48SF;User ID=sa;Initial Catalog=VentasDM;TrustServerCertificate=True;Application Name=&quot;SSIS-Carga Incremental-{8BD5924F-9488-49C0-8ADD-57F6F8C81987}DESKTOP-2KH48SF.VentasDM.sa&quot;;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAANV9Y47OUgE2IyVAns/rBhwAAAAACAAAAAAAQZgAAAAEAACAAAAASkMIIxc+XtLlOonbL8i1NsMBB8fP6pId0jgL9wxeDsgAAAAAOgAAAAAIAACAAAADa11vbl9ldYsh+H6ndXAXcNA9bc3lcgLeWWuag1W8R5oAAAABDNxotfN2VIIDoT3LjAIYR6RO6pYHVvWkkHRb839mzC9nFlf77thbDqIP2FiTvi3JpbUXHyiV0udSK3WqQ1aJVbwN/lOpQWjB8dtoZ9cQ7y4kwuJgcSOjJX/GR0GDpHSihRu9bUalzPlDNAADIrx30Agn8oFC26YmGrfcYbX3IfEAAAAAsIuJn0kWRoX/IxkBvAnhjDLQ/+sFMcHoV4y8BPSt7G4zvvpmxrxLhIf5k6y11V7GfoozQFsI/D6fClHC/0ybO</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

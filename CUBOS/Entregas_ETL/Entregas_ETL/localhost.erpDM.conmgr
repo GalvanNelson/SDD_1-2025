@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="localhost.erpDM"
+  DTS:DTSID="{4C31428A-EBEB-4647-84AB-ECEC424FAF9D}"
+  DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=localhost;Initial Catalog=erpDM;Integrated Security=True;TrustServerCertificate=True;Application Name=SSIS-Entregas_ETL-{4C31428A-EBEB-4647-84AB-ECEC424FAF9D}localhost.erpDM;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

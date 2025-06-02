@@ -11,8 +11,8 @@
   DTS:LocaleID="16394"
   DTS:ObjectName="IncremDim"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{A231AA52-841F-4D5F-AEC8-8F0715C24595}">
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{E94A89CF-F0B5-4C85-A91A-6CE5F5BF5A92}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -1586,43 +1586,59 @@ FROM            Categoria INNER JOIN
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="155,42"
-          Id="Package\Incrementar productos\Origen producto"
-          TopLeft="297,189" />
-        <NodeLayout
-          Size="159,42"
-          Id="Package\Incrementar productos\Destino producto"
-          TopLeft="494,185" />
+          Size="176,42"
+          Id="Package\Incrementar productos\Destino de ADO NET"
+          TopLeft="424,546" />
         <NodeLayout
           Size="125,42"
           Id="Package\Incrementar productos\Ordenar I"
           TopLeft="285,289" />
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Incrementar productos\Origen producto"
+          TopLeft="297,189" />
+        <NodeLayout
+          Size="129,42"
+          Id="Package\Incrementar productos\Ordenar II"
+          TopLeft="526,283" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Incrementar productos\División condicional"
+          TopLeft="422,469" />
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Incrementar productos\Combinación de mezcla"
+          TopLeft="396,390" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Incrementar productos\Destino producto"
+          TopLeft="494,185" />
         <EdgeLayout
-          Id="Package\Incrementar productos.Paths[Salida de origen de ADO NET]"
-          TopLeft="374.5,231">
+          Id="Package\Incrementar productos.Paths[Salida de ordenación]"
+          TopLeft="347.5,331">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-27,58"
+              EndConnector="143.5,59"
               Start="0,0"
-              End="-27,50.5">
+              End="143.5,51.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25" />
+                    End="0,25.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,25"
-                    Point2="0,29"
-                    Point3="-4,29" />
+                    Point1="0,25.5"
+                    Point2="0,29.5"
+                    Point3="4,29.5" />
                   <mssgle:LineSegment
-                    End="-23,29" />
+                    End="139.5,29.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="-23,29"
-                    Point2="-27,29"
-                    Point3="-27,33" />
+                    Point1="139.5,29.5"
+                    Point2="143.5,29.5"
+                    Point3="143.5,33.5" />
                   <mssgle:LineSegment
-                    End="-27,50.5" />
+                    End="143.5,51.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1631,10 +1647,64 @@ FROM            Categoria INNER JOIN
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="129,42"
-          Id="Package\Incrementar productos\Ordenar II"
-          TopLeft="526,283" />
+        <EdgeLayout
+          Id="Package\Incrementar productos.Paths[Salida de combinación de mezcla]"
+          TopLeft="491,432">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="16.5,37"
+              Start="0,0"
+              End="16.5,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.5"
+                    Point2="0,18.5"
+                    Point3="4,18.5" />
+                  <mssgle:LineSegment
+                    End="12.5,18.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="12.5,18.5"
+                    Point2="16.5,18.5"
+                    Point3="16.5,22.5" />
+                  <mssgle:LineSegment
+                    End="16.5,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Incrementar productos.Paths[Nuevo Registro]"
+          TopLeft="509.75,511">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35"
+              Start="0,0"
+              End="0,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-34.07703125,8.0576171875,68.1540625,11.384765625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Incrementar productos.Paths[Salida de origen de ADO NET1]"
           TopLeft="573.5,227">
@@ -1669,36 +1739,32 @@ FROM            Categoria INNER JOIN
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="190,42"
-          Id="Package\Incrementar productos\Combinación de mezcla"
-          TopLeft="396,390" />
         <EdgeLayout
-          Id="Package\Incrementar productos.Paths[Salida de ordenación]"
-          TopLeft="347.5,331">
+          Id="Package\Incrementar productos.Paths[Salida de origen de ADO NET]"
+          TopLeft="374.5,231">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="143.5,59"
+              EndConnector="-27,58"
               Start="0,0"
-              End="143.5,51.5">
+              End="-27,50.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.5" />
+                    End="0,25" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,25.5"
-                    Point2="0,29.5"
-                    Point3="4,29.5" />
+                    Point1="0,25"
+                    Point2="0,29"
+                    Point3="-4,29" />
                   <mssgle:LineSegment
-                    End="139.5,29.5" />
+                    End="-23,29" />
                   <mssgle:CubicBezierSegment
-                    Point1="139.5,29.5"
-                    Point2="143.5,29.5"
-                    Point3="143.5,33.5" />
+                    Point1="-23,29"
+                    Point2="-27,29"
+                    Point3="-27,33" />
                   <mssgle:LineSegment
-                    End="143.5,51.5" />
+                    End="-27,50.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1741,75 +1807,17 @@ FROM            Categoria INNER JOIN
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Incrementar productos\División condicional"
-          TopLeft="422,469" />
-        <EdgeLayout
-          Id="Package\Incrementar productos.Paths[Salida de combinación de mezcla]"
-          TopLeft="491,432">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="16.5,37"
-              Start="0,0"
-              End="16.5,29.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,14.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,14.5"
-                    Point2="0,18.5"
-                    Point3="4,18.5" />
-                  <mssgle:LineSegment
-                    End="12.5,18.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="12.5,18.5"
-                    Point2="16.5,18.5"
-                    Point3="16.5,22.5" />
-                  <mssgle:LineSegment
-                    End="16.5,29.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="176,42"
-          Id="Package\Incrementar productos\Destino de ADO NET"
-          TopLeft="424,546" />
-        <EdgeLayout
-          Id="Package\Incrementar productos.Paths[Nuevo Registro]"
-          TopLeft="509.75,511">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,35"
-              Start="0,0"
-              End="0,27.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-34.07703125,8.0576171875,68.1540625,11.384765625"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Incrementar productos\Destino de ADO NET">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Incrementar productos\Origen producto">
     <Properties>
@@ -1820,14 +1828,6 @@ FROM            Categoria INNER JOIN
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Incrementar productos\Destino producto">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Incrementar productos\Destino de ADO NET">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
