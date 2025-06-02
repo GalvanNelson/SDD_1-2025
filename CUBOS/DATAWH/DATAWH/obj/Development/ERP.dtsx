@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="5/24/2025 5:25:28 PM"
@@ -11,8 +11,8 @@
   DTS:LocaleID="2058"
   DTS:ObjectName="ERP"
   DTS:PackageType="5"
-  DTS:VersionBuild="120"
-  DTS:VersionGUID="{27B3674C-5B75-4E21-A6F5-4CCD184034F3}">
+  DTS:VersionBuild="119"
+  DTS:VersionGUID="{6426DD90-F39A-4138-B8F3-AD26B55CB5AC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -3841,39 +3841,39 @@ WHERE  (erpDM.dbo.dimUnidad.idUnidad IS NULL)</property>
               startId="Package\Dimensiones Secundarias\Leer TipoArticulo.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET14]"
-              endId="Package\Dimensiones Secundarias\dimUnidad.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimEmpresa.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer Unidad.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer Empresa.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET13]"
-              endId="Package\Dimensiones Secundarias\dimEnvase.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimTipoUnidadNegocio.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer Envase.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer TipoUnidadNegocio.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET12]"
-              endId="Package\Dimensiones Secundarias\dimLinea.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimTipoContrato.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer Linea.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer TipoContrato.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET11]"
-              endId="Package\Dimensiones Secundarias\dimCategoria.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimCargo.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer Categoria.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer Cargo.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET10]"
-              endId="Package\Dimensiones Secundarias\dimSubCategoria.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimTipoVendedor.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer SubCategoria.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer TipoVendedor.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET9]"
-              endId="Package\Dimensiones Secundarias\dimTipoCliente.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimTipoIdentificacion.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer TipoCliente.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer TipoIdentificacion.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET15]"
-              endId="Package\Dimensiones Secundarias\dimEstado.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimCanalComercial.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer Estado.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer CanalComercial.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET8]"
               endId="Package\Dimensiones Secundarias\dimCategoriaCliente.Inputs[Entrada de destino de ADO NET]"
@@ -3881,39 +3881,39 @@ WHERE  (erpDM.dbo.dimUnidad.idUnidad IS NULL)</property>
               startId="Package\Dimensiones Secundarias\Leer CategoriaCliente.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET6]"
-              endId="Package\Dimensiones Secundarias\dimTipoIdentificacion.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimTipoCliente.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer TipoIdentificacion.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer TipoCliente.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET5]"
-              endId="Package\Dimensiones Secundarias\dimTipoVendedor.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimSubCategoria.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer TipoVendedor.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer SubCategoria.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET4]"
-              endId="Package\Dimensiones Secundarias\dimCargo.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimCategoria.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer Cargo.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer Categoria.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET3]"
-              endId="Package\Dimensiones Secundarias\dimTipoContrato.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimLinea.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer TipoContrato.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer Linea.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET2]"
-              endId="Package\Dimensiones Secundarias\dimTipoUnidadNegocio.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimEnvase.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer TipoUnidadNegocio.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer Envase.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET1]"
-              endId="Package\Dimensiones Secundarias\dimEmpresa.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimUnidad.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer Empresa.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer Unidad.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET7]"
-              endId="Package\Dimensiones Secundarias\dimCanalComercial.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimEstado.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer CanalComercial.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer Estado.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET16]"
               endId="Package\Dimensiones Secundarias\dimTipoProveedor.Inputs[Entrada de destino de ADO NET]"
@@ -8423,7 +8423,7 @@ FROM     db_erp_sige.articulo INNER JOIN
                   db_erp_sige.detalle_entrada_inventario ON db_erp_sige.articulo.codigo = db_erp_sige.detalle_entrada_inventario.articulo INNER JOIN
                   db_erp_sige.entrada_inventario ON db_erp_sige.detalle_entrada_inventario.entrada_inventario = db_erp_sige.entrada_inventario.codigo INNER JOIN
                   db_erp_sige.unidad_de_negocio ON db_erp_sige.entrada_inventario.unidad_de_negocio = db_erp_sige.unidad_de_negocio.codigo INNER JOIN
-                  db_erp_sige.almacen ON db_erp_sige.detalle_entrada_inventario.almacen = db_erp_sige.almacen.codigo 
+                  db_erp_sige.almacen ON db_erp_sige.detalle_entrada_inventario.almacen = db_erp_sige.almacen.codigo
 UNION
 SELECT articulo_1.codigo AS idArticulo, almacen_1.codigo AS idAlmacen, unidad_de_negocio_1.codigo AS idNegocio, db_erp_sige.salida_inventario.fecha AS Fecha, articulo_1.maximo AS stock_maximo, 
                   articulo_1.precio_compra AS costo_unitario, 'salida' AS tipo_movimiento, db_erp_sige.detalle_salida_inventario.cantidad
@@ -9550,7 +9550,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
           Id="Package\Dimensiones Secundarias\dimCanalComercial"
           TopLeft="1526.13332755168,548.399997566144" />
         <EdgeLayout
-          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET15]"
+          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET7]"
           TopLeft="814.638085101758,140.069229198305">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9572,7 +9572,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET14]"
+          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET1]"
           TopLeft="288.199997720122,119.728569954421">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9594,7 +9594,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET13]"
+          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET2]"
           TopLeft="294.799997645617,192.799997437">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9616,7 +9616,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET12]"
+          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET3]"
           TopLeft="290.199997571111,270.157139141432">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9638,7 +9638,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET11]"
+          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET4]"
           TopLeft="301.199997705221,348.899995603093">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9660,7 +9660,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET10]"
+          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET5]"
           TopLeft="307.314283602578,431.828567992789">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9682,7 +9682,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET9]"
+          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET6]"
           TopLeft="830.209513739177,61.7364090744222">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9726,7 +9726,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET7]"
+          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET15]"
           TopLeft="1429.77775909503,569.588884671032">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9748,7 +9748,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET6]"
+          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET9]"
           TopLeft="861.174348871754,297.376919735051">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9770,7 +9770,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET5]"
+          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET10]"
           TopLeft="1412.62855287024,66.7857144528202">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9792,7 +9792,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET4]"
+          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET11]"
           TopLeft="1379.25712424772,137.457142412237">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9814,7 +9814,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET3]"
+          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET12]"
           TopLeft="1413.78093373392,206.799997317791">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9836,7 +9836,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET2]"
+          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET13]"
           TopLeft="1442.26664806008,433.633330449959">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9858,7 +9858,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET1]"
+          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET14]"
           TopLeft="1393.86664803028,499.533329801758">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10798,7 +10798,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
     design-time-name="Package\Fact Inventario">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="140.8,41.6"
           Id="Package\Fact Inventario\factInventario"
@@ -10826,7 +10826,9 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

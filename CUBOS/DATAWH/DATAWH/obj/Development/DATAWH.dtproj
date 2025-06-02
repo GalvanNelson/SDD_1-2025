@@ -26,137 +26,18 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">AYRTON-LAPTOP</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9nEWmmMOAEG4fpSH9elGjQAAAAACAAAAAAAQZgAAAAEAACAAAAD3H6ceRp12Z/oBfE+cgA8iGvDIUene5+c6Jva9bkgF4wAAAAAOgAAAAAIAACAAAAADvww5hiXQFGApwvMdeO2eS201ewYTzJzF2EJ33gAUR5AAAADxLPMu43GAvviUeRgXbyUBhWrVnhnyLRIQ+BqvYZjJxPpRWMEjzy2el892/Zxud4rQ+ILgpyvpx6TBZUTrNi22rU340HYQ8ciQXrAfn92262aoTV1TAivQqhwNHbTsE8nMQYurJJ10HLDDsY9Kn80sWxjY2Z5n/u97/H9i/CZq+pU3+dYrw5Kw1ml0MVhZf7dAAAAAPCc4HrAC4cY7cULBfNJ1ZcIkL2fCeQRF8p75QsnQ1MXTNBuBKozcRFCe4PpXznDuowhLE9L9n7JdFQRFernCrQ==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9nEWmmMOAEG4fpSH9elGjQAAAAACAAAAAAAQZgAAAAEAACAAAAB3d68MThoaXlVcmtTxttTbZyZ/oG3EwitNCs6yZf2a+AAAAAAOgAAAAAIAACAAAACFHXG8YH4gfzucJIEI/VDXe0tzERb028EmxnfPiXJvVpAAAABUJF2yiyeP+2j7hYqXK5cYdNC7BUvzqQsaCZzlQf6ToqNx32JjAhWcJ/RjrThUrGJqxdeSbTlYhPPQTjLjNubgfNTaiydPXbEcPoCpZcYFYfhKcy98W2nzi1euZ0zUD/T8hR8I+pQdJND6/a7at97XRON2gfsrfx8zw5DKD1XrphXeVUotJJRIed376pxPwQVAAAAA4pMS37b1EclsZtngeLM1x/zwWf1L6v1+qu4sH9+LZsHDm0vEhhn6Ww7yDL5XH7gLL+CXgzOR2SqhEaogz7yyJA==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
-          <SSIS:Package SSIS:Name="Package1.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="ERP.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
-          <SSIS:ConnectionManager SSIS:Name="AYRTON-LAPTOP_MSSQLSERVER3.erpDM.conmgr" />
           <SSIS:ConnectionManager SSIS:Name="AYRTON-LAPTOP_MSSQLSERVER3.erp.conmgr" />
-          <SSIS:ConnectionManager SSIS:Name="AYRTON-LAPTOP_MSSQLSERVER3.erpDM1.conmgr" />
+          <SSIS:ConnectionManager SSIS:Name="AYRTON-LAPTOP_MSSQLSERVER3.erpDM.conmgr" />
         </SSIS:ConnectionManagers>
         <SSIS:DeploymentInfo>
           <SSIS:ProjectConnectionParameters>
-            <SSIS:Parameter SSIS:Name="CM.AYRTON-LAPTOP_MSSQLSERVER3.erpDM.ConnectByProxy">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="CreationName">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">false</SSIS:Property>
-                <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
-              </SSIS:Properties>
-            </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.AYRTON-LAPTOP_MSSQLSERVER3.erpDM.ConnectionString">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="CreationName">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">Data Source=AYRTON-LAPTOP\MSSQLSERVER3;Initial Catalog=erpDM;Integrated Security=True;TrustServerCertificate=True;Application Name=SSIS-DATAWH-{F47BCA76-F15D-40B1-9664-F18D11CC10A0}AYRTON-LAPTOP\MSSQLSERVER3.erpDM;</SSIS:Property>
-                <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
-              </SSIS:Properties>
-            </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.AYRTON-LAPTOP_MSSQLSERVER3.erpDM.ConnectUsingManagedIdentity">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="CreationName">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">false</SSIS:Property>
-                <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
-              </SSIS:Properties>
-            </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.AYRTON-LAPTOP_MSSQLSERVER3.erpDM.InitialCatalog">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="CreationName">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">erpDM</SSIS:Property>
-                <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
-              </SSIS:Properties>
-            </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.AYRTON-LAPTOP_MSSQLSERVER3.erpDM.Password">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="CreationName">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Sensitive">1</SSIS:Property>
-                <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
-              </SSIS:Properties>
-            </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.AYRTON-LAPTOP_MSSQLSERVER3.erpDM.RetainSameConnection">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="CreationName">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">false</SSIS:Property>
-                <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
-              </SSIS:Properties>
-            </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.AYRTON-LAPTOP_MSSQLSERVER3.erpDM.ServerName">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="CreationName">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">AYRTON-LAPTOP\MSSQLSERVER3</SSIS:Property>
-                <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
-              </SSIS:Properties>
-            </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.AYRTON-LAPTOP_MSSQLSERVER3.erpDM.UserName">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="CreationName">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
-              </SSIS:Properties>
-            </SSIS:Parameter>
             <SSIS:Parameter SSIS:Name="CM.AYRTON-LAPTOP_MSSQLSERVER3.erp.ConnectByProxy">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
@@ -183,7 +64,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">Data Source=AYRTON-LAPTOP\MSSQLSERVER3;Initial Catalog=erp;Integrated Security=True;TrustServerCertificate=True;Application Name=SSIS-DATAWH-{D52CE048-9F61-45BC-A3E8-166F2011B286}AYRTON-LAPTOP\MSSQLSERVER3.erp;</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">Data Source=AYRTON-LAPTOP\MSSQLSERVER3;Initial Catalog=erp;Integrated Security=True;TrustServerCertificate=True;Application Name=SSIS-DATAWH-{1AFC0785-6D02-4568-8492-A66DE2CC57B7}AYRTON-LAPTOP\MSSQLSERVER3.erp;</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -275,7 +156,7 @@
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.AYRTON-LAPTOP_MSSQLSERVER3.erpDM1.ConnectByProxy">
+            <SSIS:Parameter SSIS:Name="CM.AYRTON-LAPTOP_MSSQLSERVER3.erpDM.ConnectByProxy">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
                 </SSIS:Property>
@@ -290,7 +171,7 @@
                 <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.AYRTON-LAPTOP_MSSQLSERVER3.erpDM1.ConnectionString">
+            <SSIS:Parameter SSIS:Name="CM.AYRTON-LAPTOP_MSSQLSERVER3.erpDM.ConnectionString">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
                 </SSIS:Property>
@@ -301,41 +182,11 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">Data Source=AYRTON-LAPTOP\MSSQLSERVER3;Initial Catalog=erpDM;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-DATAWH-{24B6715F-0B81-4B93-B032-C1D34F4B5EB4}AYRTON-LAPTOP\MSSQLSERVER3.erpDM1;Auto Translate=False;</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">Data Source=AYRTON-LAPTOP\MSSQLSERVER3;Initial Catalog=erpDM;Integrated Security=True;TrustServerCertificate=True;Application Name=SSIS-DATAWH-{FC96C477-7160-4B6A-80A6-FC852B455105}AYRTON-LAPTOP\MSSQLSERVER3.erpDM;</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.AYRTON-LAPTOP_MSSQLSERVER3.erpDM1.ConnectRetryCount">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="CreationName">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">1</SSIS:Property>
-                <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
-              </SSIS:Properties>
-            </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.AYRTON-LAPTOP_MSSQLSERVER3.erpDM1.ConnectRetryInterval">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="CreationName">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">5</SSIS:Property>
-                <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
-              </SSIS:Properties>
-            </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.AYRTON-LAPTOP_MSSQLSERVER3.erpDM1.ConnectUsingManagedIdentity">
+            <SSIS:Parameter SSIS:Name="CM.AYRTON-LAPTOP_MSSQLSERVER3.erpDM.ConnectUsingManagedIdentity">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
                 </SSIS:Property>
@@ -350,7 +201,7 @@
                 <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.AYRTON-LAPTOP_MSSQLSERVER3.erpDM1.InitialCatalog">
+            <SSIS:Parameter SSIS:Name="CM.AYRTON-LAPTOP_MSSQLSERVER3.erpDM.InitialCatalog">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
                 </SSIS:Property>
@@ -365,7 +216,7 @@
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.AYRTON-LAPTOP_MSSQLSERVER3.erpDM1.Password">
+            <SSIS:Parameter SSIS:Name="CM.AYRTON-LAPTOP_MSSQLSERVER3.erpDM.Password">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
                 </SSIS:Property>
@@ -379,7 +230,7 @@
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.AYRTON-LAPTOP_MSSQLSERVER3.erpDM1.RetainSameConnection">
+            <SSIS:Parameter SSIS:Name="CM.AYRTON-LAPTOP_MSSQLSERVER3.erpDM.RetainSameConnection">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
                 </SSIS:Property>
@@ -394,7 +245,7 @@
                 <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.AYRTON-LAPTOP_MSSQLSERVER3.erpDM1.ServerName">
+            <SSIS:Parameter SSIS:Name="CM.AYRTON-LAPTOP_MSSQLSERVER3.erpDM.ServerName">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
                 </SSIS:Property>
@@ -409,7 +260,7 @@
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.AYRTON-LAPTOP_MSSQLSERVER3.erpDM1.UserName">
+            <SSIS:Parameter SSIS:Name="CM.AYRTON-LAPTOP_MSSQLSERVER3.erpDM.UserName">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
                 </SSIS:Property>
@@ -425,16 +276,16 @@
             </SSIS:Parameter>
           </SSIS:ProjectConnectionParameters>
           <SSIS:PackageInfo>
-            <SSIS:PackageMetaData SSIS:Name="Package1.dtsx">
+            <SSIS:PackageMetaData SSIS:Name="ERP.dtsx">
               <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{8227AE5D-92DC-4992-9A04-5E3C6AAC5C46}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">Package1</SSIS:Property>
+                <SSIS:Property SSIS:Name="ID">{681E7C22-05B8-4A9B-8E07-09E1E109833B}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">ERP</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">26</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">119</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{88576505-93DC-4528-8D1A-7474A65D7908}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{6426DD90-F39A-4138-B8F3-AD26B55CB5AC}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

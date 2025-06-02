@@ -11,8 +11,8 @@
   DTS:LocaleID="2058"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="19"
-  DTS:VersionGUID="{DFF129EE-E985-49E1-ADA0-1CAA02BA169C}">
+  DTS:VersionBuild="21"
+  DTS:VersionGUID="{7787D202-16A5-4A28-888B-FB12CBC1DC2D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -273,10 +273,6 @@
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\EjVentas\dimProducto.Inputs[Entrada de destino de ADO NET].ExternalColumns[Producto_Key]"
-                      dataType="i4"
-                      name="Producto_Key" />
                     <externalMetadataColumn
                       refId="Package\EjVentas\dimProducto.Inputs[Entrada de destino de ADO NET].ExternalColumns[IdProducto]"
                       dataType="i4"
@@ -1717,29 +1713,29 @@ WHERE  (VentasDM.dbo.Dim_Version.IdVersion IS NULL)</property>
           <paths>
             <path
               refId="Package\EjVentas.Paths[Salida de origen de ADO NET]"
-              endId="Package\EjVentas\dimProducto.Inputs[Entrada de destino de ADO NET]"
-              name="Salida de origen de ADO NET"
-              startId="Package\EjVentas\Leer Productos.Outputs[Salida de origen de ADO NET]" />
-            <path
-              refId="Package\EjVentas.Paths[Salida de origen de ADO NET1]"
               endId="Package\EjVentas\dimLocal.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
               startId="Package\EjVentas\Leer Local.Outputs[Salida de origen de ADO NET]" />
             <path
-              refId="Package\EjVentas.Paths[Salida de origen de ADO NET2]"
+              refId="Package\EjVentas.Paths[Salida de origen de ADO NET1]"
               endId="Package\EjVentas\dimVersion.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
               startId="Package\EjVentas\Leer Version.Outputs[Salida de origen de ADO NET]" />
             <path
-              refId="Package\EjVentas.Paths[Salida de origen de ADO NET3]"
+              refId="Package\EjVentas.Paths[Salida de origen de ADO NET2]"
               endId="Package\EjVentas\dimTiempo.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
               startId="Package\EjVentas\Leer Fecha.Outputs[Salida de origen de ADO NET]" />
             <path
-              refId="Package\EjVentas.Paths[Salida de origen de ADO NET4]"
+              refId="Package\EjVentas.Paths[Salida de origen de ADO NET3]"
               endId="Package\EjVentas\factVentas.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
               startId="Package\EjVentas\Leer Ventas.Outputs[Salida de origen de ADO NET]" />
+            <path
+              refId="Package\EjVentas.Paths[Salida de origen de ADO NET4]"
+              endId="Package\EjVentas\dimProducto.Inputs[Entrada de destino de ADO NET]"
+              name="Salida de origen de ADO NET"
+              startId="Package\EjVentas\Leer Productos.Outputs[Salida de origen de ADO NET]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1774,23 +1770,51 @@ WHERE  (VentasDM.dbo.Dim_Version.IdVersion IS NULL)</property>
           Id="Package\EjVentas\Leer Productos"
           TopLeft="195.538458624712,50.923076164264" />
         <NodeLayout
-          Size="136.8,41.6"
-          Id="Package\EjVentas\dimProducto"
-          TopLeft="509.230761642639,56.1538453170886" />
+          Size="131.2,41.6"
+          Id="Package\EjVentas\Leer Fecha"
+          TopLeft="186.923074137706,299.230764771883" />
+        <NodeLayout
+          Size="129.6,41.6"
+          Id="Package\EjVentas\dimTiempo"
+          TopLeft="486.153838909589,297.999996641508" />
+        <NodeLayout
+          Size="137.6,41.6"
+          Id="Package\EjVentas\Leer Version"
+          TopLeft="193.846150957621,219.230765963976" />
+        <NodeLayout
+          Size="130.4,41.6"
+          Id="Package\EjVentas\dimVersion"
+          TopLeft="508.461530884871,217.69230444844" />
+        <NodeLayout
+          Size="127.2,41.6"
+          Id="Package\EjVentas\Leer Local"
+          TopLeft="204.615381566378,135.384613367227" />
+        <NodeLayout
+          Size="127.2,41.6"
+          Id="Package\EjVentas\factVentas"
+          TopLeft="521.538453766933,373.846150063551" />
+        <NodeLayout
+          Size="134.4,41.6"
+          Id="Package\EjVentas\Leer Ventas"
+          TopLeft="176.923074286718,367.999995690126" />
+        <NodeLayout
+          Size="120,41.6"
+          Id="Package\EjVentas\dimLocal"
+          TopLeft="519.999992251396,138.461536398301" />
         <EdgeLayout
-          Id="Package\EjVentas.Paths[Salida de origen de ADO NET]"
-          TopLeft="344.338458624712,74.3384607406763">
+          Id="Package\EjVentas.Paths[Salida de origen de ADO NET3]"
+          TopLeft="311.323074286718,391.723072876839">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="164.892303017928,0"
+              EndConnector="210.215379480215,0"
               Start="0,0"
-              End="157.392303017928,0">
+              End="202.715379480215,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="157.392303017928,0" />
+                    End="202.715379480215,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1799,16 +1823,52 @@ WHERE  (VentasDM.dbo.Dim_Version.IdVersion IS NULL)</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="127.2,41.6"
-          Id="Package\EjVentas\Leer Local"
-          TopLeft="204.615381566378,135.384613367227" />
-        <NodeLayout
-          Size="120,41.6"
-          Id="Package\EjVentas\dimLocal"
-          TopLeft="519.999992251396,138.461536398301" />
+        <EdgeLayout
+          Id="Package\EjVentas.Paths[Salida de origen de ADO NET2]"
+          TopLeft="318.123074137706,319.415380706695">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="168.030764771883,0"
+              Start="0,0"
+              End="160.530764771883,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="160.530764771883,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\EjVentas.Paths[Salida de origen de ADO NET1]"
+          TopLeft="331.446150957621,239.261535206208">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="177.015379927251,0"
+              Start="0,0"
+              End="169.515379927251,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="169.515379927251,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\EjVentas.Paths[Salida de origen de ADO NET]"
           TopLeft="331.815381566378,157.723074882764">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -1830,87 +1890,23 @@ WHERE  (VentasDM.dbo.Dim_Version.IdVersion IS NULL)</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="137.6,41.6"
-          Id="Package\EjVentas\Leer Version"
-          TopLeft="193.846150957621,219.230765963976" />
-        <NodeLayout
-          Size="130.4,41.6"
-          Id="Package\EjVentas\dimVersion"
-          TopLeft="508.461530884871,217.69230444844" />
-        <EdgeLayout
-          Id="Package\EjVentas.Paths[Salida de origen de ADO NET2]"
-          TopLeft="331.446150957621,239.261535206208">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="177.015379927251,0"
-              Start="0,0"
-              End="169.515379927251,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="169.515379927251,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="131.2,41.6"
-          Id="Package\EjVentas\Leer Fecha"
-          TopLeft="186.923074137706,299.230764771883" />
-        <NodeLayout
-          Size="129.6,41.6"
-          Id="Package\EjVentas\dimTiempo"
-          TopLeft="486.153838909589,297.999996641508" />
-        <EdgeLayout
-          Id="Package\EjVentas.Paths[Salida de origen de ADO NET3]"
-          TopLeft="318.123074137706,319.415380706695">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="168.030764771883,0"
-              Start="0,0"
-              End="160.530764771883,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="160.530764771883,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="134.4,41.6"
-          Id="Package\EjVentas\Leer Ventas"
-          TopLeft="176.923074286718,367.999995690126" />
-        <NodeLayout
-          Size="127.2,41.6"
-          Id="Package\EjVentas\factVentas"
-          TopLeft="521.538453766933,373.846150063551" />
+          Size="136.8,41.6"
+          Id="Package\EjVentas\dimProducto"
+          TopLeft="507.499972271424,51.7333331404792" />
         <EdgeLayout
           Id="Package\EjVentas.Paths[Salida de origen de ADO NET4]"
-          TopLeft="311.323074286718,391.723072876839">
+          TopLeft="344.338458624712,72.1282046523716">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="210.215379480215,0"
+              EndConnector="163.161513646712,0"
               Start="0,0"
-              End="202.715379480215,0">
+              End="155.661513646712,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="202.715379480215,0" />
+                    End="155.661513646712,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1924,46 +1920,6 @@ WHERE  (VentasDM.dbo.Dim_Version.IdVersion IS NULL)</property>
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\EjVentas\Leer Productos">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\EjVentas\dimProducto">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\EjVentas\Leer Local">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\EjVentas\dimLocal">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\EjVentas\Leer Version">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\EjVentas\dimVersion">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1987,7 +1943,23 @@ WHERE  (VentasDM.dbo.Dim_Version.IdVersion IS NULL)</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\EjVentas\Leer Ventas">
+    design-time-name="Package\EjVentas\Leer Version">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\EjVentas\dimVersion">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\EjVentas\Leer Local">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1996,6 +1968,30 @@ WHERE  (VentasDM.dbo.Dim_Version.IdVersion IS NULL)</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\EjVentas\factVentas">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\EjVentas\Leer Ventas">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\EjVentas\dimLocal">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\EjVentas\dimProducto">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
