@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36203.30 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "erpAS", "erpAS\erpAS.dwproj", "{C4B9A400-7805-E57E-594E-8D53449F1FFB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C4B9A400-7805-E57E-594E-8D53449F1FFB}.Development|Default.ActiveCfg = Development
+		{C4B9A400-7805-E57E-594E-8D53449F1FFB}.Development|Default.Build.0 = Development
+		{C4B9A400-7805-E57E-594E-8D53449F1FFB}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F30EC73A-E651-4CE0-9504-4750C372F29B}
+	EndGlobalSection
+EndGlobal
