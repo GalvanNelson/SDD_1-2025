@@ -11,8 +11,8 @@
   DTS:LocaleID="2058"
   DTS:ObjectName="ERP"
   DTS:PackageType="5"
-  DTS:VersionBuild="127"
-  DTS:VersionGUID="{1A3C4B3F-8A48-439F-B81C-270FC9518766}">
+  DTS:VersionBuild="142"
+  DTS:VersionGUID="{0995B39D-C0CF-4B51-9EFA-FD08F33AFD14}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -3368,8 +3368,10 @@ WHERE  (erpDM.dbo.dimTipoIdentificacion.idTipoIdentificacion IS NULL)</property>
                   description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT codigo, nombre
-FROM     db_erp_sige.tipo_suplidor</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT db_erp_sige.tipo_suplidor.codigo, db_erp_sige.tipo_suplidor.nombre
+FROM     db_erp_sige.tipo_suplidor LEFT OUTER JOIN
+                  erpDM.dbo.dimProveedor ON db_erp_sige.tipo_suplidor.codigo = erpDM.dbo.dimProveedor.idProveedor
+WHERE  (erpDM.dbo.dimProveedor.idProveedor IS NULL)</property>
                 <property
                   dataType="System.Int32"
                   description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
@@ -3841,39 +3843,39 @@ WHERE  (erpDM.dbo.dimUnidad.idUnidad IS NULL)</property>
               startId="Package\Dimensiones Secundarias\Leer TipoArticulo.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET14]"
-              endId="Package\Dimensiones Secundarias\dimEmpresa.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimUnidad.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer Empresa.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer Unidad.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET13]"
-              endId="Package\Dimensiones Secundarias\dimTipoUnidadNegocio.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimEnvase.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer TipoUnidadNegocio.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer Envase.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET12]"
-              endId="Package\Dimensiones Secundarias\dimTipoContrato.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimLinea.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer TipoContrato.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer Linea.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET11]"
-              endId="Package\Dimensiones Secundarias\dimCargo.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimCategoria.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer Cargo.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer Categoria.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET10]"
-              endId="Package\Dimensiones Secundarias\dimTipoVendedor.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimSubCategoria.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer TipoVendedor.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer SubCategoria.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET9]"
-              endId="Package\Dimensiones Secundarias\dimTipoIdentificacion.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimTipoCliente.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer TipoIdentificacion.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer TipoCliente.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET15]"
-              endId="Package\Dimensiones Secundarias\dimCanalComercial.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimEstado.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer CanalComercial.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer Estado.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET8]"
               endId="Package\Dimensiones Secundarias\dimCategoriaCliente.Inputs[Entrada de destino de ADO NET]"
@@ -3881,39 +3883,39 @@ WHERE  (erpDM.dbo.dimUnidad.idUnidad IS NULL)</property>
               startId="Package\Dimensiones Secundarias\Leer CategoriaCliente.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET6]"
-              endId="Package\Dimensiones Secundarias\dimTipoCliente.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimTipoIdentificacion.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer TipoCliente.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer TipoIdentificacion.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET5]"
-              endId="Package\Dimensiones Secundarias\dimSubCategoria.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimTipoVendedor.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer SubCategoria.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer TipoVendedor.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET4]"
-              endId="Package\Dimensiones Secundarias\dimCategoria.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimCargo.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer Categoria.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer Cargo.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET3]"
-              endId="Package\Dimensiones Secundarias\dimLinea.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimTipoContrato.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer Linea.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer TipoContrato.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET2]"
-              endId="Package\Dimensiones Secundarias\dimEnvase.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimTipoUnidadNegocio.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer Envase.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer TipoUnidadNegocio.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET1]"
-              endId="Package\Dimensiones Secundarias\dimUnidad.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimEmpresa.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer Unidad.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer Empresa.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET7]"
-              endId="Package\Dimensiones Secundarias\dimEstado.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimCanalComercial.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer Estado.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer CanalComercial.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET16]"
               endId="Package\Dimensiones Secundarias\dimTipoProveedor.Inputs[Entrada de destino de ADO NET]"
@@ -5630,7 +5632,9 @@ WHERE  (erpDM.dbo.dimCliente.idCliente IS NULL)</property>
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT db_erp_sige.suplidor.codigo AS idProveedor, db_erp_sige.tipo_suplidor.codigo AS idTipoProveedor, db_erp_sige.suplidor.nombre, db_erp_sige.suplidor.estado
 FROM     db_erp_sige.suplidor INNER JOIN
-                  db_erp_sige.tipo_suplidor ON db_erp_sige.suplidor.tipo_suplidor = db_erp_sige.tipo_suplidor.codigo</property>
+                  db_erp_sige.tipo_suplidor ON db_erp_sige.suplidor.tipo_suplidor = db_erp_sige.tipo_suplidor.codigo LEFT OUTER JOIN
+                  erpDM.dbo.dimProveedor ON db_erp_sige.suplidor.codigo = erpDM.dbo.dimProveedor.idProveedor
+WHERE  (erpDM.dbo.dimProveedor.idProveedor IS NULL)</property>
                 <property
                   dataType="System.Int32"
                   description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
@@ -5961,8 +5965,10 @@ WHERE  (erpDM.dbo.dimUnidadNegocio.idNegocio IS NULL)</property>
                   description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT codigo AS idUsuario, nombre, tipo_usuario, CASE WHEN activo = 1 THEN 'activo' ELSE 'inactivo' END AS estado
-FROM     db_erp_sige.usuario</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT db_erp_sige.usuario.codigo AS idUsuario, db_erp_sige.usuario.nombre, db_erp_sige.usuario.tipo_usuario, CASE WHEN activo = 1 THEN 'activo' ELSE 'inactivo' END AS estado
+FROM     db_erp_sige.usuario LEFT OUTER JOIN
+                  erpDM.dbo.dimUsuario ON db_erp_sige.usuario.codigo = erpDM.dbo.dimUsuario.idUsuario
+WHERE  (erpDM.dbo.dimUsuario.idUsuario IS NULL)</property>
                 <property
                   dataType="System.Int32"
                   description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
@@ -6345,6 +6351,23 @@ WHERE  (erpDM.dbo.dimVendedor.idVendedor IS NULL)</property>
               startId="Package\DimensionesPrincipales\Leer Usuario.Outputs[Salida de origen de ADO NET]" />
           </paths>
         </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\dimFecha"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{4B389F70-B55E-4CBC-8650-D4B33C3E9A39}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="dimFecha"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{FC96C477-7160-4B6A-80A6-FC852B455105}"
+          SQLTask:SqlStatementSource="DECLARE @FechaIni DATE = '2015-01-01';&#xA;DECLARE @FechaFin DATE = GETDATE();&#xA;&#xA;EXEC RellenarDimFecha @FechaIni, @FechaFin;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -7028,18 +7051,15 @@ WHERE  (erpDM.dbo.factCompras.idArticulo IS NULL) OR
                   db_erp_sige.factura.venta_a_credito, db_erp_sige.factura.pendiente, db_erp_sige.factura.fecha_vencimiento, db_erp_sige.factura.fecha_pagada
 FROM     db_erp_sige.factura INNER JOIN
                   db_erp_sige.cliente ON db_erp_sige.factura.cliente = db_erp_sige.cliente.codigo INNER JOIN
-                  db_erp_sige.ejecutivo_de_venta ON db_erp_sige.factura.vendedor = db_erp_sige.ejecutivo_de_venta.codigo AND db_erp_sige.cliente.vendedor = db_erp_sige.ejecutivo_de_venta.codigo INNER JOIN
-                  db_erp_sige.unidad_de_negocio ON db_erp_sige.factura.unidad_de_negocio = db_erp_sige.unidad_de_negocio.codigo AND db_erp_sige.cliente.unidad_de_negocio = db_erp_sige.unidad_de_negocio.codigo LEFT OUTER JOIN
+                  db_erp_sige.ejecutivo_de_venta ON db_erp_sige.factura.vendedor = db_erp_sige.ejecutivo_de_venta.codigo INNER JOIN
+                  db_erp_sige.unidad_de_negocio ON db_erp_sige.factura.unidad_de_negocio = db_erp_sige.unidad_de_negocio.codigo LEFT OUTER JOIN
                   erpDM.dbo.factCxC ON db_erp_sige.factura.codigo = erpDM.dbo.factCxC.idCxC AND db_erp_sige.cliente.codigo = erpDM.dbo.factCxC.idCliente AND db_erp_sige.ejecutivo_de_venta.codigo = erpDM.dbo.factCxC.idVendedor AND 
-                  db_erp_sige.unidad_de_negocio.codigo = erpDM.dbo.factCxC.idNegocio AND db_erp_sige.factura.fecha = erpDM.dbo.factCxC.Fecha AND db_erp_sige.factura.pendiente = erpDM.dbo.factCxC.pendiente AND 
-                  db_erp_sige.factura.fecha_pagada = erpDM.dbo.factCxC.fecha_pagada
+                  db_erp_sige.unidad_de_negocio.codigo = erpDM.dbo.factCxC.idNegocio AND db_erp_sige.factura.fecha = erpDM.dbo.factCxC.Fecha
 WHERE  (erpDM.dbo.factCxC.idCxC IS NULL) OR
                   (erpDM.dbo.factCxC.idCliente IS NULL) OR
                   (erpDM.dbo.factCxC.idVendedor IS NULL) OR
                   (erpDM.dbo.factCxC.idNegocio IS NULL) OR
-                  (erpDM.dbo.factCxC.Fecha IS NULL) OR
-                  (erpDM.dbo.factCxC.pendiente IS NULL) OR
-                  (erpDM.dbo.factCxC.fecha_pagada IS NULL)</property>
+                  (erpDM.dbo.factCxC.Fecha IS NULL)</property>
                 <property
                   dataType="System.Int32"
                   description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
@@ -7481,15 +7501,12 @@ FROM     db_erp_sige.factura_suplidor INNER JOIN
                   db_erp_sige.suplidor ON db_erp_sige.factura_suplidor.suplidor = db_erp_sige.suplidor.codigo INNER JOIN
                   db_erp_sige.unidad_de_negocio ON db_erp_sige.factura_suplidor.unidad_de_negocio = db_erp_sige.unidad_de_negocio.codigo LEFT OUTER JOIN
                   erpDM.dbo.factCxP ON db_erp_sige.factura_suplidor.codigo = erpDM.dbo.factCxP.idCxP AND db_erp_sige.usuario.codigo = erpDM.dbo.factCxP.idUsuario AND db_erp_sige.suplidor.codigo = erpDM.dbo.factCxP.idProveedor AND 
-                  db_erp_sige.factura_suplidor.unidad_de_negocio = erpDM.dbo.factCxP.idNegocio AND db_erp_sige.factura_suplidor.fecha = erpDM.dbo.factCxP.Fecha AND 
-                  db_erp_sige.factura_suplidor.total_pendiente = erpDM.dbo.factCxP.pendiente AND db_erp_sige.factura_suplidor.fecha_pagada = erpDM.dbo.factCxP.fecha_pagada
+                  db_erp_sige.factura_suplidor.unidad_de_negocio = erpDM.dbo.factCxP.idNegocio AND db_erp_sige.factura_suplidor.fecha = erpDM.dbo.factCxP.Fecha
 WHERE  (erpDM.dbo.factCxP.idCxP IS NULL) OR
                   (erpDM.dbo.factCxP.idUsuario IS NULL) OR
                   (erpDM.dbo.factCxP.idProveedor IS NULL) OR
                   (erpDM.dbo.factCxP.idNegocio IS NULL) OR
-                  (erpDM.dbo.factCxP.Fecha IS NULL) OR
-                  (erpDM.dbo.factCxP.pendiente IS NULL) OR
-                  (erpDM.dbo.factCxP.fecha_pagada IS NULL)</property>
+                  (erpDM.dbo.factCxP.Fecha IS NULL)</property>
                 <property
                   dataType="System.Int32"
                   description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
@@ -7808,11 +7825,11 @@ WHERE  (erpDM.dbo.factCxP.idCxP IS NULL) OR
                       externalMetadataColumnId="Package\Fact Inventario\factInventario.Inputs[Entrada de destino de ADO NET].ExternalColumns[idNegocio]"
                       lineageId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].Columns[idNegocio]" />
                     <inputColumn
-                      refId="Package\Fact Inventario\factInventario.Inputs[Entrada de destino de ADO NET].Columns[Fecha]"
+                      refId="Package\Fact Inventario\factInventario.Inputs[Entrada de destino de ADO NET].Columns[fecha]"
                       cachedDataType="dbDate"
-                      cachedName="Fecha"
+                      cachedName="fecha"
                       externalMetadataColumnId="Package\Fact Inventario\factInventario.Inputs[Entrada de destino de ADO NET].ExternalColumns[Fecha]"
-                      lineageId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].Columns[Fecha]" />
+                      lineageId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].Columns[fecha]" />
                     <inputColumn
                       refId="Package\Fact Inventario\factInventario.Inputs[Entrada de destino de ADO NET].Columns[stock_maximo]"
                       cachedDataType="r8"
@@ -7825,13 +7842,6 @@ WHERE  (erpDM.dbo.factCxP.idCxP IS NULL) OR
                       cachedName="costo_unitario"
                       externalMetadataColumnId="Package\Fact Inventario\factInventario.Inputs[Entrada de destino de ADO NET].ExternalColumns[costo_unitario]"
                       lineageId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].Columns[costo_unitario]" />
-                    <inputColumn
-                      refId="Package\Fact Inventario\factInventario.Inputs[Entrada de destino de ADO NET].Columns[tipo_movimiento]"
-                      cachedDataType="wstr"
-                      cachedLength="7"
-                      cachedName="tipo_movimiento"
-                      externalMetadataColumnId="Package\Fact Inventario\factInventario.Inputs[Entrada de destino de ADO NET].ExternalColumns[tipo_movimiento]"
-                      lineageId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].Columns[tipo_movimiento]" />
                     <inputColumn
                       refId="Package\Fact Inventario\factInventario.Inputs[Entrada de destino de ADO NET].Columns[cantidad]"
                       cachedDataType="r8"
@@ -7865,11 +7875,6 @@ WHERE  (erpDM.dbo.factCxP.idCxP IS NULL) OR
                       refId="Package\Fact Inventario\factInventario.Inputs[Entrada de destino de ADO NET].ExternalColumns[costo_unitario]"
                       dataType="r8"
                       name="costo_unitario" />
-                    <externalMetadataColumn
-                      refId="Package\Fact Inventario\factInventario.Inputs[Entrada de destino de ADO NET].ExternalColumns[tipo_movimiento]"
-                      dataType="wstr"
-                      length="45"
-                      name="tipo_movimiento" />
                     <externalMetadataColumn
                       refId="Package\Fact Inventario\factInventario.Inputs[Entrada de destino de ADO NET].ExternalColumns[cantidad]"
                       dataType="r8"
@@ -7916,33 +7921,19 @@ WHERE  (erpDM.dbo.factCxP.idCxP IS NULL) OR
                   description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT db_erp_sige.articulo.codigo AS idArticulo, db_erp_sige.almacen.codigo AS idAlmacen, db_erp_sige.unidad_de_negocio.codigo AS idNegocio, db_erp_sige.entrada_inventario.fecha AS Fecha, 
-                  db_erp_sige.articulo.maximo AS stock_maximo, db_erp_sige.articulo.precio_compra AS costo_unitario, 'entrada' AS tipo_movimiento, db_erp_sige.detalle_entrada_inventario.cantidad_pedida AS cantidad
-FROM     db_erp_sige.articulo INNER JOIN
-                  db_erp_sige.detalle_entrada_inventario ON db_erp_sige.articulo.codigo = db_erp_sige.detalle_entrada_inventario.articulo INNER JOIN
-                  db_erp_sige.entrada_inventario ON db_erp_sige.detalle_entrada_inventario.entrada_inventario = db_erp_sige.entrada_inventario.codigo INNER JOIN
-                  db_erp_sige.unidad_de_negocio ON db_erp_sige.entrada_inventario.unidad_de_negocio = db_erp_sige.unidad_de_negocio.codigo INNER JOIN
-                  db_erp_sige.almacen ON db_erp_sige.detalle_entrada_inventario.almacen = db_erp_sige.almacen.codigo LEFT OUTER JOIN
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT db_erp_sige.articulo.codigo AS idArticulo, db_erp_sige.almacen.codigo AS idAlmacen, db_erp_sige.unidad_de_negocio.codigo AS idNegocio, db_erp_sige.inventario.fecha, db_erp_sige.articulo.maximo AS stock_maximo, 
+                  db_erp_sige.articulo.precio_compra_unitario AS costo_unitario, db_erp_sige.detalle_inventario.existencia AS cantidad
+FROM     db_erp_sige.detalle_inventario INNER JOIN
+                  db_erp_sige.inventario ON db_erp_sige.detalle_inventario.inventario = db_erp_sige.inventario.codigo INNER JOIN
+                  db_erp_sige.articulo ON db_erp_sige.detalle_inventario.articulo = db_erp_sige.articulo.codigo INNER JOIN
+                  db_erp_sige.almacen ON db_erp_sige.detalle_inventario.almacen = db_erp_sige.almacen.codigo INNER JOIN
+                  db_erp_sige.unidad_de_negocio ON db_erp_sige.inventario.unidad_de_negocio = db_erp_sige.unidad_de_negocio.codigo LEFT OUTER JOIN
                   erpDM.dbo.factInventario ON db_erp_sige.articulo.codigo = erpDM.dbo.factInventario.idArticulo AND db_erp_sige.almacen.codigo = erpDM.dbo.factInventario.idAlmacen AND 
-                  db_erp_sige.unidad_de_negocio.codigo = erpDM.dbo.factInventario.idNegocio AND db_erp_sige.entrada_inventario.fecha = erpDM.dbo.factInventario.Fecha
+                  db_erp_sige.unidad_de_negocio.codigo = erpDM.dbo.factInventario.idNegocio AND db_erp_sige.inventario.fecha = erpDM.dbo.factInventario.Fecha
 WHERE  (erpDM.dbo.factInventario.idArticulo IS NULL) OR
                   (erpDM.dbo.factInventario.idAlmacen IS NULL) OR
                   (erpDM.dbo.factInventario.idNegocio IS NULL) OR
-                  (erpDM.dbo.factInventario.Fecha IS NULL)
-UNION
-SELECT articulo_1.codigo AS idArticulo, almacen_1.codigo AS idAlmacen, unidad_de_negocio_1.codigo AS idNegocio, db_erp_sige.salida_inventario.fecha AS Fecha, articulo_1.maximo AS stock_maximo, 
-                  articulo_1.precio_compra AS costo_unitario, 'salida' AS tipo_movimiento, db_erp_sige.detalle_salida_inventario.cantidad
-FROM     db_erp_sige.articulo AS articulo_1 INNER JOIN
-                  db_erp_sige.detalle_salida_inventario ON articulo_1.codigo = db_erp_sige.detalle_salida_inventario.articulo INNER JOIN
-                  db_erp_sige.salida_inventario ON db_erp_sige.detalle_salida_inventario.salida_inventario = db_erp_sige.salida_inventario.codigo INNER JOIN
-                  db_erp_sige.unidad_de_negocio AS unidad_de_negocio_1 ON db_erp_sige.salida_inventario.unidad_de_negocio = unidad_de_negocio_1.codigo INNER JOIN
-                  db_erp_sige.almacen AS almacen_1 ON db_erp_sige.detalle_salida_inventario.almacen = almacen_1.codigo LEFT OUTER JOIN
-                  erpDM.dbo.factInventario AS factInventario_1 ON articulo_1.codigo = factInventario_1.idArticulo AND almacen_1.codigo = factInventario_1.idAlmacen AND unidad_de_negocio_1.codigo = factInventario_1.idNegocio AND 
-                  db_erp_sige.salida_inventario.fecha = factInventario_1.Fecha
-WHERE  (factInventario_1.idArticulo IS NULL) OR
-                  (factInventario_1.idAlmacen IS NULL) OR
-                  (factInventario_1.idNegocio IS NULL) OR
-                  (factInventario_1.Fecha IS NULL)</property>
+                  (erpDM.dbo.factInventario.Fecha IS NULL)</property>
                 <property
                   dataType="System.Int32"
                   description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
@@ -8007,13 +7998,13 @@ WHERE  (factInventario_1.idArticulo IS NULL) OR
                       name="idNegocio"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].Columns[Fecha]"
+                      refId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].Columns[fecha]"
                       dataType="dbDate"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].ExternalColumns[Fecha]"
-                      lineageId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].Columns[Fecha]"
-                      name="Fecha"
+                      externalMetadataColumnId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].ExternalColumns[fecha]"
+                      lineageId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].Columns[fecha]"
+                      name="fecha"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].Columns[stock_maximo]"
@@ -8032,16 +8023,6 @@ WHERE  (factInventario_1.idArticulo IS NULL) OR
                       externalMetadataColumnId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].ExternalColumns[costo_unitario]"
                       lineageId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].Columns[costo_unitario]"
                       name="costo_unitario"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].Columns[tipo_movimiento]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].ExternalColumns[tipo_movimiento]"
-                      length="7"
-                      lineageId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].Columns[tipo_movimiento]"
-                      name="tipo_movimiento"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].Columns[cantidad]"
@@ -8068,9 +8049,9 @@ WHERE  (factInventario_1.idArticulo IS NULL) OR
                       dataType="i4"
                       name="idNegocio" />
                     <externalMetadataColumn
-                      refId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].ExternalColumns[Fecha]"
+                      refId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].ExternalColumns[fecha]"
                       dataType="dbDate"
-                      name="Fecha" />
+                      name="fecha" />
                     <externalMetadataColumn
                       refId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].ExternalColumns[stock_maximo]"
                       dataType="r8"
@@ -8079,11 +8060,6 @@ WHERE  (factInventario_1.idArticulo IS NULL) OR
                       refId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].ExternalColumns[costo_unitario]"
                       dataType="r8"
                       name="costo_unitario" />
-                    <externalMetadataColumn
-                      refId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].ExternalColumns[tipo_movimiento]"
-                      dataType="wstr"
-                      length="7"
-                      name="tipo_movimiento" />
                     <externalMetadataColumn
                       refId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].ExternalColumns[cantidad]"
                       dataType="r8"
@@ -8111,10 +8087,10 @@ WHERE  (factInventario_1.idArticulo IS NULL) OR
                       lineageId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de error de origen de ADO NET].Columns[idNegocio]"
                       name="idNegocio" />
                     <outputColumn
-                      refId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de error de origen de ADO NET].Columns[Fecha]"
+                      refId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de error de origen de ADO NET].Columns[fecha]"
                       dataType="dbDate"
-                      lineageId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de error de origen de ADO NET].Columns[Fecha]"
-                      name="Fecha" />
+                      lineageId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de error de origen de ADO NET].Columns[fecha]"
+                      name="fecha" />
                     <outputColumn
                       refId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de error de origen de ADO NET].Columns[stock_maximo]"
                       dataType="r8"
@@ -8125,12 +8101,6 @@ WHERE  (factInventario_1.idArticulo IS NULL) OR
                       dataType="r8"
                       lineageId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de error de origen de ADO NET].Columns[costo_unitario]"
                       name="costo_unitario" />
-                    <outputColumn
-                      refId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de error de origen de ADO NET].Columns[tipo_movimiento]"
-                      dataType="wstr"
-                      length="7"
-                      lineageId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de error de origen de ADO NET].Columns[tipo_movimiento]"
-                      name="tipo_movimiento" />
                     <outputColumn
                       refId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de error de origen de ADO NET].Columns[cantidad]"
                       dataType="r8"
@@ -8706,11 +8676,11 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Restricción]"
       DTS:CreationName=""
-      DTS:DTSID="{AF55752D-A53D-4657-B9DA-48AF3A55B664}"
+      DTS:DTSID="{90C5D4D3-0551-4294-AFB6-8FB5D467F03D}"
       DTS:From="Package\DimensionesPrincipales"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restricción"
-      DTS:To="Package\Fact Ventas" />
+      DTS:To="Package\dimFecha" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Restricción 1]"
       DTS:CreationName=""
@@ -8751,6 +8721,14 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restricción 5"
       DTS:To="Package\fact CxP" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 6]"
+      DTS:CreationName=""
+      DTS:DTSID="{F3EC0B32-054E-403E-A0EF-72583048A2EF}"
+      DTS:From="Package\dimFecha"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 6"
+      DTS:To="Package\Fact Ventas" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
@@ -8767,11 +8745,11 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
         <NodeLayout
           Size="199.2,41.6"
           Id="Package\Dimensiones Secundarias"
-          TopLeft="89.999995082617,156.866665575835" />
+          TopLeft="88.5714236510045,255.513724312896" />
         <NodeLayout
           Size="189.6,41.6"
           Id="Package\DimensionesPrincipales"
-          TopLeft="92.4358923854224,62.4666662322813" />
+          TopLeft="91.7216066696162,161.113724969343" />
         <NodeLayout
           Size="143.2,41.6"
           Id="Package\Fact Compras"
@@ -8792,28 +8770,6 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
           Size="133.6,41.6"
           Id="Package\Fact Ventas"
           TopLeft="318.974341546369,62.3333328998751" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Restricción]"
-          TopLeft="282.035892385422,83.1999995660782">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="36.9384491609466,0"
-              Start="0,0"
-              End="29.4384491609466,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="29.4384491609466,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 1]"
           TopLeft="384.726555891919,103.933332899875">
@@ -8838,7 +8794,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 2]"
-          TopLeft="188.41794373402,156.866665575835">
+          TopLeft="187.34651516031,255.513724312896">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -8924,6 +8880,54 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="123.2,41.6"
+          Id="Package\dimFecha"
+          TopLeft="130.714285992542,67.2941175880729" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción]"
+          TopLeft="189.417946331079,161.113724969343">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,-52.2196073812698"
+              Start="0,0"
+              End="0,-44.7196073812698">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-44.7196073812698" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 6]"
+          TopLeft="253.914285992542,85.613725243974">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="65.0600555538268,0"
+              Start="0,0"
+              End="57.5600555538268,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="57.5600555538268,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -8960,6 +8964,10 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
           Size="129.6,41.6"
           Id="Package\Dimensiones Secundarias\dimEnvase"
           TopLeft="372.857137301139,169.999997466803" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Dimensiones Secundarias\Leer TipoProveedor"
+          TopLeft="694.199995782971,451.199997019768" />
         <NodeLayout
           Size="193.6,41.6"
           Id="Package\Dimensiones Secundarias\Leer TipoUnidadNegocio"
@@ -9025,6 +9033,10 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
           Id="Package\Dimensiones Secundarias\dimTipoIdentificacion"
           TopLeft="957.23076320153,278.461535871029" />
         <NodeLayout
+          Size="163.2,41.6"
+          Id="Package\Dimensiones Secundarias\dimTipoProveedor"
+          TopLeft="971.19999165535,447.199997079372" />
+        <NodeLayout
           Size="120.8,41.6"
           Id="Package\Dimensiones Secundarias\dimLinea"
           TopLeft="377.142851522991,245.714282052858" />
@@ -9061,7 +9073,29 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
           Id="Package\Dimensiones Secundarias\dimCanalComercial"
           TopLeft="1526.13332755168,548.399997566144" />
         <EdgeLayout
-          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET7]"
+          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET16]"
+          TopLeft="864.599995782971,469.99999704957">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="106.599995872378,0"
+              Start="0,0"
+              End="99.0999958723785,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="99.0999958723785,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET15]"
           TopLeft="814.638085101758,140.069229198305">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9083,7 +9117,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET1]"
+          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET14]"
           TopLeft="288.199997720122,119.728569954421">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9105,7 +9139,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET2]"
+          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET13]"
           TopLeft="294.799997645617,192.799997437">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9127,7 +9161,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET3]"
+          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET12]"
           TopLeft="290.199997571111,270.157139141432">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9149,7 +9183,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET4]"
+          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET11]"
           TopLeft="301.199997705221,348.899995603093">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9171,7 +9205,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET5]"
+          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET10]"
           TopLeft="307.314283602578,431.828567992789">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9193,7 +9227,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET6]"
+          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET9]"
           TopLeft="830.209513739177,61.7364090744222">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9237,7 +9271,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET15]"
+          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET7]"
           TopLeft="1429.77775909503,569.588884671032">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9259,7 +9293,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET9]"
+          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET6]"
           TopLeft="861.174348871754,297.376919735051">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9281,7 +9315,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET10]"
+          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET5]"
           TopLeft="1412.62855287024,66.7857144528202">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9303,7 +9337,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET11]"
+          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET4]"
           TopLeft="1379.25712424772,137.457142412237">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9325,7 +9359,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET12]"
+          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET3]"
           TopLeft="1413.78093373392,206.799997317791">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9347,7 +9381,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET13]"
+          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET2]"
           TopLeft="1442.26664806008,433.633330449959">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9369,7 +9403,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET14]"
+          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET1]"
           TopLeft="1393.86664803028,499.533329801758">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9404,36 +9438,6 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
                   Capacity="5">
                   <mssgle:LineSegment
                     End="44.6999968856572,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\Dimensiones Secundarias\Leer TipoProveedor"
-          TopLeft="694.199995782971,451.199997019768" />
-        <NodeLayout
-          Size="163.2,41.6"
-          Id="Package\Dimensiones Secundarias\dimTipoProveedor"
-          TopLeft="971.19999165535,447.199997079372" />
-        <EdgeLayout
-          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET16]"
-          TopLeft="864.599995782971,469.99999704957">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="106.599995872378,0"
-              Start="0,0"
-              End="99.0999958723785,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="99.0999958723785,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9721,7 +9725,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
     design-time-name="Package\DimensionesPrincipales">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="128,41.6"
           Id="Package\DimensionesPrincipales\dimCliente"
@@ -9797,9 +9801,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9821,9 +9823,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9845,9 +9845,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9869,9 +9867,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9893,9 +9889,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9917,9 +9911,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9941,9 +9933,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -10065,7 +10055,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
     design-time-name="Package\Fact Compras">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="144,41.6"
           Id="Package\Fact Compras\Leer Compras"
@@ -10093,9 +10083,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -10156,6 +10144,14 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\Fact CxC\factCxC">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Fact CxC\Leer CxC">
     <Properties>
       <Property>
@@ -10201,6 +10197,14 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\fact CxP\factCxP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\fact CxP\Leer CxP">
     <Properties>
@@ -10311,22 +10315,6 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Fact Ventas\Leer Ventas">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Fact CxC\factCxC">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\fact CxP\factCxP">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
