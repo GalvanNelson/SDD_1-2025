@@ -11,8 +11,8 @@
   DTS:LocaleID="2058"
   DTS:ObjectName="ERP"
   DTS:PackageType="5"
-  DTS:VersionBuild="120"
-  DTS:VersionGUID="{27B3674C-5B75-4E21-A6F5-4CCD184034F3}">
+  DTS:VersionBuild="142"
+  DTS:VersionGUID="{0995B39D-C0CF-4B51-9EFA-FD08F33AFD14}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -3368,8 +3368,10 @@ WHERE  (erpDM.dbo.dimTipoIdentificacion.idTipoIdentificacion IS NULL)</property>
                   description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT codigo, nombre
-FROM     db_erp_sige.tipo_suplidor</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT db_erp_sige.tipo_suplidor.codigo, db_erp_sige.tipo_suplidor.nombre
+FROM     db_erp_sige.tipo_suplidor LEFT OUTER JOIN
+                  erpDM.dbo.dimProveedor ON db_erp_sige.tipo_suplidor.codigo = erpDM.dbo.dimProveedor.idProveedor
+WHERE  (erpDM.dbo.dimProveedor.idProveedor IS NULL)</property>
                 <property
                   dataType="System.Int32"
                   description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
@@ -5630,7 +5632,9 @@ WHERE  (erpDM.dbo.dimCliente.idCliente IS NULL)</property>
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT db_erp_sige.suplidor.codigo AS idProveedor, db_erp_sige.tipo_suplidor.codigo AS idTipoProveedor, db_erp_sige.suplidor.nombre, db_erp_sige.suplidor.estado
 FROM     db_erp_sige.suplidor INNER JOIN
-                  db_erp_sige.tipo_suplidor ON db_erp_sige.suplidor.tipo_suplidor = db_erp_sige.tipo_suplidor.codigo</property>
+                  db_erp_sige.tipo_suplidor ON db_erp_sige.suplidor.tipo_suplidor = db_erp_sige.tipo_suplidor.codigo LEFT OUTER JOIN
+                  erpDM.dbo.dimProveedor ON db_erp_sige.suplidor.codigo = erpDM.dbo.dimProveedor.idProveedor
+WHERE  (erpDM.dbo.dimProveedor.idProveedor IS NULL)</property>
                 <property
                   dataType="System.Int32"
                   description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
@@ -5961,8 +5965,10 @@ WHERE  (erpDM.dbo.dimUnidadNegocio.idNegocio IS NULL)</property>
                   description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT codigo AS idUsuario, nombre, tipo_usuario, CASE WHEN activo = 1 THEN 'activo' ELSE 'inactivo' END AS estado
-FROM     db_erp_sige.usuario</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT db_erp_sige.usuario.codigo AS idUsuario, db_erp_sige.usuario.nombre, db_erp_sige.usuario.tipo_usuario, CASE WHEN activo = 1 THEN 'activo' ELSE 'inactivo' END AS estado
+FROM     db_erp_sige.usuario LEFT OUTER JOIN
+                  erpDM.dbo.dimUsuario ON db_erp_sige.usuario.codigo = erpDM.dbo.dimUsuario.idUsuario
+WHERE  (erpDM.dbo.dimUsuario.idUsuario IS NULL)</property>
                 <property
                   dataType="System.Int32"
                   description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
@@ -6345,6 +6351,23 @@ WHERE  (erpDM.dbo.dimVendedor.idVendedor IS NULL)</property>
               startId="Package\DimensionesPrincipales\Leer Usuario.Outputs[Salida de origen de ADO NET]" />
           </paths>
         </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\dimFecha"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{4B389F70-B55E-4CBC-8650-D4B33C3E9A39}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="dimFecha"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{FC96C477-7160-4B6A-80A6-FC852B455105}"
+          SQLTask:SqlStatementSource="DECLARE @FechaIni DATE = '2015-01-01';&#xA;DECLARE @FechaFin DATE = GETDATE();&#xA;&#xA;EXEC RellenarDimFecha @FechaIni, @FechaFin;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -6920,17 +6943,29 @@ WHERE  (erpDM.dbo.factCompras.idArticulo IS NULL) OR
                       externalMetadataColumnId="Package\Fact CxC\factCxC.Inputs[Entrada de destino de ADO NET].ExternalColumns[Fecha]"
                       lineageId="Package\Fact CxC\Leer CxC.Outputs[Salida de origen de ADO NET].Columns[fecha]" />
                     <inputColumn
-                      refId="Package\Fact CxC\factCxC.Inputs[Entrada de destino de ADO NET].Columns[total_credito]"
+                      refId="Package\Fact CxC\factCxC.Inputs[Entrada de destino de ADO NET].Columns[pendiente]"
                       cachedDataType="r8"
-                      cachedName="total_credito"
-                      externalMetadataColumnId="Package\Fact CxC\factCxC.Inputs[Entrada de destino de ADO NET].ExternalColumns[total_credito]"
-                      lineageId="Package\Fact CxC\Leer CxC.Outputs[Salida de origen de ADO NET].Columns[total_credito]" />
+                      cachedName="pendiente"
+                      externalMetadataColumnId="Package\Fact CxC\factCxC.Inputs[Entrada de destino de ADO NET].ExternalColumns[pendiente]"
+                      lineageId="Package\Fact CxC\Leer CxC.Outputs[Salida de origen de ADO NET].Columns[pendiente]" />
                     <inputColumn
                       refId="Package\Fact CxC\factCxC.Inputs[Entrada de destino de ADO NET].Columns[fecha_vencimiento]"
                       cachedDataType="dbDate"
                       cachedName="fecha_vencimiento"
                       externalMetadataColumnId="Package\Fact CxC\factCxC.Inputs[Entrada de destino de ADO NET].ExternalColumns[fecha_vencimiento]"
                       lineageId="Package\Fact CxC\Leer CxC.Outputs[Salida de origen de ADO NET].Columns[fecha_vencimiento]" />
+                    <inputColumn
+                      refId="Package\Fact CxC\factCxC.Inputs[Entrada de destino de ADO NET].Columns[fecha_pagada]"
+                      cachedDataType="dbDate"
+                      cachedName="fecha_pagada"
+                      externalMetadataColumnId="Package\Fact CxC\factCxC.Inputs[Entrada de destino de ADO NET].ExternalColumns[fecha_pagada]"
+                      lineageId="Package\Fact CxC\Leer CxC.Outputs[Salida de origen de ADO NET].Columns[fecha_pagada]" />
+                    <inputColumn
+                      refId="Package\Fact CxC\factCxC.Inputs[Entrada de destino de ADO NET].Columns[venta_a_credito]"
+                      cachedDataType="r8"
+                      cachedName="venta_a_credito"
+                      externalMetadataColumnId="Package\Fact CxC\factCxC.Inputs[Entrada de destino de ADO NET].ExternalColumns[total_credito]"
+                      lineageId="Package\Fact CxC\Leer CxC.Outputs[Salida de origen de ADO NET].Columns[venta_a_credito]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -6959,9 +6994,17 @@ WHERE  (erpDM.dbo.factCompras.idArticulo IS NULL) OR
                       dataType="r8"
                       name="total_credito" />
                     <externalMetadataColumn
+                      refId="Package\Fact CxC\factCxC.Inputs[Entrada de destino de ADO NET].ExternalColumns[pendiente]"
+                      dataType="r8"
+                      name="pendiente" />
+                    <externalMetadataColumn
                       refId="Package\Fact CxC\factCxC.Inputs[Entrada de destino de ADO NET].ExternalColumns[fecha_vencimiento]"
                       dataType="dbTimeStamp"
                       name="fecha_vencimiento" />
+                    <externalMetadataColumn
+                      refId="Package\Fact CxC\factCxC.Inputs[Entrada de destino de ADO NET].ExternalColumns[fecha_pagada]"
+                      dataType="dbTimeStamp"
+                      name="fecha_pagada" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -6991,136 +7034,6 @@ WHERE  (erpDM.dbo.factCompras.idArticulo IS NULL) OR
               </outputs>
             </component>
             <component
-              refId="Package\Fact CxC\factCxCPagos"
-              componentClassID="Microsoft.ManagedComponentHost"
-              contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
-              description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
-              name="factCxCPagos"
-              usesDispositions="true"
-              version="2">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Nombre de la tabla de la base de datos de destino."
-                  expressionType="Notify"
-                  name="TableOrViewName"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."factCxCPagos"</property>
-                <property
-                  dataType="System.Int32"
-                  description="Especifique el número de filas por lote. El valor predeterminado es 0, que utiliza el mismo tamaño que el búfer interno de SSIS. "
-                  expressionType="Notify"
-                  name="BatchSize">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito. "
-                  expressionType="Notify"
-                  name="CommandTimeout">30</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Especifica si se debe usar la interfaz SqlBulkCopy para mejorar el rendimiento de las operaciones de inserción masiva. No todos los proveedores admiten esta interfaz."
-                  expressionType="Notify"
-                  name="UseBulkInsertWhenPossible">true</property>
-                <property
-                  dataType="System.String"
-                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Fact CxC\factCxCPagos.Connections[IDbConnection]"
-                  connectionManagerID="{FC96C477-7160-4B6A-80A6-FC852B455105}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[AYRTON-LAPTOP_MSSQLSERVER3.erpDM]"
-                  description="Administrador de conexiones administrado"
-                  name="IDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Fact CxC\factCxCPagos.Inputs[Entrada de destino de ADO NET]"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="Entrada de destino de ADO NET">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Fact CxC\factCxCPagos.Inputs[Entrada de destino de ADO NET].Columns[idCxC]"
-                      cachedDataType="i4"
-                      cachedName="idCxC"
-                      externalMetadataColumnId="Package\Fact CxC\factCxCPagos.Inputs[Entrada de destino de ADO NET].ExternalColumns[idCxC]"
-                      lineageId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de origen de ADO NET].Columns[idCxC]" />
-                    <inputColumn
-                      refId="Package\Fact CxC\factCxCPagos.Inputs[Entrada de destino de ADO NET].Columns[idCliente]"
-                      cachedDataType="i4"
-                      cachedName="idCliente"
-                      externalMetadataColumnId="Package\Fact CxC\factCxCPagos.Inputs[Entrada de destino de ADO NET].ExternalColumns[idCliente]"
-                      lineageId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de origen de ADO NET].Columns[idCliente]" />
-                    <inputColumn
-                      refId="Package\Fact CxC\factCxCPagos.Inputs[Entrada de destino de ADO NET].Columns[idNegocio]"
-                      cachedDataType="i4"
-                      cachedName="idNegocio"
-                      externalMetadataColumnId="Package\Fact CxC\factCxCPagos.Inputs[Entrada de destino de ADO NET].ExternalColumns[idNegocio]"
-                      lineageId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de origen de ADO NET].Columns[idNegocio]" />
-                    <inputColumn
-                      refId="Package\Fact CxC\factCxCPagos.Inputs[Entrada de destino de ADO NET].Columns[fecha]"
-                      cachedDataType="dbDate"
-                      cachedName="fecha"
-                      externalMetadataColumnId="Package\Fact CxC\factCxCPagos.Inputs[Entrada de destino de ADO NET].ExternalColumns[Fecha]"
-                      lineageId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de origen de ADO NET].Columns[fecha]" />
-                    <inputColumn
-                      refId="Package\Fact CxC\factCxCPagos.Inputs[Entrada de destino de ADO NET].Columns[total]"
-                      cachedDataType="r8"
-                      cachedName="total"
-                      externalMetadataColumnId="Package\Fact CxC\factCxCPagos.Inputs[Entrada de destino de ADO NET].ExternalColumns[total]"
-                      lineageId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de origen de ADO NET].Columns[total]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Fact CxC\factCxCPagos.Inputs[Entrada de destino de ADO NET].ExternalColumns[idCxC]"
-                      dataType="i4"
-                      name="idCxC" />
-                    <externalMetadataColumn
-                      refId="Package\Fact CxC\factCxCPagos.Inputs[Entrada de destino de ADO NET].ExternalColumns[idCliente]"
-                      dataType="i4"
-                      name="idCliente" />
-                    <externalMetadataColumn
-                      refId="Package\Fact CxC\factCxCPagos.Inputs[Entrada de destino de ADO NET].ExternalColumns[idNegocio]"
-                      dataType="i4"
-                      name="idNegocio" />
-                    <externalMetadataColumn
-                      refId="Package\Fact CxC\factCxCPagos.Inputs[Entrada de destino de ADO NET].ExternalColumns[Fecha]"
-                      dataType="dbTimeStamp"
-                      name="Fecha" />
-                    <externalMetadataColumn
-                      refId="Package\Fact CxC\factCxCPagos.Inputs[Entrada de destino de ADO NET].ExternalColumns[total]"
-                      dataType="r8"
-                      name="total" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Fact CxC\factCxCPagos.Outputs[Salida de error de destino de ADO NET]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Salida de error de destino de ADO NET"
-                  synchronousInputId="Package\Fact CxC\factCxCPagos.Inputs[Entrada de destino de ADO NET]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Fact CxC\factCxCPagos.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Fact CxC\factCxCPagos.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Fact CxC\factCxCPagos.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Fact CxC\factCxCPagos.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\Fact CxC\Leer CxC"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
@@ -7135,13 +7048,18 @@ WHERE  (erpDM.dbo.factCompras.idArticulo IS NULL) OR
                   expressionType="Notify"
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT db_erp_sige.factura.codigo AS idCxC, db_erp_sige.cliente.codigo AS idCliente, db_erp_sige.ejecutivo_de_venta.codigo AS idVendedor, db_erp_sige.unidad_de_negocio.codigo AS idNegocio, db_erp_sige.factura.fecha, 
-                  db_erp_sige.factura.venta_a_credito AS total_credito, db_erp_sige.factura.fecha_vencimiento
+                  db_erp_sige.factura.venta_a_credito, db_erp_sige.factura.pendiente, db_erp_sige.factura.fecha_vencimiento, db_erp_sige.factura.fecha_pagada
 FROM     db_erp_sige.factura INNER JOIN
                   db_erp_sige.cliente ON db_erp_sige.factura.cliente = db_erp_sige.cliente.codigo INNER JOIN
-                  db_erp_sige.unidad_de_negocio ON db_erp_sige.factura.unidad_de_negocio = db_erp_sige.unidad_de_negocio.codigo INNER JOIN
-                  db_erp_sige.ejecutivo_de_venta ON db_erp_sige.factura.vendedor = db_erp_sige.ejecutivo_de_venta.codigo LEFT OUTER JOIN
-                  erpDM.dbo.factCxC ON db_erp_sige.factura.codigo = erpDM.dbo.factCxC.idCxC
-WHERE  (erpDM.dbo.factCxC.idCxC IS NULL)</property>
+                  db_erp_sige.ejecutivo_de_venta ON db_erp_sige.factura.vendedor = db_erp_sige.ejecutivo_de_venta.codigo INNER JOIN
+                  db_erp_sige.unidad_de_negocio ON db_erp_sige.factura.unidad_de_negocio = db_erp_sige.unidad_de_negocio.codigo LEFT OUTER JOIN
+                  erpDM.dbo.factCxC ON db_erp_sige.factura.codigo = erpDM.dbo.factCxC.idCxC AND db_erp_sige.cliente.codigo = erpDM.dbo.factCxC.idCliente AND db_erp_sige.ejecutivo_de_venta.codigo = erpDM.dbo.factCxC.idVendedor AND 
+                  db_erp_sige.unidad_de_negocio.codigo = erpDM.dbo.factCxC.idNegocio AND db_erp_sige.factura.fecha = erpDM.dbo.factCxC.Fecha
+WHERE  (erpDM.dbo.factCxC.idCxC IS NULL) OR
+                  (erpDM.dbo.factCxC.idCliente IS NULL) OR
+                  (erpDM.dbo.factCxC.idVendedor IS NULL) OR
+                  (erpDM.dbo.factCxC.idNegocio IS NULL) OR
+                  (erpDM.dbo.factCxC.Fecha IS NULL)</property>
                 <property
                   dataType="System.Int32"
                   description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
@@ -7224,13 +7142,22 @@ WHERE  (erpDM.dbo.factCxC.idCxC IS NULL)</property>
                       name="fecha"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Fact CxC\Leer CxC.Outputs[Salida de origen de ADO NET].Columns[total_credito]"
+                      refId="Package\Fact CxC\Leer CxC.Outputs[Salida de origen de ADO NET].Columns[venta_a_credito]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fact CxC\Leer CxC.Outputs[Salida de origen de ADO NET].ExternalColumns[total_credito]"
-                      lineageId="Package\Fact CxC\Leer CxC.Outputs[Salida de origen de ADO NET].Columns[total_credito]"
-                      name="total_credito"
+                      externalMetadataColumnId="Package\Fact CxC\Leer CxC.Outputs[Salida de origen de ADO NET].ExternalColumns[venta_a_credito]"
+                      lineageId="Package\Fact CxC\Leer CxC.Outputs[Salida de origen de ADO NET].Columns[venta_a_credito]"
+                      name="venta_a_credito"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Fact CxC\Leer CxC.Outputs[Salida de origen de ADO NET].Columns[pendiente]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fact CxC\Leer CxC.Outputs[Salida de origen de ADO NET].ExternalColumns[pendiente]"
+                      lineageId="Package\Fact CxC\Leer CxC.Outputs[Salida de origen de ADO NET].Columns[pendiente]"
+                      name="pendiente"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Fact CxC\Leer CxC.Outputs[Salida de origen de ADO NET].Columns[fecha_vencimiento]"
@@ -7240,6 +7167,15 @@ WHERE  (erpDM.dbo.factCxC.idCxC IS NULL)</property>
                       externalMetadataColumnId="Package\Fact CxC\Leer CxC.Outputs[Salida de origen de ADO NET].ExternalColumns[fecha_vencimiento]"
                       lineageId="Package\Fact CxC\Leer CxC.Outputs[Salida de origen de ADO NET].Columns[fecha_vencimiento]"
                       name="fecha_vencimiento"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Fact CxC\Leer CxC.Outputs[Salida de origen de ADO NET].Columns[fecha_pagada]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fact CxC\Leer CxC.Outputs[Salida de origen de ADO NET].ExternalColumns[fecha_pagada]"
+                      lineageId="Package\Fact CxC\Leer CxC.Outputs[Salida de origen de ADO NET].Columns[fecha_pagada]"
+                      name="fecha_pagada"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -7265,13 +7201,21 @@ WHERE  (erpDM.dbo.factCxC.idCxC IS NULL)</property>
                       dataType="dbDate"
                       name="fecha" />
                     <externalMetadataColumn
-                      refId="Package\Fact CxC\Leer CxC.Outputs[Salida de origen de ADO NET].ExternalColumns[total_credito]"
+                      refId="Package\Fact CxC\Leer CxC.Outputs[Salida de origen de ADO NET].ExternalColumns[venta_a_credito]"
                       dataType="r8"
-                      name="total_credito" />
+                      name="venta_a_credito" />
+                    <externalMetadataColumn
+                      refId="Package\Fact CxC\Leer CxC.Outputs[Salida de origen de ADO NET].ExternalColumns[pendiente]"
+                      dataType="r8"
+                      name="pendiente" />
                     <externalMetadataColumn
                       refId="Package\Fact CxC\Leer CxC.Outputs[Salida de origen de ADO NET].ExternalColumns[fecha_vencimiento]"
                       dataType="dbDate"
                       name="fecha_vencimiento" />
+                    <externalMetadataColumn
+                      refId="Package\Fact CxC\Leer CxC.Outputs[Salida de origen de ADO NET].ExternalColumns[fecha_pagada]"
+                      dataType="dbDate"
+                      name="fecha_pagada" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -7305,15 +7249,25 @@ WHERE  (erpDM.dbo.factCxC.idCxC IS NULL)</property>
                       lineageId="Package\Fact CxC\Leer CxC.Outputs[Salida de error de origen de ADO NET].Columns[fecha]"
                       name="fecha" />
                     <outputColumn
-                      refId="Package\Fact CxC\Leer CxC.Outputs[Salida de error de origen de ADO NET].Columns[total_credito]"
+                      refId="Package\Fact CxC\Leer CxC.Outputs[Salida de error de origen de ADO NET].Columns[venta_a_credito]"
                       dataType="r8"
-                      lineageId="Package\Fact CxC\Leer CxC.Outputs[Salida de error de origen de ADO NET].Columns[total_credito]"
-                      name="total_credito" />
+                      lineageId="Package\Fact CxC\Leer CxC.Outputs[Salida de error de origen de ADO NET].Columns[venta_a_credito]"
+                      name="venta_a_credito" />
+                    <outputColumn
+                      refId="Package\Fact CxC\Leer CxC.Outputs[Salida de error de origen de ADO NET].Columns[pendiente]"
+                      dataType="r8"
+                      lineageId="Package\Fact CxC\Leer CxC.Outputs[Salida de error de origen de ADO NET].Columns[pendiente]"
+                      name="pendiente" />
                     <outputColumn
                       refId="Package\Fact CxC\Leer CxC.Outputs[Salida de error de origen de ADO NET].Columns[fecha_vencimiento]"
                       dataType="dbDate"
                       lineageId="Package\Fact CxC\Leer CxC.Outputs[Salida de error de origen de ADO NET].Columns[fecha_vencimiento]"
                       name="fecha_vencimiento" />
+                    <outputColumn
+                      refId="Package\Fact CxC\Leer CxC.Outputs[Salida de error de origen de ADO NET].Columns[fecha_pagada]"
+                      dataType="dbDate"
+                      lineageId="Package\Fact CxC\Leer CxC.Outputs[Salida de error de origen de ADO NET].Columns[fecha_pagada]"
+                      name="fecha_pagada" />
                     <outputColumn
                       refId="Package\Fact CxC\Leer CxC.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
                       dataType="i4"
@@ -7331,185 +7285,6 @@ WHERE  (erpDM.dbo.factCxC.idCxC IS NULL)</property>
                 </output>
               </outputs>
             </component>
-            <component
-              refId="Package\Fact CxC\Leer CxCPagos"
-              componentClassID="Microsoft.ManagedComponentHost"
-              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
-              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
-              name="Leer CxCPagos"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT db_erp_sige.factura.codigo AS idCxC, db_erp_sige.cliente.codigo AS idCliente, db_erp_sige.unidad_de_negocio.codigo AS idNegocio, db_erp_sige.recibo_ingreso.fecha, db_erp_sige.detalle_recibo_ingreso.total
-FROM     db_erp_sige.detalle_recibo_ingreso INNER JOIN
-                  db_erp_sige.recibo_ingreso ON db_erp_sige.detalle_recibo_ingreso.recibo = db_erp_sige.recibo_ingreso.codigo INNER JOIN
-                  db_erp_sige.cliente ON db_erp_sige.recibo_ingreso.cliente = db_erp_sige.cliente.codigo INNER JOIN
-                  db_erp_sige.unidad_de_negocio ON db_erp_sige.recibo_ingreso.unidad_de_negocio = db_erp_sige.unidad_de_negocio.codigo INNER JOIN
-                  db_erp_sige.factura ON db_erp_sige.detalle_recibo_ingreso.factura = db_erp_sige.factura.codigo LEFT OUTER JOIN
-                  erpDM.dbo.factCxCPagos ON db_erp_sige.factura.codigo = erpDM.dbo.factCxCPagos.idCxC AND db_erp_sige.cliente.codigo = erpDM.dbo.factCxCPagos.idCliente AND 
-                  db_erp_sige.unidad_de_negocio.codigo = erpDM.dbo.factCxCPagos.idNegocio AND db_erp_sige.recibo_ingreso.fecha = erpDM.dbo.factCxCPagos.Fecha
-WHERE  (erpDM.dbo.factCxCPagos.idCxC IS NULL) OR
-                  (erpDM.dbo.factCxCPagos.idCliente IS NULL) OR
-                  (erpDM.dbo.factCxCPagos.idNegocio IS NULL) OR
-                  (erpDM.dbo.factCxCPagos.Fecha IS NULL)</property>
-                <property
-                  dataType="System.Int32"
-                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
-                  name="CommandTimeout">30</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
-                  name="AllowImplicitStringConversion">true</property>
-                <property
-                  dataType="System.String"
-                  description="Nombre de la tabla de la base de datos de origen."
-                  expressionType="Notify"
-                  name="TableOrViewName"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Especificar el modo de recuperar información de columnas externas"
-                  name="AccessMode"
-                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
-                <property
-                  dataType="System.String"
-                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Fact CxC\Leer CxCPagos.Connections[IDbConnection]"
-                  connectionManagerID="{1AFC0785-6D02-4568-8492-A66DE2CC57B7}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[AYRTON-LAPTOP_MSSQLSERVER3.erp]"
-                  description="Administrador de conexiones administrado"
-                  name="IDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de origen de ADO NET]"
-                  name="Salida de origen de ADO NET">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de origen de ADO NET].Columns[idCxC]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de origen de ADO NET].ExternalColumns[idCxC]"
-                      lineageId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de origen de ADO NET].Columns[idCxC]"
-                      name="idCxC"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de origen de ADO NET].Columns[idCliente]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de origen de ADO NET].ExternalColumns[idCliente]"
-                      lineageId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de origen de ADO NET].Columns[idCliente]"
-                      name="idCliente"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de origen de ADO NET].Columns[idNegocio]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de origen de ADO NET].ExternalColumns[idNegocio]"
-                      lineageId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de origen de ADO NET].Columns[idNegocio]"
-                      name="idNegocio"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de origen de ADO NET].Columns[fecha]"
-                      dataType="dbDate"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de origen de ADO NET].ExternalColumns[fecha]"
-                      lineageId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de origen de ADO NET].Columns[fecha]"
-                      name="fecha"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de origen de ADO NET].Columns[total]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de origen de ADO NET].ExternalColumns[total]"
-                      lineageId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de origen de ADO NET].Columns[total]"
-                      name="total"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de origen de ADO NET].ExternalColumns[idCxC]"
-                      dataType="i4"
-                      name="idCxC" />
-                    <externalMetadataColumn
-                      refId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de origen de ADO NET].ExternalColumns[idCliente]"
-                      dataType="i4"
-                      name="idCliente" />
-                    <externalMetadataColumn
-                      refId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de origen de ADO NET].ExternalColumns[idNegocio]"
-                      dataType="i4"
-                      name="idNegocio" />
-                    <externalMetadataColumn
-                      refId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de origen de ADO NET].ExternalColumns[fecha]"
-                      dataType="dbDate"
-                      name="fecha" />
-                    <externalMetadataColumn
-                      refId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de origen de ADO NET].ExternalColumns[total]"
-                      dataType="r8"
-                      name="total" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de error de origen de ADO NET]"
-                  isErrorOut="true"
-                  name="Salida de error de origen de ADO NET">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de error de origen de ADO NET].Columns[idCxC]"
-                      dataType="i4"
-                      lineageId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de error de origen de ADO NET].Columns[idCxC]"
-                      name="idCxC" />
-                    <outputColumn
-                      refId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de error de origen de ADO NET].Columns[idCliente]"
-                      dataType="i4"
-                      lineageId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de error de origen de ADO NET].Columns[idCliente]"
-                      name="idCliente" />
-                    <outputColumn
-                      refId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de error de origen de ADO NET].Columns[idNegocio]"
-                      dataType="i4"
-                      lineageId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de error de origen de ADO NET].Columns[idNegocio]"
-                      name="idNegocio" />
-                    <outputColumn
-                      refId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de error de origen de ADO NET].Columns[fecha]"
-                      dataType="dbDate"
-                      lineageId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de error de origen de ADO NET].Columns[fecha]"
-                      name="fecha" />
-                    <outputColumn
-                      refId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de error de origen de ADO NET].Columns[total]"
-                      dataType="r8"
-                      lineageId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de error de origen de ADO NET].Columns[total]"
-                      name="total" />
-                    <outputColumn
-                      refId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
           </components>
           <paths>
             <path
@@ -7517,11 +7292,6 @@ WHERE  (erpDM.dbo.factCxCPagos.idCxC IS NULL) OR
               endId="Package\Fact CxC\factCxC.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
               startId="Package\Fact CxC\Leer CxC.Outputs[Salida de origen de ADO NET]" />
-            <path
-              refId="Package\Fact CxC.Paths[Salida de origen de ADO NET1]"
-              endId="Package\Fact CxC\factCxCPagos.Inputs[Entrada de destino de ADO NET]"
-              name="Salida de origen de ADO NET"
-              startId="Package\Fact CxC\Leer CxCPagos.Outputs[Salida de origen de ADO NET]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -7541,11 +7311,11 @@ WHERE  (erpDM.dbo.factCxCPagos.idCxC IS NULL) OR
           version="1">
           <components>
             <component
-              refId="Package\fact CxP\dimCxP"
+              refId="Package\fact CxP\factCxP"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
               description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
-              name="dimCxP"
+              name="factCxP"
               usesDispositions="true"
               version="2">
               <properties>
@@ -7576,7 +7346,7 @@ WHERE  (erpDM.dbo.factCxCPagos.idCxC IS NULL) OR
               </properties>
               <connections>
                 <connection
-                  refId="Package\fact CxP\dimCxP.Connections[IDbConnection]"
+                  refId="Package\fact CxP\factCxP.Connections[IDbConnection]"
                   connectionManagerID="{FC96C477-7160-4B6A-80A6-FC852B455105}:external"
                   connectionManagerRefId="Project.ConnectionManagers[AYRTON-LAPTOP_MSSQLSERVER3.erpDM]"
                   description="Administrador de conexiones administrado"
@@ -7584,235 +7354,125 @@ WHERE  (erpDM.dbo.factCxCPagos.idCxC IS NULL) OR
               </connections>
               <inputs>
                 <input
-                  refId="Package\fact CxP\dimCxP.Inputs[Entrada de destino de ADO NET]"
+                  refId="Package\fact CxP\factCxP.Inputs[Entrada de destino de ADO NET]"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="Entrada de destino de ADO NET">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\fact CxP\dimCxP.Inputs[Entrada de destino de ADO NET].Columns[idCxP]"
+                      refId="Package\fact CxP\factCxP.Inputs[Entrada de destino de ADO NET].Columns[idCxP]"
                       cachedDataType="i4"
                       cachedName="idCxP"
-                      externalMetadataColumnId="Package\fact CxP\dimCxP.Inputs[Entrada de destino de ADO NET].ExternalColumns[idCxP]"
+                      externalMetadataColumnId="Package\fact CxP\factCxP.Inputs[Entrada de destino de ADO NET].ExternalColumns[idCxP]"
                       lineageId="Package\fact CxP\Leer CxP.Outputs[Salida de origen de ADO NET].Columns[idCxP]" />
                     <inputColumn
-                      refId="Package\fact CxP\dimCxP.Inputs[Entrada de destino de ADO NET].Columns[idUsuario]"
+                      refId="Package\fact CxP\factCxP.Inputs[Entrada de destino de ADO NET].Columns[idUsuario]"
                       cachedDataType="i4"
                       cachedName="idUsuario"
-                      externalMetadataColumnId="Package\fact CxP\dimCxP.Inputs[Entrada de destino de ADO NET].ExternalColumns[idUsuario]"
+                      externalMetadataColumnId="Package\fact CxP\factCxP.Inputs[Entrada de destino de ADO NET].ExternalColumns[idUsuario]"
                       lineageId="Package\fact CxP\Leer CxP.Outputs[Salida de origen de ADO NET].Columns[idUsuario]" />
                     <inputColumn
-                      refId="Package\fact CxP\dimCxP.Inputs[Entrada de destino de ADO NET].Columns[idProveedor]"
+                      refId="Package\fact CxP\factCxP.Inputs[Entrada de destino de ADO NET].Columns[idProveedor]"
                       cachedDataType="i4"
                       cachedName="idProveedor"
-                      externalMetadataColumnId="Package\fact CxP\dimCxP.Inputs[Entrada de destino de ADO NET].ExternalColumns[idProveedor]"
+                      externalMetadataColumnId="Package\fact CxP\factCxP.Inputs[Entrada de destino de ADO NET].ExternalColumns[idProveedor]"
                       lineageId="Package\fact CxP\Leer CxP.Outputs[Salida de origen de ADO NET].Columns[idProveedor]" />
                     <inputColumn
-                      refId="Package\fact CxP\dimCxP.Inputs[Entrada de destino de ADO NET].Columns[idNegocio]"
+                      refId="Package\fact CxP\factCxP.Inputs[Entrada de destino de ADO NET].Columns[idNegocio]"
                       cachedDataType="i4"
                       cachedName="idNegocio"
-                      externalMetadataColumnId="Package\fact CxP\dimCxP.Inputs[Entrada de destino de ADO NET].ExternalColumns[idNegocio]"
+                      externalMetadataColumnId="Package\fact CxP\factCxP.Inputs[Entrada de destino de ADO NET].ExternalColumns[idNegocio]"
                       lineageId="Package\fact CxP\Leer CxP.Outputs[Salida de origen de ADO NET].Columns[idNegocio]" />
                     <inputColumn
-                      refId="Package\fact CxP\dimCxP.Inputs[Entrada de destino de ADO NET].Columns[fecha]"
+                      refId="Package\fact CxP\factCxP.Inputs[Entrada de destino de ADO NET].Columns[fecha]"
                       cachedDataType="dbDate"
                       cachedName="fecha"
-                      externalMetadataColumnId="Package\fact CxP\dimCxP.Inputs[Entrada de destino de ADO NET].ExternalColumns[Fecha]"
+                      externalMetadataColumnId="Package\fact CxP\factCxP.Inputs[Entrada de destino de ADO NET].ExternalColumns[Fecha]"
                       lineageId="Package\fact CxP\Leer CxP.Outputs[Salida de origen de ADO NET].Columns[fecha]" />
                     <inputColumn
-                      refId="Package\fact CxP\dimCxP.Inputs[Entrada de destino de ADO NET].Columns[total]"
-                      cachedDataType="r8"
-                      cachedName="total"
-                      externalMetadataColumnId="Package\fact CxP\dimCxP.Inputs[Entrada de destino de ADO NET].ExternalColumns[total]"
-                      lineageId="Package\fact CxP\Leer CxP.Outputs[Salida de origen de ADO NET].Columns[total]" />
-                    <inputColumn
-                      refId="Package\fact CxP\dimCxP.Inputs[Entrada de destino de ADO NET].Columns[fecha_vencimiento]"
+                      refId="Package\fact CxP\factCxP.Inputs[Entrada de destino de ADO NET].Columns[fecha_vencimiento]"
                       cachedDataType="dbDate"
                       cachedName="fecha_vencimiento"
-                      externalMetadataColumnId="Package\fact CxP\dimCxP.Inputs[Entrada de destino de ADO NET].ExternalColumns[fecha_vencimiento]"
+                      externalMetadataColumnId="Package\fact CxP\factCxP.Inputs[Entrada de destino de ADO NET].ExternalColumns[fecha_vencimiento]"
                       lineageId="Package\fact CxP\Leer CxP.Outputs[Salida de origen de ADO NET].Columns[fecha_vencimiento]" />
+                    <inputColumn
+                      refId="Package\fact CxP\factCxP.Inputs[Entrada de destino de ADO NET].Columns[fecha_pagada]"
+                      cachedDataType="dbDate"
+                      cachedName="fecha_pagada"
+                      externalMetadataColumnId="Package\fact CxP\factCxP.Inputs[Entrada de destino de ADO NET].ExternalColumns[fecha_pagada]"
+                      lineageId="Package\fact CxP\Leer CxP.Outputs[Salida de origen de ADO NET].Columns[fecha_pagada]" />
+                    <inputColumn
+                      refId="Package\fact CxP\factCxP.Inputs[Entrada de destino de ADO NET].Columns[total_a_pagar]"
+                      cachedDataType="r8"
+                      cachedName="total_a_pagar"
+                      externalMetadataColumnId="Package\fact CxP\factCxP.Inputs[Entrada de destino de ADO NET].ExternalColumns[total_pagar]"
+                      lineageId="Package\fact CxP\Leer CxP.Outputs[Salida de origen de ADO NET].Columns[total_a_pagar]" />
+                    <inputColumn
+                      refId="Package\fact CxP\factCxP.Inputs[Entrada de destino de ADO NET].Columns[total_pendiente]"
+                      cachedDataType="r8"
+                      cachedName="total_pendiente"
+                      externalMetadataColumnId="Package\fact CxP\factCxP.Inputs[Entrada de destino de ADO NET].ExternalColumns[pendiente]"
+                      lineageId="Package\fact CxP\Leer CxP.Outputs[Salida de origen de ADO NET].Columns[total_pendiente]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\fact CxP\dimCxP.Inputs[Entrada de destino de ADO NET].ExternalColumns[idCxP]"
+                      refId="Package\fact CxP\factCxP.Inputs[Entrada de destino de ADO NET].ExternalColumns[idCxP]"
                       dataType="i4"
                       name="idCxP" />
                     <externalMetadataColumn
-                      refId="Package\fact CxP\dimCxP.Inputs[Entrada de destino de ADO NET].ExternalColumns[idUsuario]"
+                      refId="Package\fact CxP\factCxP.Inputs[Entrada de destino de ADO NET].ExternalColumns[idUsuario]"
                       dataType="i4"
                       name="idUsuario" />
                     <externalMetadataColumn
-                      refId="Package\fact CxP\dimCxP.Inputs[Entrada de destino de ADO NET].ExternalColumns[idProveedor]"
+                      refId="Package\fact CxP\factCxP.Inputs[Entrada de destino de ADO NET].ExternalColumns[idProveedor]"
                       dataType="i4"
                       name="idProveedor" />
                     <externalMetadataColumn
-                      refId="Package\fact CxP\dimCxP.Inputs[Entrada de destino de ADO NET].ExternalColumns[idNegocio]"
+                      refId="Package\fact CxP\factCxP.Inputs[Entrada de destino de ADO NET].ExternalColumns[idNegocio]"
                       dataType="i4"
                       name="idNegocio" />
                     <externalMetadataColumn
-                      refId="Package\fact CxP\dimCxP.Inputs[Entrada de destino de ADO NET].ExternalColumns[Fecha]"
+                      refId="Package\fact CxP\factCxP.Inputs[Entrada de destino de ADO NET].ExternalColumns[Fecha]"
                       dataType="dbTimeStamp"
                       name="Fecha" />
                     <externalMetadataColumn
-                      refId="Package\fact CxP\dimCxP.Inputs[Entrada de destino de ADO NET].ExternalColumns[total]"
+                      refId="Package\fact CxP\factCxP.Inputs[Entrada de destino de ADO NET].ExternalColumns[total_pagar]"
                       dataType="r8"
-                      name="total" />
+                      name="total_pagar" />
                     <externalMetadataColumn
-                      refId="Package\fact CxP\dimCxP.Inputs[Entrada de destino de ADO NET].ExternalColumns[fecha_vencimiento]"
+                      refId="Package\fact CxP\factCxP.Inputs[Entrada de destino de ADO NET].ExternalColumns[pendiente]"
+                      dataType="r8"
+                      name="pendiente" />
+                    <externalMetadataColumn
+                      refId="Package\fact CxP\factCxP.Inputs[Entrada de destino de ADO NET].ExternalColumns[fecha_vencimiento]"
                       dataType="dbTimeStamp"
                       name="fecha_vencimiento" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\fact CxP\dimCxP.Outputs[Salida de error de destino de ADO NET]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Salida de error de destino de ADO NET"
-                  synchronousInputId="Package\fact CxP\dimCxP.Inputs[Entrada de destino de ADO NET]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\fact CxP\dimCxP.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\fact CxP\dimCxP.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\fact CxP\dimCxP.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\fact CxP\dimCxP.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\fact CxP\dimCxPPagos"
-              componentClassID="Microsoft.ManagedComponentHost"
-              contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
-              description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
-              name="dimCxPPagos"
-              usesDispositions="true"
-              version="2">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Nombre de la tabla de la base de datos de destino."
-                  expressionType="Notify"
-                  name="TableOrViewName"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."factCxPPagos"</property>
-                <property
-                  dataType="System.Int32"
-                  description="Especifique el número de filas por lote. El valor predeterminado es 0, que utiliza el mismo tamaño que el búfer interno de SSIS. "
-                  expressionType="Notify"
-                  name="BatchSize">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito. "
-                  expressionType="Notify"
-                  name="CommandTimeout">30</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Especifica si se debe usar la interfaz SqlBulkCopy para mejorar el rendimiento de las operaciones de inserción masiva. No todos los proveedores admiten esta interfaz."
-                  expressionType="Notify"
-                  name="UseBulkInsertWhenPossible">true</property>
-                <property
-                  dataType="System.String"
-                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\fact CxP\dimCxPPagos.Connections[IDbConnection]"
-                  connectionManagerID="{FC96C477-7160-4B6A-80A6-FC852B455105}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[AYRTON-LAPTOP_MSSQLSERVER3.erpDM]"
-                  description="Administrador de conexiones administrado"
-                  name="IDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\fact CxP\dimCxPPagos.Inputs[Entrada de destino de ADO NET]"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="Entrada de destino de ADO NET">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\fact CxP\dimCxPPagos.Inputs[Entrada de destino de ADO NET].Columns[idCxP]"
-                      cachedDataType="i4"
-                      cachedName="idCxP"
-                      externalMetadataColumnId="Package\fact CxP\dimCxPPagos.Inputs[Entrada de destino de ADO NET].ExternalColumns[idCxP]"
-                      lineageId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de origen de ADO NET].Columns[idCxP]" />
-                    <inputColumn
-                      refId="Package\fact CxP\dimCxPPagos.Inputs[Entrada de destino de ADO NET].Columns[idProveedor]"
-                      cachedDataType="i4"
-                      cachedName="idProveedor"
-                      externalMetadataColumnId="Package\fact CxP\dimCxPPagos.Inputs[Entrada de destino de ADO NET].ExternalColumns[idProveedor]"
-                      lineageId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de origen de ADO NET].Columns[idProveedor]" />
-                    <inputColumn
-                      refId="Package\fact CxP\dimCxPPagos.Inputs[Entrada de destino de ADO NET].Columns[idNegocio]"
-                      cachedDataType="i4"
-                      cachedName="idNegocio"
-                      externalMetadataColumnId="Package\fact CxP\dimCxPPagos.Inputs[Entrada de destino de ADO NET].ExternalColumns[idNegocio]"
-                      lineageId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de origen de ADO NET].Columns[idNegocio]" />
-                    <inputColumn
-                      refId="Package\fact CxP\dimCxPPagos.Inputs[Entrada de destino de ADO NET].Columns[fecha]"
-                      cachedDataType="dbDate"
-                      cachedName="fecha"
-                      externalMetadataColumnId="Package\fact CxP\dimCxPPagos.Inputs[Entrada de destino de ADO NET].ExternalColumns[Fecha]"
-                      lineageId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de origen de ADO NET].Columns[fecha]" />
-                    <inputColumn
-                      refId="Package\fact CxP\dimCxPPagos.Inputs[Entrada de destino de ADO NET].Columns[total]"
-                      cachedDataType="r8"
-                      cachedName="total"
-                      externalMetadataColumnId="Package\fact CxP\dimCxPPagos.Inputs[Entrada de destino de ADO NET].ExternalColumns[total]"
-                      lineageId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de origen de ADO NET].Columns[total]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\fact CxP\dimCxPPagos.Inputs[Entrada de destino de ADO NET].ExternalColumns[idCxP]"
-                      dataType="i4"
-                      name="idCxP" />
-                    <externalMetadataColumn
-                      refId="Package\fact CxP\dimCxPPagos.Inputs[Entrada de destino de ADO NET].ExternalColumns[idProveedor]"
-                      dataType="i4"
-                      name="idProveedor" />
-                    <externalMetadataColumn
-                      refId="Package\fact CxP\dimCxPPagos.Inputs[Entrada de destino de ADO NET].ExternalColumns[idNegocio]"
-                      dataType="i4"
-                      name="idNegocio" />
-                    <externalMetadataColumn
-                      refId="Package\fact CxP\dimCxPPagos.Inputs[Entrada de destino de ADO NET].ExternalColumns[Fecha]"
+                      refId="Package\fact CxP\factCxP.Inputs[Entrada de destino de ADO NET].ExternalColumns[fecha_pagada]"
                       dataType="dbTimeStamp"
-                      name="Fecha" />
-                    <externalMetadataColumn
-                      refId="Package\fact CxP\dimCxPPagos.Inputs[Entrada de destino de ADO NET].ExternalColumns[total]"
-                      dataType="r8"
-                      name="total" />
+                      name="fecha_pagada" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\fact CxP\dimCxPPagos.Outputs[Salida de error de destino de ADO NET]"
+                  refId="Package\fact CxP\factCxP.Outputs[Salida de error de destino de ADO NET]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Salida de error de destino de ADO NET"
-                  synchronousInputId="Package\fact CxP\dimCxPPagos.Inputs[Entrada de destino de ADO NET]">
+                  synchronousInputId="Package\fact CxP\factCxP.Inputs[Entrada de destino de ADO NET]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\fact CxP\dimCxPPagos.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      refId="Package\fact CxP\factCxP.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\fact CxP\dimCxPPagos.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      lineageId="Package\fact CxP\factCxP.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\fact CxP\dimCxPPagos.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      refId="Package\fact CxP\factCxP.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\fact CxP\dimCxPPagos.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      lineageId="Package\fact CxP\factCxP.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -7835,13 +7495,18 @@ WHERE  (erpDM.dbo.factCxCPagos.idCxC IS NULL) OR
                   expressionType="Notify"
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT db_erp_sige.factura_suplidor.codigo AS idCxP, db_erp_sige.usuario.codigo AS idUsuario, db_erp_sige.suplidor.codigo AS idProveedor, db_erp_sige.unidad_de_negocio.codigo AS idNegocio, db_erp_sige.factura_suplidor.fecha, 
-                  db_erp_sige.factura_suplidor.total_pendiente AS total, db_erp_sige.factura_suplidor.fecha_vencimiento
+                  db_erp_sige.factura_suplidor.total_a_pagar, db_erp_sige.factura_suplidor.total_pendiente, db_erp_sige.factura_suplidor.fecha_vencimiento, db_erp_sige.factura_suplidor.fecha_pagada
 FROM     db_erp_sige.factura_suplidor INNER JOIN
                   db_erp_sige.usuario ON db_erp_sige.factura_suplidor.usuario = db_erp_sige.usuario.codigo INNER JOIN
-                  db_erp_sige.unidad_de_negocio ON db_erp_sige.factura_suplidor.unidad_de_negocio = db_erp_sige.unidad_de_negocio.codigo INNER JOIN
-                  db_erp_sige.suplidor ON db_erp_sige.factura_suplidor.suplidor = db_erp_sige.suplidor.codigo LEFT OUTER JOIN
-                  erpDM.dbo.factCxP ON db_erp_sige.factura_suplidor.codigo = erpDM.dbo.factCxP.idCxP
-WHERE  (erpDM.dbo.factCxP.idCxP IS NULL)</property>
+                  db_erp_sige.suplidor ON db_erp_sige.factura_suplidor.suplidor = db_erp_sige.suplidor.codigo INNER JOIN
+                  db_erp_sige.unidad_de_negocio ON db_erp_sige.factura_suplidor.unidad_de_negocio = db_erp_sige.unidad_de_negocio.codigo LEFT OUTER JOIN
+                  erpDM.dbo.factCxP ON db_erp_sige.factura_suplidor.codigo = erpDM.dbo.factCxP.idCxP AND db_erp_sige.usuario.codigo = erpDM.dbo.factCxP.idUsuario AND db_erp_sige.suplidor.codigo = erpDM.dbo.factCxP.idProveedor AND 
+                  db_erp_sige.factura_suplidor.unidad_de_negocio = erpDM.dbo.factCxP.idNegocio AND db_erp_sige.factura_suplidor.fecha = erpDM.dbo.factCxP.Fecha
+WHERE  (erpDM.dbo.factCxP.idCxP IS NULL) OR
+                  (erpDM.dbo.factCxP.idUsuario IS NULL) OR
+                  (erpDM.dbo.factCxP.idProveedor IS NULL) OR
+                  (erpDM.dbo.factCxP.idNegocio IS NULL) OR
+                  (erpDM.dbo.factCxP.Fecha IS NULL)</property>
                 <property
                   dataType="System.Int32"
                   description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
@@ -7924,13 +7589,22 @@ WHERE  (erpDM.dbo.factCxP.idCxP IS NULL)</property>
                       name="fecha"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\fact CxP\Leer CxP.Outputs[Salida de origen de ADO NET].Columns[total]"
+                      refId="Package\fact CxP\Leer CxP.Outputs[Salida de origen de ADO NET].Columns[total_a_pagar]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\fact CxP\Leer CxP.Outputs[Salida de origen de ADO NET].ExternalColumns[total]"
-                      lineageId="Package\fact CxP\Leer CxP.Outputs[Salida de origen de ADO NET].Columns[total]"
-                      name="total"
+                      externalMetadataColumnId="Package\fact CxP\Leer CxP.Outputs[Salida de origen de ADO NET].ExternalColumns[total_a_pagar]"
+                      lineageId="Package\fact CxP\Leer CxP.Outputs[Salida de origen de ADO NET].Columns[total_a_pagar]"
+                      name="total_a_pagar"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\fact CxP\Leer CxP.Outputs[Salida de origen de ADO NET].Columns[total_pendiente]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\fact CxP\Leer CxP.Outputs[Salida de origen de ADO NET].ExternalColumns[total_pendiente]"
+                      lineageId="Package\fact CxP\Leer CxP.Outputs[Salida de origen de ADO NET].Columns[total_pendiente]"
+                      name="total_pendiente"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\fact CxP\Leer CxP.Outputs[Salida de origen de ADO NET].Columns[fecha_vencimiento]"
@@ -7940,6 +7614,15 @@ WHERE  (erpDM.dbo.factCxP.idCxP IS NULL)</property>
                       externalMetadataColumnId="Package\fact CxP\Leer CxP.Outputs[Salida de origen de ADO NET].ExternalColumns[fecha_vencimiento]"
                       lineageId="Package\fact CxP\Leer CxP.Outputs[Salida de origen de ADO NET].Columns[fecha_vencimiento]"
                       name="fecha_vencimiento"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\fact CxP\Leer CxP.Outputs[Salida de origen de ADO NET].Columns[fecha_pagada]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\fact CxP\Leer CxP.Outputs[Salida de origen de ADO NET].ExternalColumns[fecha_pagada]"
+                      lineageId="Package\fact CxP\Leer CxP.Outputs[Salida de origen de ADO NET].Columns[fecha_pagada]"
+                      name="fecha_pagada"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -7965,13 +7648,21 @@ WHERE  (erpDM.dbo.factCxP.idCxP IS NULL)</property>
                       dataType="dbDate"
                       name="fecha" />
                     <externalMetadataColumn
-                      refId="Package\fact CxP\Leer CxP.Outputs[Salida de origen de ADO NET].ExternalColumns[total]"
+                      refId="Package\fact CxP\Leer CxP.Outputs[Salida de origen de ADO NET].ExternalColumns[total_a_pagar]"
                       dataType="r8"
-                      name="total" />
+                      name="total_a_pagar" />
+                    <externalMetadataColumn
+                      refId="Package\fact CxP\Leer CxP.Outputs[Salida de origen de ADO NET].ExternalColumns[total_pendiente]"
+                      dataType="r8"
+                      name="total_pendiente" />
                     <externalMetadataColumn
                       refId="Package\fact CxP\Leer CxP.Outputs[Salida de origen de ADO NET].ExternalColumns[fecha_vencimiento]"
                       dataType="dbDate"
                       name="fecha_vencimiento" />
+                    <externalMetadataColumn
+                      refId="Package\fact CxP\Leer CxP.Outputs[Salida de origen de ADO NET].ExternalColumns[fecha_pagada]"
+                      dataType="dbDate"
+                      name="fecha_pagada" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -8005,15 +7696,25 @@ WHERE  (erpDM.dbo.factCxP.idCxP IS NULL)</property>
                       lineageId="Package\fact CxP\Leer CxP.Outputs[Salida de error de origen de ADO NET].Columns[fecha]"
                       name="fecha" />
                     <outputColumn
-                      refId="Package\fact CxP\Leer CxP.Outputs[Salida de error de origen de ADO NET].Columns[total]"
+                      refId="Package\fact CxP\Leer CxP.Outputs[Salida de error de origen de ADO NET].Columns[total_a_pagar]"
                       dataType="r8"
-                      lineageId="Package\fact CxP\Leer CxP.Outputs[Salida de error de origen de ADO NET].Columns[total]"
-                      name="total" />
+                      lineageId="Package\fact CxP\Leer CxP.Outputs[Salida de error de origen de ADO NET].Columns[total_a_pagar]"
+                      name="total_a_pagar" />
+                    <outputColumn
+                      refId="Package\fact CxP\Leer CxP.Outputs[Salida de error de origen de ADO NET].Columns[total_pendiente]"
+                      dataType="r8"
+                      lineageId="Package\fact CxP\Leer CxP.Outputs[Salida de error de origen de ADO NET].Columns[total_pendiente]"
+                      name="total_pendiente" />
                     <outputColumn
                       refId="Package\fact CxP\Leer CxP.Outputs[Salida de error de origen de ADO NET].Columns[fecha_vencimiento]"
                       dataType="dbDate"
                       lineageId="Package\fact CxP\Leer CxP.Outputs[Salida de error de origen de ADO NET].Columns[fecha_vencimiento]"
                       name="fecha_vencimiento" />
+                    <outputColumn
+                      refId="Package\fact CxP\Leer CxP.Outputs[Salida de error de origen de ADO NET].Columns[fecha_pagada]"
+                      dataType="dbDate"
+                      lineageId="Package\fact CxP\Leer CxP.Outputs[Salida de error de origen de ADO NET].Columns[fecha_pagada]"
+                      name="fecha_pagada" />
                     <outputColumn
                       refId="Package\fact CxP\Leer CxP.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
                       dataType="i4"
@@ -8031,198 +7732,13 @@ WHERE  (erpDM.dbo.factCxP.idCxP IS NULL)</property>
                 </output>
               </outputs>
             </component>
-            <component
-              refId="Package\fact CxP\Leer CxPPagos"
-              componentClassID="Microsoft.ManagedComponentHost"
-              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
-              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
-              name="Leer CxPPagos"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT db_erp_sige.factura_suplidor.codigo AS idCxP, db_erp_sige.suplidor.codigo AS idProveedor, db_erp_sige.unidad_de_negocio.codigo AS idNegocio, db_erp_sige.comprobante_de_pago.fecha, 
-                  db_erp_sige.detalle_comprobante_de_pago.total
-FROM     db_erp_sige.detalle_comprobante_de_pago INNER JOIN
-                  db_erp_sige.comprobante_de_pago ON db_erp_sige.detalle_comprobante_de_pago.comprobante_de_pago = db_erp_sige.comprobante_de_pago.codigo INNER JOIN
-                  db_erp_sige.suplidor ON db_erp_sige.comprobante_de_pago.suplidor = db_erp_sige.suplidor.codigo INNER JOIN
-                  db_erp_sige.unidad_de_negocio ON db_erp_sige.comprobante_de_pago.unidad_de_negocio = db_erp_sige.unidad_de_negocio.codigo INNER JOIN
-                  db_erp_sige.factura_suplidor ON db_erp_sige.detalle_comprobante_de_pago.factura = db_erp_sige.factura_suplidor.codigo LEFT OUTER JOIN
-                  erpDM.dbo.factCxPPagos ON db_erp_sige.factura_suplidor.codigo = erpDM.dbo.factCxPPagos.idCxP AND db_erp_sige.suplidor.codigo = erpDM.dbo.factCxPPagos.idProveedor AND 
-                  db_erp_sige.unidad_de_negocio.codigo = erpDM.dbo.factCxPPagos.idNegocio AND db_erp_sige.comprobante_de_pago.fecha = erpDM.dbo.factCxPPagos.Fecha
-WHERE  (erpDM.dbo.factCxPPagos.idCxP IS NULL) OR
-                  (erpDM.dbo.factCxPPagos.idProveedor IS NULL) OR
-                  (erpDM.dbo.factCxPPagos.idNegocio IS NULL) OR
-                  (erpDM.dbo.factCxPPagos.Fecha IS NULL)</property>
-                <property
-                  dataType="System.Int32"
-                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
-                  name="CommandTimeout">30</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
-                  name="AllowImplicitStringConversion">true</property>
-                <property
-                  dataType="System.String"
-                  description="Nombre de la tabla de la base de datos de origen."
-                  expressionType="Notify"
-                  name="TableOrViewName"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Especificar el modo de recuperar información de columnas externas"
-                  name="AccessMode"
-                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
-                <property
-                  dataType="System.String"
-                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\fact CxP\Leer CxPPagos.Connections[IDbConnection]"
-                  connectionManagerID="{1AFC0785-6D02-4568-8492-A66DE2CC57B7}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[AYRTON-LAPTOP_MSSQLSERVER3.erp]"
-                  description="Administrador de conexiones administrado"
-                  name="IDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de origen de ADO NET]"
-                  name="Salida de origen de ADO NET">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de origen de ADO NET].Columns[idCxP]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de origen de ADO NET].ExternalColumns[idCxP]"
-                      lineageId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de origen de ADO NET].Columns[idCxP]"
-                      name="idCxP"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de origen de ADO NET].Columns[idProveedor]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de origen de ADO NET].ExternalColumns[idProveedor]"
-                      lineageId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de origen de ADO NET].Columns[idProveedor]"
-                      name="idProveedor"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de origen de ADO NET].Columns[idNegocio]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de origen de ADO NET].ExternalColumns[idNegocio]"
-                      lineageId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de origen de ADO NET].Columns[idNegocio]"
-                      name="idNegocio"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de origen de ADO NET].Columns[fecha]"
-                      dataType="dbDate"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de origen de ADO NET].ExternalColumns[fecha]"
-                      lineageId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de origen de ADO NET].Columns[fecha]"
-                      name="fecha"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de origen de ADO NET].Columns[total]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de origen de ADO NET].ExternalColumns[total]"
-                      lineageId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de origen de ADO NET].Columns[total]"
-                      name="total"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de origen de ADO NET].ExternalColumns[idCxP]"
-                      dataType="i4"
-                      name="idCxP" />
-                    <externalMetadataColumn
-                      refId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de origen de ADO NET].ExternalColumns[idProveedor]"
-                      dataType="i4"
-                      name="idProveedor" />
-                    <externalMetadataColumn
-                      refId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de origen de ADO NET].ExternalColumns[idNegocio]"
-                      dataType="i4"
-                      name="idNegocio" />
-                    <externalMetadataColumn
-                      refId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de origen de ADO NET].ExternalColumns[fecha]"
-                      dataType="dbDate"
-                      name="fecha" />
-                    <externalMetadataColumn
-                      refId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de origen de ADO NET].ExternalColumns[total]"
-                      dataType="r8"
-                      name="total" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de error de origen de ADO NET]"
-                  isErrorOut="true"
-                  name="Salida de error de origen de ADO NET">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de error de origen de ADO NET].Columns[idCxP]"
-                      dataType="i4"
-                      lineageId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de error de origen de ADO NET].Columns[idCxP]"
-                      name="idCxP" />
-                    <outputColumn
-                      refId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de error de origen de ADO NET].Columns[idProveedor]"
-                      dataType="i4"
-                      lineageId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de error de origen de ADO NET].Columns[idProveedor]"
-                      name="idProveedor" />
-                    <outputColumn
-                      refId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de error de origen de ADO NET].Columns[idNegocio]"
-                      dataType="i4"
-                      lineageId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de error de origen de ADO NET].Columns[idNegocio]"
-                      name="idNegocio" />
-                    <outputColumn
-                      refId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de error de origen de ADO NET].Columns[fecha]"
-                      dataType="dbDate"
-                      lineageId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de error de origen de ADO NET].Columns[fecha]"
-                      name="fecha" />
-                    <outputColumn
-                      refId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de error de origen de ADO NET].Columns[total]"
-                      dataType="r8"
-                      lineageId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de error de origen de ADO NET].Columns[total]"
-                      name="total" />
-                    <outputColumn
-                      refId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
           </components>
           <paths>
             <path
               refId="Package\fact CxP.Paths[Salida de origen de ADO NET]"
-              endId="Package\fact CxP\dimCxP.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\fact CxP\factCxP.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
               startId="Package\fact CxP\Leer CxP.Outputs[Salida de origen de ADO NET]" />
-            <path
-              refId="Package\fact CxP.Paths[Salida de origen de ADO NET1]"
-              endId="Package\fact CxP\dimCxPPagos.Inputs[Entrada de destino de ADO NET]"
-              name="Salida de origen de ADO NET"
-              startId="Package\fact CxP\Leer CxPPagos.Outputs[Salida de origen de ADO NET]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -8309,11 +7825,11 @@ WHERE  (erpDM.dbo.factCxPPagos.idCxP IS NULL) OR
                       externalMetadataColumnId="Package\Fact Inventario\factInventario.Inputs[Entrada de destino de ADO NET].ExternalColumns[idNegocio]"
                       lineageId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].Columns[idNegocio]" />
                     <inputColumn
-                      refId="Package\Fact Inventario\factInventario.Inputs[Entrada de destino de ADO NET].Columns[Fecha]"
+                      refId="Package\Fact Inventario\factInventario.Inputs[Entrada de destino de ADO NET].Columns[fecha]"
                       cachedDataType="dbDate"
-                      cachedName="Fecha"
+                      cachedName="fecha"
                       externalMetadataColumnId="Package\Fact Inventario\factInventario.Inputs[Entrada de destino de ADO NET].ExternalColumns[Fecha]"
-                      lineageId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].Columns[Fecha]" />
+                      lineageId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].Columns[fecha]" />
                     <inputColumn
                       refId="Package\Fact Inventario\factInventario.Inputs[Entrada de destino de ADO NET].Columns[stock_maximo]"
                       cachedDataType="r8"
@@ -8326,13 +7842,6 @@ WHERE  (erpDM.dbo.factCxPPagos.idCxP IS NULL) OR
                       cachedName="costo_unitario"
                       externalMetadataColumnId="Package\Fact Inventario\factInventario.Inputs[Entrada de destino de ADO NET].ExternalColumns[costo_unitario]"
                       lineageId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].Columns[costo_unitario]" />
-                    <inputColumn
-                      refId="Package\Fact Inventario\factInventario.Inputs[Entrada de destino de ADO NET].Columns[tipo_movimiento]"
-                      cachedDataType="wstr"
-                      cachedLength="7"
-                      cachedName="tipo_movimiento"
-                      externalMetadataColumnId="Package\Fact Inventario\factInventario.Inputs[Entrada de destino de ADO NET].ExternalColumns[tipo_movimiento]"
-                      lineageId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].Columns[tipo_movimiento]" />
                     <inputColumn
                       refId="Package\Fact Inventario\factInventario.Inputs[Entrada de destino de ADO NET].Columns[cantidad]"
                       cachedDataType="r8"
@@ -8366,11 +7875,6 @@ WHERE  (erpDM.dbo.factCxPPagos.idCxP IS NULL) OR
                       refId="Package\Fact Inventario\factInventario.Inputs[Entrada de destino de ADO NET].ExternalColumns[costo_unitario]"
                       dataType="r8"
                       name="costo_unitario" />
-                    <externalMetadataColumn
-                      refId="Package\Fact Inventario\factInventario.Inputs[Entrada de destino de ADO NET].ExternalColumns[tipo_movimiento]"
-                      dataType="wstr"
-                      length="45"
-                      name="tipo_movimiento" />
                     <externalMetadataColumn
                       refId="Package\Fact Inventario\factInventario.Inputs[Entrada de destino de ADO NET].ExternalColumns[cantidad]"
                       dataType="r8"
@@ -8417,21 +7921,19 @@ WHERE  (erpDM.dbo.factCxPPagos.idCxP IS NULL) OR
                   description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT db_erp_sige.articulo.codigo AS idArticulo, db_erp_sige.almacen.codigo AS idAlmacen, db_erp_sige.unidad_de_negocio.codigo AS idNegocio, db_erp_sige.entrada_inventario.fecha AS Fecha, 
-                  db_erp_sige.articulo.maximo AS stock_maximo, db_erp_sige.articulo.precio_compra AS costo_unitario, 'entrada' AS tipo_movimiento, db_erp_sige.detalle_entrada_inventario.cantidad_pedida AS cantidad
-FROM     db_erp_sige.articulo INNER JOIN
-                  db_erp_sige.detalle_entrada_inventario ON db_erp_sige.articulo.codigo = db_erp_sige.detalle_entrada_inventario.articulo INNER JOIN
-                  db_erp_sige.entrada_inventario ON db_erp_sige.detalle_entrada_inventario.entrada_inventario = db_erp_sige.entrada_inventario.codigo INNER JOIN
-                  db_erp_sige.unidad_de_negocio ON db_erp_sige.entrada_inventario.unidad_de_negocio = db_erp_sige.unidad_de_negocio.codigo INNER JOIN
-                  db_erp_sige.almacen ON db_erp_sige.detalle_entrada_inventario.almacen = db_erp_sige.almacen.codigo 
-UNION
-SELECT articulo_1.codigo AS idArticulo, almacen_1.codigo AS idAlmacen, unidad_de_negocio_1.codigo AS idNegocio, db_erp_sige.salida_inventario.fecha AS Fecha, articulo_1.maximo AS stock_maximo, 
-                  articulo_1.precio_compra AS costo_unitario, 'salida' AS tipo_movimiento, db_erp_sige.detalle_salida_inventario.cantidad
-FROM     db_erp_sige.articulo AS articulo_1 INNER JOIN
-                  db_erp_sige.detalle_salida_inventario ON articulo_1.codigo = db_erp_sige.detalle_salida_inventario.articulo INNER JOIN
-                  db_erp_sige.salida_inventario ON db_erp_sige.detalle_salida_inventario.salida_inventario = db_erp_sige.salida_inventario.codigo INNER JOIN
-                  db_erp_sige.unidad_de_negocio AS unidad_de_negocio_1 ON db_erp_sige.salida_inventario.unidad_de_negocio = unidad_de_negocio_1.codigo INNER JOIN
-                  db_erp_sige.almacen AS almacen_1 ON db_erp_sige.detalle_salida_inventario.almacen = almacen_1.codigo</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT db_erp_sige.articulo.codigo AS idArticulo, db_erp_sige.almacen.codigo AS idAlmacen, db_erp_sige.unidad_de_negocio.codigo AS idNegocio, db_erp_sige.inventario.fecha, db_erp_sige.articulo.maximo AS stock_maximo, 
+                  db_erp_sige.articulo.precio_compra_unitario AS costo_unitario, db_erp_sige.detalle_inventario.existencia AS cantidad
+FROM     db_erp_sige.detalle_inventario INNER JOIN
+                  db_erp_sige.inventario ON db_erp_sige.detalle_inventario.inventario = db_erp_sige.inventario.codigo INNER JOIN
+                  db_erp_sige.articulo ON db_erp_sige.detalle_inventario.articulo = db_erp_sige.articulo.codigo INNER JOIN
+                  db_erp_sige.almacen ON db_erp_sige.detalle_inventario.almacen = db_erp_sige.almacen.codigo INNER JOIN
+                  db_erp_sige.unidad_de_negocio ON db_erp_sige.inventario.unidad_de_negocio = db_erp_sige.unidad_de_negocio.codigo LEFT OUTER JOIN
+                  erpDM.dbo.factInventario ON db_erp_sige.articulo.codigo = erpDM.dbo.factInventario.idArticulo AND db_erp_sige.almacen.codigo = erpDM.dbo.factInventario.idAlmacen AND 
+                  db_erp_sige.unidad_de_negocio.codigo = erpDM.dbo.factInventario.idNegocio AND db_erp_sige.inventario.fecha = erpDM.dbo.factInventario.Fecha
+WHERE  (erpDM.dbo.factInventario.idArticulo IS NULL) OR
+                  (erpDM.dbo.factInventario.idAlmacen IS NULL) OR
+                  (erpDM.dbo.factInventario.idNegocio IS NULL) OR
+                  (erpDM.dbo.factInventario.Fecha IS NULL)</property>
                 <property
                   dataType="System.Int32"
                   description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
@@ -8496,13 +7998,13 @@ FROM     db_erp_sige.articulo AS articulo_1 INNER JOIN
                       name="idNegocio"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].Columns[Fecha]"
+                      refId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].Columns[fecha]"
                       dataType="dbDate"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].ExternalColumns[Fecha]"
-                      lineageId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].Columns[Fecha]"
-                      name="Fecha"
+                      externalMetadataColumnId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].ExternalColumns[fecha]"
+                      lineageId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].Columns[fecha]"
+                      name="fecha"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].Columns[stock_maximo]"
@@ -8521,16 +8023,6 @@ FROM     db_erp_sige.articulo AS articulo_1 INNER JOIN
                       externalMetadataColumnId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].ExternalColumns[costo_unitario]"
                       lineageId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].Columns[costo_unitario]"
                       name="costo_unitario"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].Columns[tipo_movimiento]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].ExternalColumns[tipo_movimiento]"
-                      length="7"
-                      lineageId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].Columns[tipo_movimiento]"
-                      name="tipo_movimiento"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].Columns[cantidad]"
@@ -8557,9 +8049,9 @@ FROM     db_erp_sige.articulo AS articulo_1 INNER JOIN
                       dataType="i4"
                       name="idNegocio" />
                     <externalMetadataColumn
-                      refId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].ExternalColumns[Fecha]"
+                      refId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].ExternalColumns[fecha]"
                       dataType="dbDate"
-                      name="Fecha" />
+                      name="fecha" />
                     <externalMetadataColumn
                       refId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].ExternalColumns[stock_maximo]"
                       dataType="r8"
@@ -8568,11 +8060,6 @@ FROM     db_erp_sige.articulo AS articulo_1 INNER JOIN
                       refId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].ExternalColumns[costo_unitario]"
                       dataType="r8"
                       name="costo_unitario" />
-                    <externalMetadataColumn
-                      refId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].ExternalColumns[tipo_movimiento]"
-                      dataType="wstr"
-                      length="7"
-                      name="tipo_movimiento" />
                     <externalMetadataColumn
                       refId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de origen de ADO NET].ExternalColumns[cantidad]"
                       dataType="r8"
@@ -8600,10 +8087,10 @@ FROM     db_erp_sige.articulo AS articulo_1 INNER JOIN
                       lineageId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de error de origen de ADO NET].Columns[idNegocio]"
                       name="idNegocio" />
                     <outputColumn
-                      refId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de error de origen de ADO NET].Columns[Fecha]"
+                      refId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de error de origen de ADO NET].Columns[fecha]"
                       dataType="dbDate"
-                      lineageId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de error de origen de ADO NET].Columns[Fecha]"
-                      name="Fecha" />
+                      lineageId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de error de origen de ADO NET].Columns[fecha]"
+                      name="fecha" />
                     <outputColumn
                       refId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de error de origen de ADO NET].Columns[stock_maximo]"
                       dataType="r8"
@@ -8614,12 +8101,6 @@ FROM     db_erp_sige.articulo AS articulo_1 INNER JOIN
                       dataType="r8"
                       lineageId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de error de origen de ADO NET].Columns[costo_unitario]"
                       name="costo_unitario" />
-                    <outputColumn
-                      refId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de error de origen de ADO NET].Columns[tipo_movimiento]"
-                      dataType="wstr"
-                      length="7"
-                      lineageId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de error de origen de ADO NET].Columns[tipo_movimiento]"
-                      name="tipo_movimiento" />
                     <outputColumn
                       refId="Package\Fact Inventario\Leer Inventario.Outputs[Salida de error de origen de ADO NET].Columns[cantidad]"
                       dataType="r8"
@@ -9195,11 +8676,11 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Restricción]"
       DTS:CreationName=""
-      DTS:DTSID="{AF55752D-A53D-4657-B9DA-48AF3A55B664}"
+      DTS:DTSID="{90C5D4D3-0551-4294-AFB6-8FB5D467F03D}"
       DTS:From="Package\DimensionesPrincipales"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restricción"
-      DTS:To="Package\Fact Ventas" />
+      DTS:To="Package\dimFecha" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Restricción 1]"
       DTS:CreationName=""
@@ -9240,6 +8721,14 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restricción 5"
       DTS:To="Package\fact CxP" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 6]"
+      DTS:CreationName=""
+      DTS:DTSID="{F3EC0B32-054E-403E-A0EF-72583048A2EF}"
+      DTS:From="Package\dimFecha"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 6"
+      DTS:To="Package\Fact Ventas" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
@@ -9256,11 +8745,11 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
         <NodeLayout
           Size="199.2,41.6"
           Id="Package\Dimensiones Secundarias"
-          TopLeft="89.999995082617,156.866665575835" />
+          TopLeft="88.5714236510045,255.513724312896" />
         <NodeLayout
           Size="189.6,41.6"
           Id="Package\DimensionesPrincipales"
-          TopLeft="92.4358923854224,62.4666662322813" />
+          TopLeft="91.7216066696162,161.113724969343" />
         <NodeLayout
           Size="143.2,41.6"
           Id="Package\Fact Compras"
@@ -9281,28 +8770,6 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
           Size="133.6,41.6"
           Id="Package\Fact Ventas"
           TopLeft="318.974341546369,62.3333328998751" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Restricción]"
-          TopLeft="282.035892385422,83.1999995660782">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="36.9384491609466,0"
-              Start="0,0"
-              End="29.4384491609466,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="29.4384491609466,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 1]"
           TopLeft="384.726555891919,103.933332899875">
@@ -9327,7 +8794,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 2]"
-          TopLeft="188.41794373402,156.866665575835">
+          TopLeft="187.34651516031,255.513724312896">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -9413,6 +8880,54 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="123.2,41.6"
+          Id="Package\dimFecha"
+          TopLeft="130.714285992542,67.2941175880729" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción]"
+          TopLeft="189.417946331079,161.113724969343">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,-52.2196073812698"
+              Start="0,0"
+              End="0,-44.7196073812698">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-44.7196073812698" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 6]"
+          TopLeft="253.914285992542,85.613725243974">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="65.0600555538268,0"
+              Start="0,0"
+              End="57.5600555538268,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="57.5600555538268,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -9449,6 +8964,10 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
           Size="129.6,41.6"
           Id="Package\Dimensiones Secundarias\dimEnvase"
           TopLeft="372.857137301139,169.999997466803" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Dimensiones Secundarias\Leer TipoProveedor"
+          TopLeft="694.199995782971,451.199997019768" />
         <NodeLayout
           Size="193.6,41.6"
           Id="Package\Dimensiones Secundarias\Leer TipoUnidadNegocio"
@@ -9514,6 +9033,10 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
           Id="Package\Dimensiones Secundarias\dimTipoIdentificacion"
           TopLeft="957.23076320153,278.461535871029" />
         <NodeLayout
+          Size="163.2,41.6"
+          Id="Package\Dimensiones Secundarias\dimTipoProveedor"
+          TopLeft="971.19999165535,447.199997079372" />
+        <NodeLayout
           Size="120.8,41.6"
           Id="Package\Dimensiones Secundarias\dimLinea"
           TopLeft="377.142851522991,245.714282052858" />
@@ -9549,6 +9072,28 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
           Size="169.6,41.6"
           Id="Package\Dimensiones Secundarias\dimCanalComercial"
           TopLeft="1526.13332755168,548.399997566144" />
+        <EdgeLayout
+          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET16]"
+          TopLeft="864.599995782971,469.99999704957">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="106.599995872378,0"
+              Start="0,0"
+              End="99.0999958723785,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="99.0999958723785,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET15]"
           TopLeft="814.638085101758,140.069229198305">
@@ -9901,36 +9446,6 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\Dimensiones Secundarias\Leer TipoProveedor"
-          TopLeft="694.199995782971,451.199997019768" />
-        <NodeLayout
-          Size="163.2,41.6"
-          Id="Package\Dimensiones Secundarias\dimTipoProveedor"
-          TopLeft="971.19999165535,447.199997079372" />
-        <EdgeLayout
-          Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET16]"
-          TopLeft="864.599995782971,469.99999704957">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="106.599995872378,0"
-              Start="0,0"
-              End="99.0999958723785,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="99.0999958723785,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -9984,6 +9499,14 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Dimensiones Secundarias\dimEnvase">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Dimensiones Secundarias\Leer TipoProveedor">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -10119,6 +9642,14 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Dimensiones Secundarias\dimTipoProveedor">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Dimensiones Secundarias\dimLinea">
     <Properties>
       <Property>
@@ -10194,7 +9725,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
     design-time-name="Package\DimensionesPrincipales">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="128,41.6"
           Id="Package\DimensionesPrincipales\dimCliente"
@@ -10270,9 +9801,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10294,9 +9823,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10318,9 +9845,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10342,9 +9867,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10366,9 +9889,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10390,9 +9911,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10414,9 +9933,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -10538,7 +10055,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
     design-time-name="Package\Fact Compras">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="144,41.6"
           Id="Package\Fact Compras\Leer Compras"
@@ -10566,9 +10083,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -10594,90 +10109,40 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
     design-time-name="Package\Fact CxC">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="144.8,41.6"
-          Id="Package\Fact CxC\factCxCPagos"
-          TopLeft="330.833315257398,207.999998553594" />
-        <NodeLayout
-          Size="152,41.6"
-          Id="Package\Fact CxC\Leer CxCPagos"
-          TopLeft="89.999995082617,207.999998553594" />
-        <NodeLayout
-          Size="115.2,41.6"
-          Id="Package\Fact CxC\factCxC"
-          TopLeft="333.333315120804,109.199999240637" />
-        <NodeLayout
-          Size="122.4,41.6"
+          Size="120,41.6"
           Id="Package\Fact CxC\Leer CxC"
-          TopLeft="90.666665315628,110.666665017605" />
-        <EdgeLayout
-          Id="Package\Fact CxC.Paths[Salida de origen de ADO NET1]"
-          TopLeft="241.999995082617,228.799998553594">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="88.8333201747809,0"
-              Start="0,0"
-              End="81.3333201747809,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="81.3333201747809,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="89.9523795998218,109.901959135922" />
+        <NodeLayout
+          Size="113.6,41.6"
+          Id="Package\Fact CxC\factCxC"
+          TopLeft="303.571429217653,109.352941080618" />
         <EdgeLayout
           Id="Package\Fact CxC.Paths[Salida de origen de ADO NET]"
-          TopLeft="213.066665315628,130.733332129121">
+          TopLeft="209.952379599822,130.42745010827">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="120.266649805176,0"
+              EndConnector="93.6190496178307,0"
               Start="0,0"
-              End="112.766649805176,0">
+              End="86.1190496178307,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="112.766649805176,0" />
+                    End="86.1190496178307,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Fact CxC\factCxCPagos">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Fact CxC\Leer CxCPagos">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Fact CxC\factCxC">
     <Properties>
@@ -10698,59 +10163,29 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
     design-time-name="Package\fact CxP">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="144,41.6"
-          Id="Package\fact CxP\dimCxPPagos"
-          TopLeft="423.999993681908,271.999995946884" />
-        <NodeLayout
-          Size="151.2,41.6"
-          Id="Package\fact CxP\Leer CxPPagos"
-          TopLeft="147.999997794628,268.999995991588" />
-        <NodeLayout
-          Size="115.2,41.6"
-          Id="Package\fact CxP\dimCxP"
-          TopLeft="433.999993532896,155.999997675419" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="121.6,41.6"
           Id="Package\fact CxP\Leer CxP"
           TopLeft="148.999997779727,158.999997630715" />
-        <EdgeLayout
-          Id="Package\fact CxP.Paths[Salida de origen de ADO NET1]"
-          TopLeft="299.199997794628,291.299995969236">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="124.79999588728,0"
-              Start="0,0"
-              End="117.29999588728,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="117.29999588728,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="113.6,41.6"
+          Id="Package\fact CxP\factCxP"
+          TopLeft="382.999994292855,157.999997645617" />
         <EdgeLayout
           Id="Package\fact CxP.Paths[Salida de origen de ADO NET]"
-          TopLeft="270.599997779727,178.299997653067">
+          TopLeft="270.599997779727,179.299997638166">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="163.399995753169,0"
+              EndConnector="112.399996513128,0"
               Start="0,0"
-              End="155.899995753169,0">
+              End="104.899996513128,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="155.899995753169,0" />
+                    End="104.899996513128,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10763,23 +10198,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\fact CxP\dimCxPPagos">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\fact CxP\Leer CxPPagos">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\fact CxP\dimCxP">
+    design-time-name="Package\fact CxP\factCxP">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -10800,7 +10219,7 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="140.8,41.6"
+          Size="155.2,43.2"
           Id="Package\Fact Inventario\factInventario"
           TopLeft="330.857137926987,107.999998390675" />
         <NodeLayout
@@ -10809,18 +10228,18 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
           TopLeft="96.7142842731306,107.857141249946" />
         <EdgeLayout
           Id="Package\Fact Inventario.Paths[Salida de origen de ADO NET]"
-          TopLeft="244.714284273131,128.72856982031">
+          TopLeft="244.714284273131,129.128569820311">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="86.1428536538567,0"
+              EndConnector="86.1428536538564,0"
               Start="0,0"
-              End="78.6428536538567,0">
+              End="78.6428536538564,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="78.6428536538567,0" />
+                    End="78.6428536538564,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10896,22 +10315,6 @@ WHERE  (erpDM.dbo.factVentas.idArticulo IS NULL) OR
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Fact Ventas\Leer Ventas">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Dimensiones Secundarias\Leer TipoProveedor">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Dimensiones Secundarias\dimTipoProveedor">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
