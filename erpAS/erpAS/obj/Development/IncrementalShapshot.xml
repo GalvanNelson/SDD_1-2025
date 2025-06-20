@@ -19,238 +19,238 @@
     <ObjectSnapshots>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
-        <TimeStamp>Sb+m1xOlJxcxTyj/dCZ4sQTlO7k=11/06/2025 01:32:45 p. m.11/06/2025 01:32:45 p. m.</TimeStamp>
+        <TimeStamp>Sb+m1xOlJxcxTyj/dCZ4sQTlO7k=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
         <ID>
           <String>Erp DM</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>M3ypsw7l5iwq00fzUES7i8O0H9I=11/06/2025 01:57:17 p. m.11/06/2025 01:34:31 p. m.</TimeStamp>
+        <TimeStamp>M3ypsw7l5iwq00fzUES7i8O0H9I=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
         <ID>
           <String>VENTAS</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>qxCTQSOeZE81L5/y6EHb8roCVpc=13/06/2025 02:31:39 p. m.11/06/2025 02:03:53 p. m.</TimeStamp>
+        <TimeStamp>qxCTQSOeZE81L5/y6EHb8roCVpc=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
         <ID>
           <String>INVENTARIO</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>G7/rmwZZ/LsBFtBYX7Ch97LbqaE=11/06/2025 05:10:00 p. m.11/06/2025 02:31:25 p. m.</TimeStamp>
+        <TimeStamp>G7/rmwZZ/LsBFtBYX7Ch97LbqaE=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
         <ID>
           <String>COMPRAS</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>wZQMEOjtMDdeX+ZXPZO0NoczeL8=13/06/2025 02:01:38 p. m.11/06/2025 03:17:08 p. m.</TimeStamp>
+        <TimeStamp>wZQMEOjtMDdeX+ZXPZO0NoczeL8=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
         <ID>
           <String>CxC</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>Mm3Q6qT7q+UTdx1b9Lekdi+DyKM=13/06/2025 01:53:48 p. m.11/06/2025 04:35:11 p. m.</TimeStamp>
+        <TimeStamp>Mm3Q6qT7q+UTdx1b9Lekdi+DyKM=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
         <ID>
           <String>CxP</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>dKLGC5khfMQtn3t8Idd2Jy7AJ8g=13/06/2025 01:43:37 p. m.11/06/2025 01:36:30 p. m.</TimeStamp>
+        <TimeStamp>dKLGC5khfMQtn3t8Idd2Jy7AJ8g=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
         <ID>
           <String>Dim Cliente</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>+4cslRHe8kWZa5TsCi+jUym1u0I=13/06/2025 01:44:51 p. m.11/06/2025 01:36:30 p. m.</TimeStamp>
+        <TimeStamp>+4cslRHe8kWZa5TsCi+jUym1u0I=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
         <ID>
           <String>Dim Articulo</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>T3bucGhiM8XjEONOYRGS+qvuMlE=13/06/2025 01:45:11 p. m.11/06/2025 01:36:30 p. m.</TimeStamp>
+        <TimeStamp>T3bucGhiM8XjEONOYRGS+qvuMlE=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
         <ID>
           <String>Dim Unidad Negocio</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>T5as9ml1bmY+NsrC3aBbuBEW5ro=13/06/2025 01:45:28 p. m.11/06/2025 01:36:30 p. m.</TimeStamp>
+        <TimeStamp>T5as9ml1bmY+NsrC3aBbuBEW5ro=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
         <ID>
           <String>Dim Almacen</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>jIr0/RiZHcPHue+WvQzDt4pJ0cU=13/06/2025 01:45:58 p. m.11/06/2025 01:36:30 p. m.</TimeStamp>
+        <TimeStamp>jIr0/RiZHcPHue+WvQzDt4pJ0cU=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
         <ID>
           <String>Dim Vendedor</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>ZyzvqYYMpIrV1uLvivSM45JnJyQ=11/06/2025 01:43:32 p. m.11/06/2025 01:36:30 p. m.</TimeStamp>
+        <TimeStamp>ZyzvqYYMpIrV1uLvivSM45JnJyQ=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
         <ID>
           <String>Dim Fecha</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>VhtCB1PkzGUu+ddGdPmlWKOt1x4=13/06/2025 01:46:18 p. m.11/06/2025 02:14:51 p. m.</TimeStamp>
+        <TimeStamp>VhtCB1PkzGUu+ddGdPmlWKOt1x4=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
         <ID>
           <String>Dim Articulo 1</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>CpBglrl4SHsU1U8oHk3mG+QWVCo=11/06/2025 02:33:38 p. m.11/06/2025 02:14:51 p. m.</TimeStamp>
+        <TimeStamp>CpBglrl4SHsU1U8oHk3mG+QWVCo=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
         <ID>
           <String>Dim Fecha 1</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>illTgxdw/9jMa+AJXQ+TrAmj7a0=13/06/2025 01:46:32 p. m.11/06/2025 02:14:51 p. m.</TimeStamp>
+        <TimeStamp>illTgxdw/9jMa+AJXQ+TrAmj7a0=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
         <ID>
           <String>Dim Almacen 1</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>Rg02cyX5QvDodcIzTuLS3Xi15XE=13/06/2025 01:46:50 p. m.11/06/2025 02:14:51 p. m.</TimeStamp>
+        <TimeStamp>Rg02cyX5QvDodcIzTuLS3Xi15XE=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
         <ID>
           <String>Dim Unidad Negocio 1</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>Oof9cP+C+ilDng064h4wGya9cys=13/06/2025 01:47:14 p. m.11/06/2025 02:41:24 p. m.</TimeStamp>
+        <TimeStamp>Oof9cP+C+ilDng064h4wGya9cys=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
         <ID>
           <String>Dim Unidad Negocio 2</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>FKwgZergSRB6zrzK1NZ86ZAohvY=13/06/2025 01:47:31 p. m.11/06/2025 02:41:25 p. m.</TimeStamp>
+        <TimeStamp>FKwgZergSRB6zrzK1NZ86ZAohvY=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
         <ID>
           <String>Dim Almacen 2</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>NrtFOqbcwH5ptJMs7vNwjuXDRY4=11/06/2025 02:42:57 p. m.11/06/2025 02:41:25 p. m.</TimeStamp>
+        <TimeStamp>NrtFOqbcwH5ptJMs7vNwjuXDRY4=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
         <ID>
           <String>Dim Fecha 2</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>2i7sHGVU46Sewc7/O0a+pFqRxKY=13/06/2025 01:47:44 p. m.11/06/2025 02:41:25 p. m.</TimeStamp>
+        <TimeStamp>2i7sHGVU46Sewc7/O0a+pFqRxKY=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
         <ID>
           <String>Dim Proveedor</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>3s4Ulhea+/0zKGY+6K+m3OwK/54=13/06/2025 01:47:58 p. m.11/06/2025 02:41:25 p. m.</TimeStamp>
+        <TimeStamp>3s4Ulhea+/0zKGY+6K+m3OwK/54=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
         <ID>
           <String>Dim Articulo 2</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>IwOIBrJnpySGsPNQQD5fabqVWN0=13/06/2025 01:48:16 p. m.11/06/2025 03:46:50 p. m.</TimeStamp>
+        <TimeStamp>IwOIBrJnpySGsPNQQD5fabqVWN0=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
         <ID>
           <String>Dim Vendedor 1</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>l9p1SOqqRSTbfAPmJJTx/dNnjwk=13/06/2025 01:48:27 p. m.11/06/2025 03:46:50 p. m.</TimeStamp>
+        <TimeStamp>l9p1SOqqRSTbfAPmJJTx/dNnjwk=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
         <ID>
           <String>Dim Cliente 1</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>rRMU6MerQoGorcUUF6n7i9UVR0Y=11/06/2025 03:50:27 p. m.11/06/2025 03:46:50 p. m.</TimeStamp>
+        <TimeStamp>rRMU6MerQoGorcUUF6n7i9UVR0Y=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
         <ID>
           <String>Dim Fecha 3</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>XnD4XXlQYo7eHek3OWra5EXGDb4=13/06/2025 01:48:43 p. m.11/06/2025 03:46:50 p. m.</TimeStamp>
+        <TimeStamp>XnD4XXlQYo7eHek3OWra5EXGDb4=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
         <ID>
           <String>Dim Unidad Negocio 3</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>3O3qFGXuO3QRKFTj6zYSxs3APrQ=13/06/2025 01:48:53 p. m.11/06/2025 04:40:18 p. m.</TimeStamp>
+        <TimeStamp>3O3qFGXuO3QRKFTj6zYSxs3APrQ=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
         <ID>
           <String>Dim Usuario</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>U2da8SEbSpJo99mFvYtMYmDeR1g=11/06/2025 04:41:08 p. m.11/06/2025 04:40:18 p. m.</TimeStamp>
+        <TimeStamp>U2da8SEbSpJo99mFvYtMYmDeR1g=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
         <ID>
           <String>Dim Fecha 4</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>Qs5DNJKHO52+cXI5iZ2rWdFwf1M=13/06/2025 01:49:06 p. m.11/06/2025 04:40:18 p. m.</TimeStamp>
+        <TimeStamp>Qs5DNJKHO52+cXI5iZ2rWdFwf1M=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
         <ID>
           <String>Dim Proveedor 1</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>8InmVwa7dpl52EuCEGmEeMYLfmQ=13/06/2025 01:49:18 p. m.11/06/2025 04:40:18 p. m.</TimeStamp>
+        <TimeStamp>8InmVwa7dpl52EuCEGmEeMYLfmQ=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
         <ID>
           <String>Dim Unidad Negocio 4</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>8mM8nvjA6EKkbJ/2Hoilmo99Gzw=13/06/2025 04:18:28 p. m.11/06/2025 01:46:19 p. m.dvrc4W1I/q7a7J+EB8xXqANRHok=11/06/2025 01:46:20 p. m.11/06/2025 01:46:20 p. m.</TimeStamp>
+        <TimeStamp>8mM8nvjA6EKkbJ/2Hoilmo99Gzw=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.dvrc4W1I/q7a7J+EB8xXqANRHok=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
         <ID>
           <String>VENTAS</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>M3z/qEH7Q1qmhicXAbWbMV9ds6Y=13/06/2025 04:06:52 p. m.11/06/2025 02:41:24 p. m.QfYkIjJjLxN5+cxdrVa5C5yHPY8=11/06/2025 02:41:25 p. m.11/06/2025 02:41:24 p. m.</TimeStamp>
+        <TimeStamp>M3z/qEH7Q1qmhicXAbWbMV9ds6Y=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.QfYkIjJjLxN5+cxdrVa5C5yHPY8=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
         <ID>
           <String>COMPRAS</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>GYV2yCPEknKpMMaeKeL6PdpupTE=13/06/2025 04:40:49 p. m.11/06/2025 04:40:18 p. m.U6fMUnEc2jsGq8qwntJLNz4Hhh4=11/06/2025 04:40:18 p. m.11/06/2025 04:40:18 p. m.</TimeStamp>
+        <TimeStamp>GYV2yCPEknKpMMaeKeL6PdpupTE=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.U6fMUnEc2jsGq8qwntJLNz4Hhh4=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
         <ID>
           <String>CxP</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>lCLNE/wXN/nnah9SZLpSVqenJ7U=13/06/2025 04:00:52 p. m.13/06/2025 02:41:27 p. m.dZhOw0QSWZkdv2KfmTclzHZF0JQ=13/06/2025 02:41:27 p. m.13/06/2025 02:41:27 p. m.</TimeStamp>
+        <TimeStamp>lCLNE/wXN/nnah9SZLpSVqenJ7U=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.dZhOw0QSWZkdv2KfmTclzHZF0JQ=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
         <ID>
           <String>INVENTARIO</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>8svRqauGTzt6vTw9AlTajRhYsLg=13/06/2025 03:59:18 p. m.13/06/2025 03:03:28 p. m.Cvq/cOIsrJCTn4Qdqaw8Gq84fVA=13/06/2025 03:03:28 p. m.13/06/2025 03:03:28 p. m.</TimeStamp>
+        <TimeStamp>8svRqauGTzt6vTw9AlTajRhYsLg=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.Cvq/cOIsrJCTn4Qdqaw8Gq84fVA=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
         <ID>
           <String>CxC</String>
         </ID>
@@ -258,7 +258,7 @@
     </ObjectSnapshots>
     <DatabaseSnapshot>
       <Type>Microsoft.AnalysisServices.Database</Type>
-      <TimeStamp>mRRV+xBbxdRvmzM071ltiQApVCE=11/06/2025 01:31:59 p. m.11/06/2025 01:31:59 p. m.</TimeStamp>
+      <TimeStamp>mRRV+xBbxdRvmzM071ltiQApVCE=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
       <ID>
         <String>erpAS</String>
       </ID>
@@ -267,5 +267,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2025-06-13T22:04:16.823333Z</LastDeployed>
+  <LastDeployed>2025-06-16T22:34:09.55Z</LastDeployed>
 </DeploymentSnapshot>

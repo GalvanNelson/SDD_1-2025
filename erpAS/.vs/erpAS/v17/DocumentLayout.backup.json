@@ -1,9 +1,33 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\CUBOS\\erpAS\\",
+  "WorkspaceRootPath": "D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\SDD_1-2025\\erpAS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C4B9A400-7805-E57E-594E-8D53449F1FFB}|erpAS\\erpAS.dwproj|D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\CUBOS\\erpAS\\erpAS\\VENTAS.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "AbsoluteMoniker": "D:0:0:{C4B9A400-7805-E57E-594E-8D53449F1FFB}|erpAS\\erpAS.dwproj|D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\SDD_1-2025\\erpAS\\erpAS\\CxP.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{C4B9A400-7805-E57E-594E-8D53449F1FFB}|erpAS\\erpAS.dwproj|solutionrelative:erpAS\\CxP.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B9A400-7805-E57E-594E-8D53449F1FFB}|erpAS\\erpAS.dwproj|D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\SDD_1-2025\\erpAS\\erpAS\\INVENTARIO.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{C4B9A400-7805-E57E-594E-8D53449F1FFB}|erpAS\\erpAS.dwproj|solutionrelative:erpAS\\INVENTARIO.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B9A400-7805-E57E-594E-8D53449F1FFB}|erpAS\\erpAS.dwproj|D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\SDD_1-2025\\erpAS\\erpAS\\COMPRAS.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{C4B9A400-7805-E57E-594E-8D53449F1FFB}|erpAS\\erpAS.dwproj|solutionrelative:erpAS\\COMPRAS.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B9A400-7805-E57E-594E-8D53449F1FFB}|erpAS\\erpAS.dwproj|D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\SDD_1-2025\\erpAS\\erpAS\\CxC.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{C4B9A400-7805-E57E-594E-8D53449F1FFB}|erpAS\\erpAS.dwproj|solutionrelative:erpAS\\CxC.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B9A400-7805-E57E-594E-8D53449F1FFB}|erpAS\\erpAS.dwproj|D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\SDD_1-2025\\erpAS\\erpAS\\CxC.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{C4B9A400-7805-E57E-594E-8D53449F1FFB}|erpAS\\erpAS.dwproj|solutionrelative:erpAS\\CxC.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B9A400-7805-E57E-594E-8D53449F1FFB}|erpAS\\erpAS.dwproj|D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\SDD_1-2025\\erpAS\\erpAS\\VENTAS.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{C4B9A400-7805-E57E-594E-8D53449F1FFB}|erpAS\\erpAS.dwproj|solutionrelative:erpAS\\VENTAS.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4B9A400-7805-E57E-594E-8D53449F1FFB}|erpAS\\erpAS.dwproj|D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\SDD_1-2025\\erpAS\\erpAS\\VENTAS.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
       "RelativeMoniker": "D:0:0:{C4B9A400-7805-E57E-594E-8D53449F1FFB}|erpAS\\erpAS.dwproj|solutionrelative:erpAS\\VENTAS.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
     }
   ],
@@ -14,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -29,20 +53,91 @@
               "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CxP.cube [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\SDD_1-2025\\erpAS\\erpAS\\CxP.cube",
+              "RelativeDocumentMoniker": "erpAS\\CxP.cube",
+              "ToolTip": "D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\SDD_1-2025\\erpAS\\erpAS\\CxP.cube [Dise\u00F1o]",
+              "RelativeToolTip": "erpAS\\CxP.cube [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-06-16T22:37:41.475Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "Name": "ST:0:0:{6d52cee1-a15c-42fd-8d30-faacc8d1dd02}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "INVENTARIO.cube [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\SDD_1-2025\\erpAS\\erpAS\\INVENTARIO.cube",
+              "RelativeDocumentMoniker": "erpAS\\INVENTARIO.cube",
+              "ToolTip": "D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\SDD_1-2025\\erpAS\\erpAS\\INVENTARIO.cube [Dise\u00F1o]",
+              "RelativeToolTip": "erpAS\\INVENTARIO.cube [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-06-16T22:34:19.036Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "COMPRAS.dsv [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\SDD_1-2025\\erpAS\\erpAS\\COMPRAS.dsv",
+              "RelativeDocumentMoniker": "erpAS\\COMPRAS.dsv",
+              "ToolTip": "D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\SDD_1-2025\\erpAS\\erpAS\\COMPRAS.dsv [Dise\u00F1o]",
+              "RelativeToolTip": "erpAS\\COMPRAS.dsv [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-06-16T22:30:12.788Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CxC.dsv [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\SDD_1-2025\\erpAS\\erpAS\\CxC.dsv",
+              "RelativeDocumentMoniker": "erpAS\\CxC.dsv",
+              "ToolTip": "D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\SDD_1-2025\\erpAS\\erpAS\\CxC.dsv [Dise\u00F1o]",
+              "RelativeToolTip": "erpAS\\CxC.dsv [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-06-16T22:27:37.696Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CxC.cube [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\SDD_1-2025\\erpAS\\erpAS\\CxC.cube",
+              "RelativeDocumentMoniker": "erpAS\\CxC.cube",
+              "ToolTip": "D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\SDD_1-2025\\erpAS\\erpAS\\CxC.cube [Dise\u00F1o]",
+              "RelativeToolTip": "erpAS\\CxC.cube [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-06-16T22:25:11.561Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "VENTAS.cube [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\SDD_1-2025\\erpAS\\erpAS\\VENTAS.cube",
+              "RelativeDocumentMoniker": "erpAS\\VENTAS.cube",
+              "ToolTip": "D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\SDD_1-2025\\erpAS\\erpAS\\VENTAS.cube [Dise\u00F1o]",
+              "RelativeToolTip": "erpAS\\VENTAS.cube [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-06-13T22:06:17.222Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "VENTAS.dsv [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\CUBOS\\erpAS\\erpAS\\VENTAS.dsv",
+              "DocumentMoniker": "D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\SDD_1-2025\\erpAS\\erpAS\\VENTAS.dsv",
               "RelativeDocumentMoniker": "erpAS\\VENTAS.dsv",
-              "ToolTip": "D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\CUBOS\\erpAS\\erpAS\\VENTAS.dsv [Dise\u00F1o]",
+              "ToolTip": "D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\SDD_1-2025\\erpAS\\erpAS\\VENTAS.dsv [Dise\u00F1o]",
               "RelativeToolTip": "erpAS\\VENTAS.dsv [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-06-13T22:03:54.778Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-06-13T22:03:54.778Z"
             }
           ]
         }

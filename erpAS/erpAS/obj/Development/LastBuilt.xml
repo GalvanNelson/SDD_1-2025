@@ -1,6 +1,6 @@
 ﻿<Infos>
   <Item name="CxC.dsv">
-    <Time>638854200981659254</Time>
+    <Time>638854490552132358</Time>
     <Hash length="20">
       <b>193</b>
       <b>148</b>
@@ -25,7 +25,7 @@
     </Hash>
   </Item>
   <Item name="Dim Almacen 2.dim">
-    <Time>638854192517259961</Time>
+    <Time>638854490552152349</Time>
     <Hash length="20">
       <b>20</b>
       <b>172</b>
@@ -49,8 +49,33 @@
       <b>246</b>
     </Hash>
   </Item>
+  <Item name="Dim Vendedor 1.dim">
+    <Time>638854490552217052</Time>
+    <Hash length="20">
+      <b>35</b>
+      <b>3</b>
+      <b>136</b>
+      <b>6</b>
+      <b>178</b>
+      <b>103</b>
+      <b>167</b>
+      <b>36</b>
+      <b>134</b>
+      <b>176</b>
+      <b>243</b>
+      <b>80</b>
+      <b>64</b>
+      <b>62</b>
+      <b>95</b>
+      <b>105</b>
+      <b>186</b>
+      <b>149</b>
+      <b>88</b>
+      <b>221</b>
+    </Hash>
+  </Item>
   <Item name="erpAS.database">
-    <Time>638852455197902821</Time>
+    <Time>638854490552302353</Time>
     <Hash length="20">
       <b>153</b>
       <b>20</b>
@@ -75,7 +100,7 @@
     </Hash>
   </Item>
   <Item name="Dim Fecha 1.dim">
-    <Time>638852492183424859</Time>
+    <Time>638854490552172374</Time>
     <Hash length="20">
       <b>10</b>
       <b>144</b>
@@ -100,7 +125,7 @@
     </Hash>
   </Item>
   <Item name="Erp DM.ds">
-    <Time>638852455656303880</Time>
+    <Time>638854490552217052</Time>
     <Hash length="20">
       <b>73</b>
       <b>191</b>
@@ -125,7 +150,7 @@
     </Hash>
   </Item>
   <Item name="CxP.cube">
-    <Time>638854296492291914</Time>
+    <Time>638854490552142358</Time>
     <Hash length="20">
       <b>25</b>
       <b>133</b>
@@ -150,7 +175,7 @@
     </Hash>
   </Item>
   <Item name="Dim Articulo.dim">
-    <Time>638854190910246807</Time>
+    <Time>638854490552162345</Time>
     <Hash length="20">
       <b>251</b>
       <b>135</b>
@@ -175,7 +200,7 @@
     </Hash>
   </Item>
   <Item name="CxP.dsv">
-    <Time>638854196286669895</Time>
+    <Time>638854490552142358</Time>
     <Hash length="20">
       <b>50</b>
       <b>109</b>
@@ -200,7 +225,7 @@
     </Hash>
   </Item>
   <Item name="VENTAS.cube">
-    <Time>638854283084288119</Time>
+    <Time>638854490552247122</Time>
     <Hash length="20">
       <b>242</b>
       <b>99</b>
@@ -225,7 +250,7 @@
     </Hash>
   </Item>
   <Item name="Dim Unidad Negocio 3.dim">
-    <Time>638854193236439291</Time>
+    <Time>638854490552207050</Time>
     <Hash length="20">
       <b>94</b>
       <b>112</b>
@@ -250,7 +275,7 @@
     </Hash>
   </Item>
   <Item name="COMPRAS.cube">
-    <Time>638854276126817189</Time>
+    <Time>638854490552112301</Time>
     <Hash length="20">
       <b>51</b>
       <b>124</b>
@@ -275,7 +300,7 @@
     </Hash>
   </Item>
   <Item name="Dim Unidad Negocio 1.dim">
-    <Time>638854192101411628</Time>
+    <Time>638854490552192523</Time>
     <Hash length="20">
       <b>70</b>
       <b>13</b>
@@ -299,33 +324,33 @@
       <b>113</b>
     </Hash>
   </Item>
-  <Item name="Dim Vendedor 1.dim">
-    <Time>638854192961557560</Time>
+  <Item name="Dim Unidad Negocio.dim">
+    <Time>638854490552207050</Time>
     <Hash length="20">
-      <b>35</b>
-      <b>3</b>
-      <b>136</b>
-      <b>6</b>
-      <b>178</b>
-      <b>103</b>
-      <b>167</b>
-      <b>36</b>
-      <b>134</b>
-      <b>176</b>
-      <b>243</b>
-      <b>80</b>
-      <b>64</b>
-      <b>62</b>
-      <b>95</b>
-      <b>105</b>
-      <b>186</b>
-      <b>149</b>
-      <b>88</b>
-      <b>221</b>
+      <b>79</b>
+      <b>118</b>
+      <b>238</b>
+      <b>112</b>
+      <b>104</b>
+      <b>98</b>
+      <b>51</b>
+      <b>197</b>
+      <b>227</b>
+      <b>16</b>
+      <b>227</b>
+      <b>78</b>
+      <b>97</b>
+      <b>17</b>
+      <b>146</b>
+      <b>250</b>
+      <b>171</b>
+      <b>238</b>
+      <b>50</b>
+      <b>81</b>
     </Hash>
   </Item>
   <Item name="CxC.cube">
-    <Time>638854271585434271</Time>
+    <Time>638854490552122357</Time>
     <Hash length="20">
       <b>242</b>
       <b>203</b>
@@ -350,7 +375,7 @@
     </Hash>
   </Item>
   <Item name="COMPRAS.dsv">
-    <Time>638852586003274202</Time>
+    <Time>638854490552122357</Time>
     <Hash length="20">
       <b>27</b>
       <b>191</b>
@@ -375,7 +400,7 @@
     </Hash>
   </Item>
   <Item name="INVENTARIO.partitions">
-    <Time>638854224878118777</Time>
+    <Time>638854490552237128</Time>
     <Hash length="20">
       <b>117</b>
       <b>152</b>
@@ -400,7 +425,7 @@
     </Hash>
   </Item>
   <Item name="Dim Proveedor 1.dim">
-    <Time>638854193469209965</Time>
+    <Time>638854490552192523</Time>
     <Hash length="20">
       <b>66</b>
       <b>206</b>
@@ -425,7 +450,7 @@
     </Hash>
   </Item>
   <Item name="Dim Proveedor.dim">
-    <Time>638854192647742725</Time>
+    <Time>638854490552192523</Time>
     <Hash length="20">
       <b>218</b>
       <b>46</b>
@@ -450,7 +475,7 @@
     </Hash>
   </Item>
   <Item name="Dim Fecha 4.dim">
-    <Time>638852568689183183</Time>
+    <Time>638854490552187476</Time>
     <Hash length="20">
       <b>83</b>
       <b>103</b>
@@ -475,7 +500,7 @@
     </Hash>
   </Item>
   <Item name="Dim Cliente.dim">
-    <Time>638854190178916780</Time>
+    <Time>638854490552172374</Time>
     <Hash length="20">
       <b>116</b>
       <b>162</b>
@@ -499,33 +524,8 @@
       <b>200</b>
     </Hash>
   </Item>
-  <Item name="Dim Unidad Negocio.dim">
-    <Time>638854191119415903</Time>
-    <Hash length="20">
-      <b>79</b>
-      <b>118</b>
-      <b>238</b>
-      <b>112</b>
-      <b>104</b>
-      <b>98</b>
-      <b>51</b>
-      <b>197</b>
-      <b>227</b>
-      <b>16</b>
-      <b>227</b>
-      <b>78</b>
-      <b>97</b>
-      <b>17</b>
-      <b>146</b>
-      <b>250</b>
-      <b>171</b>
-      <b>238</b>
-      <b>50</b>
-      <b>81</b>
-    </Hash>
-  </Item>
   <Item name="CxP.partitions">
-    <Time>638852568185010805</Time>
+    <Time>638854490552152349</Time>
     <Hash length="20">
       <b>83</b>
       <b>167</b>
@@ -550,7 +550,7 @@
     </Hash>
   </Item>
   <Item name="Dim Almacen 1.dim">
-    <Time>638854191925018712</Time>
+    <Time>638854490552152349</Time>
     <Hash length="20">
       <b>138</b>
       <b>89</b>
@@ -575,7 +575,7 @@
     </Hash>
   </Item>
   <Item name="Dim Unidad Negocio 4.dim">
-    <Time>638854193589319499</Time>
+    <Time>638854490552207050</Time>
     <Hash length="20">
       <b>240</b>
       <b>137</b>
@@ -600,7 +600,7 @@
     </Hash>
   </Item>
   <Item name="CxC.partitions">
-    <Time>638854238088206303</Time>
+    <Time>638854490552132358</Time>
     <Hash length="20">
       <b>10</b>
       <b>250</b>
@@ -625,7 +625,7 @@
     </Hash>
   </Item>
   <Item name="VENTAS.dsv">
-    <Time>638852470372228711</Time>
+    <Time>638854490552247122</Time>
     <Hash length="20">
       <b>51</b>
       <b>124</b>
@@ -650,7 +650,7 @@
     </Hash>
   </Item>
   <Item name="INVENTARIO.cube">
-    <Time>638854272525034967</Time>
+    <Time>638854490552227041</Time>
     <Hash length="20">
       <b>148</b>
       <b>34</b>
@@ -675,7 +675,7 @@
     </Hash>
   </Item>
   <Item name="Dim Almacen.dim">
-    <Time>638854191288586560</Time>
+    <Time>638854490552152349</Time>
     <Hash length="20">
       <b>79</b>
       <b>150</b>
@@ -700,7 +700,7 @@
     </Hash>
   </Item>
   <Item name="COMPRAS.partitions">
-    <Time>638852496851303129</Time>
+    <Time>638854490552122357</Time>
     <Hash length="20">
       <b>65</b>
       <b>246</b>
@@ -725,7 +725,7 @@
     </Hash>
   </Item>
   <Item name="Dim Unidad Negocio 2.dim">
-    <Time>638854192348150171</Time>
+    <Time>638854490552192523</Time>
     <Hash length="20">
       <b>58</b>
       <b>135</b>
@@ -750,7 +750,7 @@
     </Hash>
   </Item>
   <Item name="Dim Usuario.dim">
-    <Time>638854193334646365</Time>
+    <Time>638854490552217052</Time>
     <Hash length="20">
       <b>220</b>
       <b>237</b>
@@ -775,7 +775,7 @@
     </Hash>
   </Item>
   <Item name="Dim Fecha.dim">
-    <Time>638852462126155326</Time>
+    <Time>638854490552192523</Time>
     <Hash length="20">
       <b>103</b>
       <b>44</b>
@@ -800,7 +800,7 @@
     </Hash>
   </Item>
   <Item name="Dim Fecha 3.dim">
-    <Time>638852538276968933</Time>
+    <Time>638854490552172374</Time>
     <Hash length="20">
       <b>173</b>
       <b>19</b>
@@ -825,7 +825,7 @@
     </Hash>
   </Item>
   <Item name="Dim Vendedor.dim">
-    <Time>638854191586495135</Time>
+    <Time>638854490552217052</Time>
     <Hash length="20">
       <b>140</b>
       <b>138</b>
@@ -850,7 +850,7 @@
     </Hash>
   </Item>
   <Item name="Dim Articulo 2.dim">
-    <Time>638854192784258025</Time>
+    <Time>638854490552162345</Time>
     <Hash length="20">
       <b>222</b>
       <b>206</b>
@@ -875,7 +875,7 @@
     </Hash>
   </Item>
   <Item name="Dim Fecha 2.dim">
-    <Time>638852497779577014</Time>
+    <Time>638854490552172374</Time>
     <Hash length="20">
       <b>54</b>
       <b>187</b>
@@ -900,7 +900,7 @@
     </Hash>
   </Item>
   <Item name="INVENTARIO.dsv">
-    <Time>638854218996478985</Time>
+    <Time>638854490552227041</Time>
     <Hash length="20">
       <b>171</b>
       <b>16</b>
@@ -925,7 +925,7 @@
     </Hash>
   </Item>
   <Item name="Dim Cliente 1.dim">
-    <Time>638854193071481209</Time>
+    <Time>638854490552172374</Time>
     <Hash length="20">
       <b>151</b>
       <b>218</b>
@@ -950,7 +950,7 @@
     </Hash>
   </Item>
   <Item name="VENTAS.partitions">
-    <Time>638852463800598339</Time>
+    <Time>638854490552257060</Time>
     <Hash length="20">
       <b>118</b>
       <b>250</b>
@@ -975,7 +975,7 @@
     </Hash>
   </Item>
   <Item name="Dim Articulo 1.dim">
-    <Time>638854191782329753</Time>
+    <Time>638854490552162345</Time>
     <Hash length="20">
       <b>86</b>
       <b>27</b>
