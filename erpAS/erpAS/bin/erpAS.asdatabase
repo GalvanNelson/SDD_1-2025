@@ -7126,7 +7126,7 @@
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="16" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="22" scrolltop="-391" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="93" x="7472" y="15642" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="16" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="22" scrolltop="-391" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="93" x="7684" y="15642" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
                 </font>
@@ -7387,7 +7387,7 @@
         </Attribute>
         <Attribute>
           <ID>Nombre</ID>
-          <Name>NombreUnidadUsuario</Name>
+          <Name>NombreUnidadNegocio</Name>
           <KeyColumns>
             <KeyColumn>
               <DataType>WChar</DataType>
@@ -7464,7 +7464,7 @@
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="92" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="13525" scrolltop="12862" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="145" x="32830" y="15642" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="92" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="13525" scrolltop="12862" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="145" x="17590" y="15642" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
                 </font>
@@ -11150,7 +11150,7 @@ VISIBLE = 1; </Text>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="60" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="118" scrolltop="2503" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="17590" y="15642" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="60" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="118" scrolltop="2503" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="25442" y="15642" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
                 </font>
@@ -13839,7 +13839,7 @@ VISIBLE = 1; </Text>
                       </connector>
                     </ddscontrol>
                   </dds>
-</DiagramLayout>
+                </DiagramLayout>
                 <ShowRelationshipNames>False</ShowRelationshipNames>
                 <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
                 <DiagramViewPortLeft>11965</DiagramViewPortLeft>
@@ -15643,7 +15643,7 @@ VISIBLE = 1; </Text>
                       </connector>
                     </ddscontrol>
                   </dds>
-</DiagramLayout>
+                </DiagramLayout>
                 <ShowRelationshipNames>False</ShowRelationshipNames>
                 <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
                 <DiagramViewPortLeft>4211</DiagramViewPortLeft>
@@ -16009,61 +16009,61 @@ VISIBLE = 1; </Text>
               <xs:selector xpath=".//dbo_dimCategoriaCliente" />
               <xs:field xpath="idCategoriaCliente" />
             </xs:unique>
-            <xs:keyref name="FK_dimCliente_dimCategoriaCliente" refer="dbo_dimCategoriaCliente_Constraint1">
+            <xs:keyref name="FK_dimCliente_dimEstado" refer="dbo_dimEstado_Constraint1">
               <xs:selector xpath=".//dbo_dimCliente" />
-              <xs:field xpath="idCategoriaCliente" />
-            </xs:keyref>
-            <xs:keyref name="FK_dimCliente_dimTipoIdentificacion" refer="dbo_dimTipoIdentificacion_Constraint1">
-              <xs:selector xpath=".//dbo_dimCliente" />
-              <xs:field xpath="idTipoIdentificacion" />
+              <xs:field xpath="idEstado" />
             </xs:keyref>
             <xs:keyref name="FK_dimCliente_dimTipoCliente" refer="dbo_dimTipoCliente_Constraint1">
               <xs:selector xpath=".//dbo_dimCliente" />
               <xs:field xpath="idTipoCliente" />
             </xs:keyref>
-            <xs:keyref name="FK_dimCliente_dimEstado" refer="dbo_dimEstado_Constraint1">
+            <xs:keyref name="FK_dimCliente_dimTipoIdentificacion" refer="dbo_dimTipoIdentificacion_Constraint1">
               <xs:selector xpath=".//dbo_dimCliente" />
-              <xs:field xpath="idEstado" />
+              <xs:field xpath="idTipoIdentificacion" />
             </xs:keyref>
-            <xs:keyref name="FK_dimVendedor_dimCargo" refer="dbo_dimCargo_Constraint1">
-              <xs:selector xpath=".//dbo_dimVendedor" />
-              <xs:field xpath="idCargo" />
-            </xs:keyref>
-            <xs:keyref name="FK_dimVendedor_dimTipoVendedor" refer="dbo_dimTipoVendedor_Constraint1">
-              <xs:selector xpath=".//dbo_dimVendedor" />
-              <xs:field xpath="idTipoVendedor" />
+            <xs:keyref name="FK_dimCliente_dimCategoriaCliente" refer="dbo_dimCategoriaCliente_Constraint1">
+              <xs:selector xpath=".//dbo_dimCliente" />
+              <xs:field xpath="idCategoriaCliente" />
             </xs:keyref>
             <xs:keyref name="FK_dimVendedor_dimTipoContrato" refer="dbo_dimTipoContrato_Constraint1">
               <xs:selector xpath=".//dbo_dimVendedor" />
               <xs:field xpath="idTipoContrato" />
             </xs:keyref>
-            <xs:keyref name="FK_dimUnidadNegocio_dimEmpresa" refer="dbo_dimEmpresa_Constraint1">
-              <xs:selector xpath=".//dbo_dimUnidadNegocio" />
-              <xs:field xpath="idEmpresa" />
+            <xs:keyref name="FK_dimVendedor_dimTipoVendedor" refer="dbo_dimTipoVendedor_Constraint1">
+              <xs:selector xpath=".//dbo_dimVendedor" />
+              <xs:field xpath="idTipoVendedor" />
             </xs:keyref>
-            <xs:keyref name="FK_dimUnidadNegocio_dimCanalComercial" refer="dbo_dimCanalComercial_Constraint1">
-              <xs:selector xpath=".//dbo_dimUnidadNegocio" />
-              <xs:field xpath="idCanalComercial" />
+            <xs:keyref name="FK_dimVendedor_dimCargo" refer="dbo_dimCargo_Constraint1">
+              <xs:selector xpath=".//dbo_dimVendedor" />
+              <xs:field xpath="idCargo" />
             </xs:keyref>
             <xs:keyref name="FK_dimUnidadNegocio_dimTipoUnidadNegocio" refer="dbo_dimTipoUnidadNegocio_Constraint1">
               <xs:selector xpath=".//dbo_dimUnidadNegocio" />
               <xs:field xpath="idTipoUnidadNegocio" />
             </xs:keyref>
-            <xs:keyref name="FK_factCXC_dimUnidadNegocio" refer="dbo_dimUnidadNegocio_Constraint1">
-              <xs:selector xpath=".//dbo_factCxC" />
-              <xs:field xpath="idNegocio" />
+            <xs:keyref name="FK_dimUnidadNegocio_dimCanalComercial" refer="dbo_dimCanalComercial_Constraint1">
+              <xs:selector xpath=".//dbo_dimUnidadNegocio" />
+              <xs:field xpath="idCanalComercial" />
             </xs:keyref>
-            <xs:keyref name="FK_factCXC_dimFecha" refer="Constraint1">
+            <xs:keyref name="FK_dimUnidadNegocio_dimEmpresa" refer="dbo_dimEmpresa_Constraint1">
+              <xs:selector xpath=".//dbo_dimUnidadNegocio" />
+              <xs:field xpath="idEmpresa" />
+            </xs:keyref>
+            <xs:keyref name="FK_factCXC_dimVendedor" refer="dbo_dimVendedor_Constraint1">
               <xs:selector xpath=".//dbo_factCxC" />
-              <xs:field xpath="Fecha" />
+              <xs:field xpath="idVendedor" />
             </xs:keyref>
             <xs:keyref name="FK_factCXC_dimCliente" refer="dbo_dimCliente_Constraint1">
               <xs:selector xpath=".//dbo_factCxC" />
               <xs:field xpath="idCliente" />
             </xs:keyref>
-            <xs:keyref name="FK_factCXC_dimVendedor" refer="dbo_dimVendedor_Constraint1">
+            <xs:keyref name="FK_factCXC_dimFecha" refer="Constraint1">
               <xs:selector xpath=".//dbo_factCxC" />
-              <xs:field xpath="idVendedor" />
+              <xs:field xpath="Fecha" />
+            </xs:keyref>
+            <xs:keyref name="FK_factCXC_dimUnidadNegocio" refer="dbo_dimUnidadNegocio_Constraint1">
+              <xs:selector xpath=".//dbo_factCxC" />
+              <xs:field xpath="idNegocio" />
             </xs:keyref>
           </xs:element>
         </xs:schema>
@@ -16360,7 +16360,7 @@ VISIBLE = 1; </Text>
                       </connector>
                     </ddscontrol>
                   </dds>
-</DiagramLayout>
+                </DiagramLayout>
                 <ShowRelationshipNames>False</ShowRelationshipNames>
                 <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
                 <DiagramViewPortLeft>1751</DiagramViewPortLeft>
@@ -16605,37 +16605,37 @@ VISIBLE = 1; </Text>
               <xs:selector xpath=".//dbo_dimEmpresa" />
               <xs:field xpath="idEmpresa" />
             </xs:unique>
-            <xs:keyref name="FK_dimUnidadNegocio_dimEmpresa" refer="dbo_dimEmpresa_Constraint1">
+            <xs:keyref name="FK_dimUnidadNegocio_dimTipoUnidadNegocio" refer="dbo_dimTipoUnidadNegocio_Constraint1">
               <xs:selector xpath=".//dbo_dimUnidadNegocio" />
-              <xs:field xpath="idEmpresa" />
+              <xs:field xpath="idTipoUnidadNegocio" />
             </xs:keyref>
             <xs:keyref name="FK_dimUnidadNegocio_dimCanalComercial" refer="dbo_dimCanalComercial_Constraint1">
               <xs:selector xpath=".//dbo_dimUnidadNegocio" />
               <xs:field xpath="idCanalComercial" />
             </xs:keyref>
-            <xs:keyref name="FK_dimUnidadNegocio_dimTipoUnidadNegocio" refer="dbo_dimTipoUnidadNegocio_Constraint1">
+            <xs:keyref name="FK_dimUnidadNegocio_dimEmpresa" refer="dbo_dimEmpresa_Constraint1">
               <xs:selector xpath=".//dbo_dimUnidadNegocio" />
-              <xs:field xpath="idTipoUnidadNegocio" />
+              <xs:field xpath="idEmpresa" />
             </xs:keyref>
             <xs:keyref name="FK_dimProveedor_dimTipoProveedor" refer="dbo_dimTipoProveedor_Constraint1">
               <xs:selector xpath=".//dbo_dimProveedor" />
               <xs:field xpath="idTipoProveedor" />
             </xs:keyref>
-            <xs:keyref name="FK_factCxP_dimUnidadNegocio" refer="dbo_dimUnidadNegocio_Constraint1">
+            <xs:keyref name="FK_factCxP_dimUsuario" refer="dbo_dimUsuario_Constraint1">
               <xs:selector xpath=".//dbo_factCxP" />
-              <xs:field xpath="idNegocio" />
-            </xs:keyref>
-            <xs:keyref name="FK_factCxP_dimProveedor" refer="dbo_dimProveedor_Constraint1">
-              <xs:selector xpath=".//dbo_factCxP" />
-              <xs:field xpath="idProveedor" />
+              <xs:field xpath="idUsuario" />
             </xs:keyref>
             <xs:keyref name="FK_factCxP_dimFecha" refer="Constraint1">
               <xs:selector xpath=".//dbo_factCxP" />
               <xs:field xpath="Fecha" />
             </xs:keyref>
-            <xs:keyref name="FK_factCxP_dimUsuario" refer="dbo_dimUsuario_Constraint1">
+            <xs:keyref name="FK_factCxP_dimProveedor" refer="dbo_dimProveedor_Constraint1">
               <xs:selector xpath=".//dbo_factCxP" />
-              <xs:field xpath="idUsuario" />
+              <xs:field xpath="idProveedor" />
+            </xs:keyref>
+            <xs:keyref name="FK_factCxP_dimUnidadNegocio" refer="dbo_dimUnidadNegocio_Constraint1">
+              <xs:selector xpath=".//dbo_factCxP" />
+              <xs:field xpath="idNegocio" />
             </xs:keyref>
           </xs:element>
         </xs:schema>

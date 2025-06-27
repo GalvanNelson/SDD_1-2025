@@ -215,7 +215,7 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>8InmVwa7dpl52EuCEGmEeMYLfmQ=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
+        <TimeStamp>WfcsK5AHoq9CpmrALnuvLDyM1FM=27/06/2025 04:16:18 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
         <ID>
           <String>Dim Unidad Negocio 4</String>
         </ID>
@@ -267,5 +267,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2025-06-27T19:54:26.513333Z</LastDeployed>
+  <LastDeployed>2025-06-27T20:34:43.643333Z</LastDeployed>
 </DeploymentSnapshot>

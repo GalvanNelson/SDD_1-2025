@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\SDD_1-2025\\erpAS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C4B9A400-7805-E57E-594E-8D53449F1FFB}|erpAS\\erpAS.dwproj|D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\SDD_1-2025\\erpAS\\erpAS\\CxP.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
-      "RelativeMoniker": "D:0:0:{C4B9A400-7805-E57E-594E-8D53449F1FFB}|erpAS\\erpAS.dwproj|solutionrelative:erpAS\\CxP.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+      "AbsoluteMoniker": "D:0:0:{C4B9A400-7805-E57E-594E-8D53449F1FFB}|erpAS\\erpAS.dwproj|D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\SDD_1-2025\\erpAS\\erpAS\\VENTAS.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{C4B9A400-7805-E57E-594E-8D53449F1FFB}|erpAS\\erpAS.dwproj|solutionrelative:erpAS\\VENTAS.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -29,19 +29,15 @@
               "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{6d52cee1-a15c-42fd-8d30-faacc8d1dd02}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CxP.dsv [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\SDD_1-2025\\erpAS\\erpAS\\CxP.dsv",
-              "RelativeDocumentMoniker": "erpAS\\CxP.dsv",
-              "ToolTip": "D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\SDD_1-2025\\erpAS\\erpAS\\CxP.dsv [Dise\u00F1o]",
-              "RelativeToolTip": "erpAS\\CxP.dsv [Dise\u00F1o]",
+              "Title": "VENTAS.cube [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\SDD_1-2025\\erpAS\\erpAS\\VENTAS.cube",
+              "RelativeDocumentMoniker": "erpAS\\VENTAS.cube",
+              "ToolTip": "D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\SDD_1-2025\\erpAS\\erpAS\\VENTAS.cube [Dise\u00F1o]",
+              "RelativeToolTip": "erpAS\\VENTAS.cube [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-06-27T19:51:42.665Z",
+              "WhenOpened": "2025-06-27T20:19:53.275Z",
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]
