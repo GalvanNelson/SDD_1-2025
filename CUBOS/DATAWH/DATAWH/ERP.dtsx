@@ -11,8 +11,8 @@
   DTS:LocaleID="2058"
   DTS:ObjectName="ERP"
   DTS:PackageType="5"
-  DTS:VersionBuild="181"
-  DTS:VersionGUID="{0C67CFB8-5ECB-46EA-B454-77F46B0BB148}">
+  DTS:VersionBuild="186"
+  DTS:VersionGUID="{ADB44895-5DBA-4C21-BF4A-1228FF2BBA2D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -4281,44 +4281,44 @@ WHERE  (erpDM.dbo.dimUnidad.idUnidad IS NULL)</property>
               startId="Package\Dimensiones Secundarias\Leer TipoArticulo.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET16]"
-              endId="Package\Dimensiones Secundarias\dimTipoProveedor.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimUnidad.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer TipoProveedor.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer Unidad.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET15]"
-              endId="Package\Dimensiones Secundarias\dimCanalComercial.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimEnvase.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer CanalComercial.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer Envase.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET14]"
-              endId="Package\Dimensiones Secundarias\dimEmpresa.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimLinea.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer Empresa.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer Linea.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET13]"
-              endId="Package\Dimensiones Secundarias\dimTipoUnidadNegocio.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimCategoria.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer TipoUnidadNegocio.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer Categoria.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET12]"
-              endId="Package\Dimensiones Secundarias\dimTipoContrato.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimSubCategoria.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer TipoContrato.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer SubCategoria.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET11]"
-              endId="Package\Dimensiones Secundarias\dimCargo.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimTipoCliente.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer Cargo.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer TipoCliente.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET10]"
-              endId="Package\Dimensiones Secundarias\dimTipoVendedor.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimEstado.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer TipoVendedor.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer Estado.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET17]"
-              endId="Package\Dimensiones Secundarias\dimTipoNomina.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimCategoriaCliente.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer TipoNomina.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer CategoriaCliente.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET9]"
               endId="Package\Dimensiones Secundarias\dimTipoIdentificacion.Inputs[Entrada de destino de ADO NET]"
@@ -4326,44 +4326,44 @@ WHERE  (erpDM.dbo.dimUnidad.idUnidad IS NULL)</property>
               startId="Package\Dimensiones Secundarias\Leer TipoIdentificacion.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET7]"
-              endId="Package\Dimensiones Secundarias\dimEstado.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimTipoVendedor.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer Estado.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer TipoVendedor.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET6]"
-              endId="Package\Dimensiones Secundarias\dimTipoCliente.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimCargo.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer TipoCliente.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer Cargo.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET5]"
-              endId="Package\Dimensiones Secundarias\dimSubCategoria.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimTipoContrato.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer SubCategoria.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer TipoContrato.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET4]"
-              endId="Package\Dimensiones Secundarias\dimCategoria.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimTipoUnidadNegocio.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer Categoria.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer TipoUnidadNegocio.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET3]"
-              endId="Package\Dimensiones Secundarias\dimLinea.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimEmpresa.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer Linea.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer Empresa.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET2]"
-              endId="Package\Dimensiones Secundarias\dimEnvase.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimCanalComercial.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer Envase.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer CanalComercial.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET1]"
-              endId="Package\Dimensiones Secundarias\dimUnidad.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimTipoProveedor.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer Unidad.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer TipoProveedor.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET8]"
-              endId="Package\Dimensiones Secundarias\dimCategoriaCliente.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimTipoNomina.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer CategoriaCliente.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer TipoNomina.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET18]"
               endId="Package\Dimensiones Secundarias\dimEstadoEmpleado.Inputs[Entrada de destino de ADO NET]"
@@ -4866,160 +4866,6 @@ WHERE  (erpDM.dbo.dimUnidad.idUnidad IS NULL)</property>
               </outputs>
             </component>
             <component
-              refId="Package\DimensionesPrincipales\dimEmpleado"
-              componentClassID="Microsoft.ManagedComponentHost"
-              contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
-              description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
-              name="dimEmpleado"
-              usesDispositions="true"
-              version="2">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Nombre de la tabla de la base de datos de destino."
-                  expressionType="Notify"
-                  name="TableOrViewName"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."dimEmpleado"</property>
-                <property
-                  dataType="System.Int32"
-                  description="Especifique el número de filas por lote. El valor predeterminado es 0, que utiliza el mismo tamaño que el búfer interno de SSIS. "
-                  expressionType="Notify"
-                  name="BatchSize">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito. "
-                  expressionType="Notify"
-                  name="CommandTimeout">30</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Especifica si se debe usar la interfaz SqlBulkCopy para mejorar el rendimiento de las operaciones de inserción masiva. No todos los proveedores admiten esta interfaz."
-                  expressionType="Notify"
-                  name="UseBulkInsertWhenPossible">true</property>
-                <property
-                  dataType="System.String"
-                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\DimensionesPrincipales\dimEmpleado.Connections[IDbConnection]"
-                  connectionManagerID="{FC96C477-7160-4B6A-80A6-FC852B455105}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[AYRTON-LAPTOP_MSSQLSERVER3.erpDM]"
-                  description="Administrador de conexiones administrado"
-                  name="IDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\DimensionesPrincipales\dimEmpleado.Inputs[Entrada de destino de ADO NET]"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="Entrada de destino de ADO NET">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\DimensionesPrincipales\dimEmpleado.Inputs[Entrada de destino de ADO NET].Columns[idEmpleado]"
-                      cachedDataType="i4"
-                      cachedName="idEmpleado"
-                      externalMetadataColumnId="Package\DimensionesPrincipales\dimEmpleado.Inputs[Entrada de destino de ADO NET].ExternalColumns[idEmpleado]"
-                      lineageId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de origen de ADO NET].Columns[idEmpleado]" />
-                    <inputColumn
-                      refId="Package\DimensionesPrincipales\dimEmpleado.Inputs[Entrada de destino de ADO NET].Columns[idCargoEmpleado]"
-                      cachedDataType="i4"
-                      cachedName="idCargoEmpleado"
-                      externalMetadataColumnId="Package\DimensionesPrincipales\dimEmpleado.Inputs[Entrada de destino de ADO NET].ExternalColumns[idCargoEmpleado]"
-                      lineageId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de origen de ADO NET].Columns[idCargoEmpleado]" />
-                    <inputColumn
-                      refId="Package\DimensionesPrincipales\dimEmpleado.Inputs[Entrada de destino de ADO NET].Columns[idEstadoCivil]"
-                      cachedDataType="i4"
-                      cachedName="idEstadoCivil"
-                      externalMetadataColumnId="Package\DimensionesPrincipales\dimEmpleado.Inputs[Entrada de destino de ADO NET].ExternalColumns[idEstadoCivil]"
-                      lineageId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de origen de ADO NET].Columns[idEstadoCivil]" />
-                    <inputColumn
-                      refId="Package\DimensionesPrincipales\dimEmpleado.Inputs[Entrada de destino de ADO NET].Columns[idTipoNomina]"
-                      cachedDataType="i4"
-                      cachedName="idTipoNomina"
-                      externalMetadataColumnId="Package\DimensionesPrincipales\dimEmpleado.Inputs[Entrada de destino de ADO NET].ExternalColumns[idTipoNomina]"
-                      lineageId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de origen de ADO NET].Columns[idTipoNomina]" />
-                    <inputColumn
-                      refId="Package\DimensionesPrincipales\dimEmpleado.Inputs[Entrada de destino de ADO NET].Columns[idEstadoEmpleado]"
-                      cachedDataType="i4"
-                      cachedName="idEstadoEmpleado"
-                      externalMetadataColumnId="Package\DimensionesPrincipales\dimEmpleado.Inputs[Entrada de destino de ADO NET].ExternalColumns[idEstadoEmpleado]"
-                      lineageId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de origen de ADO NET].Columns[idEstadoEmpleado]" />
-                    <inputColumn
-                      refId="Package\DimensionesPrincipales\dimEmpleado.Inputs[Entrada de destino de ADO NET].Columns[nombre]"
-                      cachedDataType="wstr"
-                      cachedLength="120"
-                      cachedName="nombre"
-                      externalMetadataColumnId="Package\DimensionesPrincipales\dimEmpleado.Inputs[Entrada de destino de ADO NET].ExternalColumns[nombre]"
-                      lineageId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de origen de ADO NET].Columns[nombre]" />
-                    <inputColumn
-                      refId="Package\DimensionesPrincipales\dimEmpleado.Inputs[Entrada de destino de ADO NET].Columns[sexo]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
-                      cachedName="sexo"
-                      externalMetadataColumnId="Package\DimensionesPrincipales\dimEmpleado.Inputs[Entrada de destino de ADO NET].ExternalColumns[sexo]"
-                      lineageId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de origen de ADO NET].Columns[sexo]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\DimensionesPrincipales\dimEmpleado.Inputs[Entrada de destino de ADO NET].ExternalColumns[idEmpleado]"
-                      dataType="i4"
-                      name="idEmpleado" />
-                    <externalMetadataColumn
-                      refId="Package\DimensionesPrincipales\dimEmpleado.Inputs[Entrada de destino de ADO NET].ExternalColumns[idCargoEmpleado]"
-                      dataType="i4"
-                      name="idCargoEmpleado" />
-                    <externalMetadataColumn
-                      refId="Package\DimensionesPrincipales\dimEmpleado.Inputs[Entrada de destino de ADO NET].ExternalColumns[idEstadoCivil]"
-                      dataType="i4"
-                      name="idEstadoCivil" />
-                    <externalMetadataColumn
-                      refId="Package\DimensionesPrincipales\dimEmpleado.Inputs[Entrada de destino de ADO NET].ExternalColumns[idTipoNomina]"
-                      dataType="i4"
-                      name="idTipoNomina" />
-                    <externalMetadataColumn
-                      refId="Package\DimensionesPrincipales\dimEmpleado.Inputs[Entrada de destino de ADO NET].ExternalColumns[idEstadoEmpleado]"
-                      dataType="i4"
-                      name="idEstadoEmpleado" />
-                    <externalMetadataColumn
-                      refId="Package\DimensionesPrincipales\dimEmpleado.Inputs[Entrada de destino de ADO NET].ExternalColumns[nombre]"
-                      dataType="wstr"
-                      length="2147483647"
-                      name="nombre" />
-                    <externalMetadataColumn
-                      refId="Package\DimensionesPrincipales\dimEmpleado.Inputs[Entrada de destino de ADO NET].ExternalColumns[sexo]"
-                      dataType="wstr"
-                      length="2147483647"
-                      name="sexo" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\DimensionesPrincipales\dimEmpleado.Outputs[Salida de error de destino de ADO NET]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Salida de error de destino de ADO NET"
-                  synchronousInputId="Package\DimensionesPrincipales\dimEmpleado.Inputs[Entrada de destino de ADO NET]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\DimensionesPrincipales\dimEmpleado.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\DimensionesPrincipales\dimEmpleado.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\DimensionesPrincipales\dimEmpleado.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\DimensionesPrincipales\dimEmpleado.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\DimensionesPrincipales\dimProveedor"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
@@ -5135,108 +4981,6 @@ WHERE  (erpDM.dbo.dimUnidad.idUnidad IS NULL)</property>
                       refId="Package\DimensionesPrincipales\dimProveedor.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\DimensionesPrincipales\dimProveedor.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\DimensionesPrincipales\dimTurno"
-              componentClassID="Microsoft.ManagedComponentHost"
-              contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
-              description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
-              name="dimTurno"
-              usesDispositions="true"
-              version="2">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Nombre de la tabla de la base de datos de destino."
-                  expressionType="Notify"
-                  name="TableOrViewName"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."dimTurno"</property>
-                <property
-                  dataType="System.Int32"
-                  description="Especifique el número de filas por lote. El valor predeterminado es 0, que utiliza el mismo tamaño que el búfer interno de SSIS. "
-                  expressionType="Notify"
-                  name="BatchSize">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito. "
-                  expressionType="Notify"
-                  name="CommandTimeout">30</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Especifica si se debe usar la interfaz SqlBulkCopy para mejorar el rendimiento de las operaciones de inserción masiva. No todos los proveedores admiten esta interfaz."
-                  expressionType="Notify"
-                  name="UseBulkInsertWhenPossible">true</property>
-                <property
-                  dataType="System.String"
-                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\DimensionesPrincipales\dimTurno.Connections[IDbConnection]"
-                  connectionManagerID="{FC96C477-7160-4B6A-80A6-FC852B455105}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[AYRTON-LAPTOP_MSSQLSERVER3.erpDM]"
-                  description="Administrador de conexiones administrado"
-                  name="IDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\DimensionesPrincipales\dimTurno.Inputs[Entrada de destino de ADO NET]"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="Entrada de destino de ADO NET">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\DimensionesPrincipales\dimTurno.Inputs[Entrada de destino de ADO NET].Columns[nombre]"
-                      cachedDataType="wstr"
-                      cachedLength="30"
-                      cachedName="nombre"
-                      externalMetadataColumnId="Package\DimensionesPrincipales\dimTurno.Inputs[Entrada de destino de ADO NET].ExternalColumns[nombre]"
-                      lineageId="Package\DimensionesPrincipales\Leer Turno.Outputs[Salida de origen de ADO NET].Columns[nombre]" />
-                    <inputColumn
-                      refId="Package\DimensionesPrincipales\dimTurno.Inputs[Entrada de destino de ADO NET].Columns[codigo]"
-                      cachedDataType="i4"
-                      cachedName="codigo"
-                      externalMetadataColumnId="Package\DimensionesPrincipales\dimTurno.Inputs[Entrada de destino de ADO NET].ExternalColumns[idTurno]"
-                      lineageId="Package\DimensionesPrincipales\Leer Turno.Outputs[Salida de origen de ADO NET].Columns[codigo]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\DimensionesPrincipales\dimTurno.Inputs[Entrada de destino de ADO NET].ExternalColumns[idTurno]"
-                      dataType="i4"
-                      name="idTurno" />
-                    <externalMetadataColumn
-                      refId="Package\DimensionesPrincipales\dimTurno.Inputs[Entrada de destino de ADO NET].ExternalColumns[nombre]"
-                      dataType="wstr"
-                      length="2147483647"
-                      name="nombre" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\DimensionesPrincipales\dimTurno.Outputs[Salida de error de destino de ADO NET]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Salida de error de destino de ADO NET"
-                  synchronousInputId="Package\DimensionesPrincipales\dimTurno.Inputs[Entrada de destino de ADO NET]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\DimensionesPrincipales\dimTurno.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\DimensionesPrincipales\dimTurno.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\DimensionesPrincipales\dimTurno.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\DimensionesPrincipales\dimTurno.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -6321,228 +6065,6 @@ WHERE  (erpDM.dbo.dimCliente.idCliente IS NULL)</property>
               </outputs>
             </component>
             <component
-              refId="Package\DimensionesPrincipales\Leer Empleado"
-              componentClassID="Microsoft.ManagedComponentHost"
-              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
-              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
-              name="Leer Empleado"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT db_erp_sige.empleado.codigo AS idEmpleado, db_erp_sige.cargo.codigo AS idCargoEmpleado, db_erp_sige.estado_civil.codigo AS idEstadoCivil, db_erp_sige.tipo_de_nomina.codigo AS idTipoNomina, 
-                  db_erp_sige.estado_empleado.codigo AS idEstadoEmpleado, db_erp_sige.empleado.nombre, db_erp_sige.empleado.sexo
-FROM     db_erp_sige.empleado INNER JOIN
-                  db_erp_sige.cargo ON db_erp_sige.empleado.cargo = db_erp_sige.cargo.codigo INNER JOIN
-                  db_erp_sige.estado_civil ON db_erp_sige.empleado.estado_civil = db_erp_sige.estado_civil.codigo INNER JOIN
-                  db_erp_sige.estado_empleado ON db_erp_sige.empleado.estado = db_erp_sige.estado_empleado.codigo INNER JOIN
-                  db_erp_sige.tipo_de_nomina ON db_erp_sige.empleado.tipo_nomina = db_erp_sige.tipo_de_nomina.codigo LEFT OUTER JOIN
-                  erpDM.dbo.dimEmpleado ON db_erp_sige.cargo.codigo = erpDM.dbo.dimEmpleado.idCargoEmpleado AND db_erp_sige.estado_civil.codigo = erpDM.dbo.dimEmpleado.idEstadoCivil AND 
-                  db_erp_sige.tipo_de_nomina.codigo = erpDM.dbo.dimEmpleado.idTipoNomina AND db_erp_sige.estado_empleado.codigo = erpDM.dbo.dimEmpleado.idEstadoEmpleado
-WHERE  (erpDM.dbo.dimEmpleado.idCargoEmpleado IS NULL) OR
-                  (erpDM.dbo.dimEmpleado.idEstadoCivil IS NULL) OR
-                  (erpDM.dbo.dimEmpleado.idTipoNomina IS NULL) OR
-                  (erpDM.dbo.dimEmpleado.idEstadoEmpleado IS NULL)</property>
-                <property
-                  dataType="System.Int32"
-                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
-                  name="CommandTimeout">30</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
-                  name="AllowImplicitStringConversion">true</property>
-                <property
-                  dataType="System.String"
-                  description="Nombre de la tabla de la base de datos de origen."
-                  expressionType="Notify"
-                  name="TableOrViewName"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Especificar el modo de recuperar información de columnas externas"
-                  name="AccessMode"
-                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
-                <property
-                  dataType="System.String"
-                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\DimensionesPrincipales\Leer Empleado.Connections[IDbConnection]"
-                  connectionManagerID="{1AFC0785-6D02-4568-8492-A66DE2CC57B7}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[AYRTON-LAPTOP_MSSQLSERVER3.erp]"
-                  description="Administrador de conexiones administrado"
-                  name="IDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de origen de ADO NET]"
-                  name="Salida de origen de ADO NET">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de origen de ADO NET].Columns[idEmpleado]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de origen de ADO NET].ExternalColumns[idEmpleado]"
-                      lineageId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de origen de ADO NET].Columns[idEmpleado]"
-                      name="idEmpleado"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de origen de ADO NET].Columns[idCargoEmpleado]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de origen de ADO NET].ExternalColumns[idCargoEmpleado]"
-                      lineageId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de origen de ADO NET].Columns[idCargoEmpleado]"
-                      name="idCargoEmpleado"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de origen de ADO NET].Columns[idEstadoCivil]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de origen de ADO NET].ExternalColumns[idEstadoCivil]"
-                      lineageId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de origen de ADO NET].Columns[idEstadoCivil]"
-                      name="idEstadoCivil"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de origen de ADO NET].Columns[idTipoNomina]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de origen de ADO NET].ExternalColumns[idTipoNomina]"
-                      lineageId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de origen de ADO NET].Columns[idTipoNomina]"
-                      name="idTipoNomina"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de origen de ADO NET].Columns[idEstadoEmpleado]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de origen de ADO NET].ExternalColumns[idEstadoEmpleado]"
-                      lineageId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de origen de ADO NET].Columns[idEstadoEmpleado]"
-                      name="idEstadoEmpleado"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de origen de ADO NET].Columns[nombre]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de origen de ADO NET].ExternalColumns[nombre]"
-                      length="120"
-                      lineageId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de origen de ADO NET].Columns[nombre]"
-                      name="nombre"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de origen de ADO NET].Columns[sexo]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de origen de ADO NET].ExternalColumns[sexo]"
-                      length="10"
-                      lineageId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de origen de ADO NET].Columns[sexo]"
-                      name="sexo"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de origen de ADO NET].ExternalColumns[idEmpleado]"
-                      dataType="i4"
-                      name="idEmpleado" />
-                    <externalMetadataColumn
-                      refId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de origen de ADO NET].ExternalColumns[idCargoEmpleado]"
-                      dataType="i4"
-                      name="idCargoEmpleado" />
-                    <externalMetadataColumn
-                      refId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de origen de ADO NET].ExternalColumns[idEstadoCivil]"
-                      dataType="i4"
-                      name="idEstadoCivil" />
-                    <externalMetadataColumn
-                      refId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de origen de ADO NET].ExternalColumns[idTipoNomina]"
-                      dataType="i4"
-                      name="idTipoNomina" />
-                    <externalMetadataColumn
-                      refId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de origen de ADO NET].ExternalColumns[idEstadoEmpleado]"
-                      dataType="i4"
-                      name="idEstadoEmpleado" />
-                    <externalMetadataColumn
-                      refId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de origen de ADO NET].ExternalColumns[nombre]"
-                      dataType="wstr"
-                      length="120"
-                      name="nombre" />
-                    <externalMetadataColumn
-                      refId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de origen de ADO NET].ExternalColumns[sexo]"
-                      dataType="wstr"
-                      length="10"
-                      name="sexo" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de error de origen de ADO NET]"
-                  isErrorOut="true"
-                  name="Salida de error de origen de ADO NET">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de error de origen de ADO NET].Columns[idEmpleado]"
-                      dataType="i4"
-                      lineageId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de error de origen de ADO NET].Columns[idEmpleado]"
-                      name="idEmpleado" />
-                    <outputColumn
-                      refId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de error de origen de ADO NET].Columns[idCargoEmpleado]"
-                      dataType="i4"
-                      lineageId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de error de origen de ADO NET].Columns[idCargoEmpleado]"
-                      name="idCargoEmpleado" />
-                    <outputColumn
-                      refId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de error de origen de ADO NET].Columns[idEstadoCivil]"
-                      dataType="i4"
-                      lineageId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de error de origen de ADO NET].Columns[idEstadoCivil]"
-                      name="idEstadoCivil" />
-                    <outputColumn
-                      refId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de error de origen de ADO NET].Columns[idTipoNomina]"
-                      dataType="i4"
-                      lineageId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de error de origen de ADO NET].Columns[idTipoNomina]"
-                      name="idTipoNomina" />
-                    <outputColumn
-                      refId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de error de origen de ADO NET].Columns[idEstadoEmpleado]"
-                      dataType="i4"
-                      lineageId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de error de origen de ADO NET].Columns[idEstadoEmpleado]"
-                      name="idEstadoEmpleado" />
-                    <outputColumn
-                      refId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de error de origen de ADO NET].Columns[nombre]"
-                      dataType="wstr"
-                      length="120"
-                      lineageId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de error de origen de ADO NET].Columns[nombre]"
-                      name="nombre" />
-                    <outputColumn
-                      refId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de error de origen de ADO NET].Columns[sexo]"
-                      dataType="wstr"
-                      length="10"
-                      lineageId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de error de origen de ADO NET].Columns[sexo]"
-                      name="sexo" />
-                    <outputColumn
-                      refId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\DimensionesPrincipales\Leer Proveedor"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
@@ -6692,126 +6214,6 @@ WHERE  (erpDM.dbo.dimProveedor.idProveedor IS NULL)</property>
                       refId="Package\DimensionesPrincipales\Leer Proveedor.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\DimensionesPrincipales\Leer Proveedor.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\DimensionesPrincipales\Leer Turno"
-              componentClassID="Microsoft.ManagedComponentHost"
-              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
-              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
-              name="Leer Turno"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT db_erp_sige.turno.codigo, db_erp_sige.turno.nombre
-FROM     db_erp_sige.empleado INNER JOIN
-                  turno_asignacion ON db_erp_sige.empleado.codigo = turno_asignacion.empleado INNER JOIN
-                  db_erp_sige.turno ON turno_asignacion.turno = db_erp_sige.turno.codigo</property>
-                <property
-                  dataType="System.Int32"
-                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
-                  name="CommandTimeout">30</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
-                  name="AllowImplicitStringConversion">true</property>
-                <property
-                  dataType="System.String"
-                  description="Nombre de la tabla de la base de datos de origen."
-                  expressionType="Notify"
-                  name="TableOrViewName"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Especificar el modo de recuperar información de columnas externas"
-                  name="AccessMode"
-                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
-                <property
-                  dataType="System.String"
-                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\DimensionesPrincipales\Leer Turno.Connections[IDbConnection]"
-                  connectionManagerID="{1AFC0785-6D02-4568-8492-A66DE2CC57B7}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[AYRTON-LAPTOP_MSSQLSERVER3.erp]"
-                  description="Administrador de conexiones administrado"
-                  name="IDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\DimensionesPrincipales\Leer Turno.Outputs[Salida de origen de ADO NET]"
-                  name="Salida de origen de ADO NET">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\DimensionesPrincipales\Leer Turno.Outputs[Salida de origen de ADO NET].Columns[codigo]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DimensionesPrincipales\Leer Turno.Outputs[Salida de origen de ADO NET].ExternalColumns[codigo]"
-                      lineageId="Package\DimensionesPrincipales\Leer Turno.Outputs[Salida de origen de ADO NET].Columns[codigo]"
-                      name="codigo"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DimensionesPrincipales\Leer Turno.Outputs[Salida de origen de ADO NET].Columns[nombre]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DimensionesPrincipales\Leer Turno.Outputs[Salida de origen de ADO NET].ExternalColumns[nombre]"
-                      length="30"
-                      lineageId="Package\DimensionesPrincipales\Leer Turno.Outputs[Salida de origen de ADO NET].Columns[nombre]"
-                      name="nombre"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\DimensionesPrincipales\Leer Turno.Outputs[Salida de origen de ADO NET].ExternalColumns[codigo]"
-                      dataType="i4"
-                      name="codigo" />
-                    <externalMetadataColumn
-                      refId="Package\DimensionesPrincipales\Leer Turno.Outputs[Salida de origen de ADO NET].ExternalColumns[nombre]"
-                      dataType="wstr"
-                      length="30"
-                      name="nombre" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\DimensionesPrincipales\Leer Turno.Outputs[Salida de error de origen de ADO NET]"
-                  isErrorOut="true"
-                  name="Salida de error de origen de ADO NET">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\DimensionesPrincipales\Leer Turno.Outputs[Salida de error de origen de ADO NET].Columns[codigo]"
-                      dataType="i4"
-                      lineageId="Package\DimensionesPrincipales\Leer Turno.Outputs[Salida de error de origen de ADO NET].Columns[codigo]"
-                      name="codigo" />
-                    <outputColumn
-                      refId="Package\DimensionesPrincipales\Leer Turno.Outputs[Salida de error de origen de ADO NET].Columns[nombre]"
-                      dataType="wstr"
-                      length="30"
-                      lineageId="Package\DimensionesPrincipales\Leer Turno.Outputs[Salida de error de origen de ADO NET].Columns[nombre]"
-                      name="nombre" />
-                    <outputColumn
-                      refId="Package\DimensionesPrincipales\Leer Turno.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\DimensionesPrincipales\Leer Turno.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\DimensionesPrincipales\Leer Turno.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\DimensionesPrincipales\Leer Turno.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -7395,16 +6797,6 @@ WHERE  (erpDM.dbo.dimVendedor.idVendedor IS NULL)</property>
               endId="Package\DimensionesPrincipales\dimUsuario.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
               startId="Package\DimensionesPrincipales\Leer Usuario.Outputs[Salida de origen de ADO NET]" />
-            <path
-              refId="Package\DimensionesPrincipales.Paths[Salida de origen de ADO NET7]"
-              endId="Package\DimensionesPrincipales\dimTurno.Inputs[Entrada de destino de ADO NET]"
-              name="Salida de origen de ADO NET"
-              startId="Package\DimensionesPrincipales\Leer Turno.Outputs[Salida de origen de ADO NET]" />
-            <path
-              refId="Package\DimensionesPrincipales.Paths[Salida de origen de ADO NET8]"
-              endId="Package\DimensionesPrincipales\dimEmpleado.Inputs[Entrada de destino de ADO NET]"
-              name="Salida de origen de ADO NET"
-              startId="Package\DimensionesPrincipales\Leer Empleado.Outputs[Salida de origen de ADO NET]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -8110,11 +7502,11 @@ FROM     db_erp_sige.factura INNER JOIN
                   db_erp_sige.unidad_de_negocio ON db_erp_sige.factura.unidad_de_negocio = db_erp_sige.unidad_de_negocio.codigo LEFT OUTER JOIN
                   erpDM.dbo.factCxC ON db_erp_sige.factura.codigo = erpDM.dbo.factCxC.idCxC AND db_erp_sige.cliente.codigo = erpDM.dbo.factCxC.idCliente AND db_erp_sige.ejecutivo_de_venta.codigo = erpDM.dbo.factCxC.idVendedor AND 
                   db_erp_sige.unidad_de_negocio.codigo = erpDM.dbo.factCxC.idNegocio AND db_erp_sige.factura.fecha = erpDM.dbo.factCxC.Fecha
-WHERE  (erpDM.dbo.factCxC.idCxC IS NULL) OR
-                  (erpDM.dbo.factCxC.idCliente IS NULL) OR
-                  (erpDM.dbo.factCxC.idVendedor IS NULL) OR
-                  (erpDM.dbo.factCxC.idNegocio IS NULL) OR
-                  (erpDM.dbo.factCxC.Fecha IS NULL)</property>
+WHERE  (db_erp_sige.factura.venta_a_credito IS NOT NULL) AND (erpDM.dbo.factCxC.idCxC IS NULL) OR
+                  (db_erp_sige.factura.venta_a_credito IS NOT NULL) AND (erpDM.dbo.factCxC.idCliente IS NULL) OR
+                  (db_erp_sige.factura.venta_a_credito IS NOT NULL) AND (erpDM.dbo.factCxC.idVendedor IS NULL) OR
+                  (db_erp_sige.factura.venta_a_credito IS NOT NULL) AND (erpDM.dbo.factCxC.idNegocio IS NULL) OR
+                  (db_erp_sige.factura.venta_a_credito IS NOT NULL) AND (erpDM.dbo.factCxC.Fecha IS NULL)</property>
                 <property
                   dataType="System.Int32"
                   description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
@@ -8557,11 +7949,11 @@ FROM     db_erp_sige.factura_suplidor INNER JOIN
                   db_erp_sige.unidad_de_negocio ON db_erp_sige.factura_suplidor.unidad_de_negocio = db_erp_sige.unidad_de_negocio.codigo LEFT OUTER JOIN
                   erpDM.dbo.factCxP ON db_erp_sige.factura_suplidor.codigo = erpDM.dbo.factCxP.idCxP AND db_erp_sige.usuario.codigo = erpDM.dbo.factCxP.idUsuario AND db_erp_sige.suplidor.codigo = erpDM.dbo.factCxP.idProveedor AND 
                   db_erp_sige.factura_suplidor.unidad_de_negocio = erpDM.dbo.factCxP.idNegocio AND db_erp_sige.factura_suplidor.fecha = erpDM.dbo.factCxP.Fecha
-WHERE  (erpDM.dbo.factCxP.idCxP IS NULL) OR
-                  (erpDM.dbo.factCxP.idUsuario IS NULL) OR
-                  (erpDM.dbo.factCxP.idProveedor IS NULL) OR
-                  (erpDM.dbo.factCxP.idNegocio IS NULL) OR
-                  (erpDM.dbo.factCxP.Fecha IS NULL)</property>
+WHERE  (db_erp_sige.factura_suplidor.total_a_pagar IS NOT NULL) AND (erpDM.dbo.factCxP.idCxP IS NULL) OR
+                  (db_erp_sige.factura_suplidor.total_a_pagar IS NOT NULL) AND (erpDM.dbo.factCxP.idUsuario IS NULL) OR
+                  (db_erp_sige.factura_suplidor.total_a_pagar IS NOT NULL) AND (erpDM.dbo.factCxP.idProveedor IS NULL) OR
+                  (db_erp_sige.factura_suplidor.total_a_pagar IS NOT NULL) AND (erpDM.dbo.factCxP.idNegocio IS NULL) OR
+                  (db_erp_sige.factura_suplidor.total_a_pagar IS NOT NULL) AND (erpDM.dbo.factCxP.Fecha IS NULL)</property>
                 <property
                   dataType="System.Int32"
                   description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
@@ -10262,35 +9654,59 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
     design-time-name="Package\Dimensiones Secundarias">
     <LayoutInfo>
       <GraphLayout
-        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="154.4,41.6"
-          Id="Package\Dimensiones Secundarias\Leer TipoCliente"
-          TopLeft="675.809513739177,40.9999993890524" />
+          Size="135.2,41.6"
+          Id="Package\Dimensiones Secundarias\Leer Unidad"
+          TopLeft="152.999997720122,99.9999985098839" />
         <NodeLayout
-          Size="150.4,41.6"
-          Id="Package\Dimensiones Secundarias\dimTipoArticulo"
-          TopLeft="369.99999448657,36.4285751432179" />
-        <NodeLayout
-          Size="193.6,41.6"
-          Id="Package\Dimensiones Secundarias\Leer TipoUnidadNegocio"
-          TopLeft="1248.66664806008,411.266661337018" />
+          Size="148,41.6"
+          Id="Package\Dimensiones Secundarias\dimTipoCliente"
+          TopLeft="936.068243008857,40.872818759792" />
         <NodeLayout
           Size="129.6,41.6"
           Id="Package\Dimensiones Secundarias\dimEnvase"
           TopLeft="372.857137301139,169.999997466803" />
         <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\Dimensiones Secundarias\Leer TipoContrato"
-          TopLeft="1251.38093373392,184.285711539643" />
+          Size="127.2,41.6"
+          Id="Package\Dimensiones Secundarias\Leer Linea"
+          TopLeft="162.999997571111,252.999996230006" />
+        <NodeLayout
+          Size="180,41.6"
+          Id="Package\Dimensiones Secundarias\Leer CategoriaCliente"
+          TopLeft="674.238085191165,196.142854220101" />
+        <NodeLayout
+          Size="176,41.6"
+          Id="Package\Dimensiones Secundarias\Leer CanalComercial"
+          TopLeft="1253.77775909503,549.177771775921" />
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Dimensiones Secundarias\dimTipoArticulo"
+          TopLeft="369.99999448657,36.4285751432179" />
+        <NodeLayout
+          Size="167.2,41.6"
+          Id="Package\Dimensiones Secundarias\Leer TipoVendedor"
+          TopLeft="1245.42855287024,45.685715130823" />
+        <NodeLayout
+          Size="136.8,41.6"
+          Id="Package\Dimensiones Secundarias\dimEmpresa"
+          TopLeft="1525.7333273828,478.399998609225" />
+        <NodeLayout
+          Size="180,41.6"
+          Id="Package\Dimensiones Secundarias\Leer EstadoEmpleado"
+          TopLeft="150.999997749924,717.799991044402" />
         <NodeLayout
           Size="147.2,41.6"
           Id="Package\Dimensiones Secundarias\Leer Categoria"
           TopLeft="153.999997705221,331.199995112419" />
         <NodeLayout
-          Size="128,41.6"
-          Id="Package\Dimensiones Secundarias\dimUnidad"
-          TopLeft="377.857137226633,97.8571413989578" />
+          Size="186.4,41.6"
+          Id="Package\Dimensiones Secundarias\dimTipoUnidadNegocio"
+          TopLeft="1525.59999382099,414.399999562899" />
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\Dimensiones Secundarias\Leer TipoContrato"
+          TopLeft="1251.38093373392,184.285711539643" />
         <NodeLayout
           Size="163.2,41.6"
           Id="Package\Dimensiones Secundarias\dimTipoProveedor"
@@ -10300,21 +9716,21 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
           Id="Package\Dimensiones Secundarias\dimSubCategoria"
           TopLeft="379.999994337559,408.85714126059" />
         <NodeLayout
-          Size="136.8,41.6"
-          Id="Package\Dimensiones Secundarias\dimEmpresa"
-          TopLeft="1525.7333273828,478.399998609225" />
+          Size="172.8,41.6"
+          Id="Package\Dimensiones Secundarias\dimCategoriaCliente"
+          TopLeft="951.846147897152,203.076920463489" />
         <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\Dimensiones Secundarias\Leer TipoProveedor"
-          TopLeft="694.199995782971,451.199997019768" />
+          Size="193.6,41.6"
+          Id="Package\Dimensiones Secundarias\Leer TipoUnidadNegocio"
+          TopLeft="1248.66664806008,411.266661337018" />
         <NodeLayout
-          Size="156.8,41.6"
-          Id="Package\Dimensiones Secundarias\Leer TipoArticulo"
-          TopLeft="160.999997600913,32.9999995082617" />
+          Size="154.4,41.6"
+          Id="Package\Dimensiones Secundarias\Leer TipoCliente"
+          TopLeft="675.809513739177,40.9999993890524" />
         <NodeLayout
-          Size="176,41.6"
-          Id="Package\Dimensiones Secundarias\dimTipoIdentificacion"
-          TopLeft="957.23076320153,278.461535871029" />
+          Size="183.2,41.6"
+          Id="Package\Dimensiones Secundarias\Leer TipoIdentificacion"
+          TopLeft="677.974348871754,274.692303599073" />
         <NodeLayout
           Size="134.4,41.6"
           Id="Package\Dimensiones Secundarias\Leer Estado"
@@ -10332,77 +9748,57 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
           Id="Package\Dimensiones Secundarias\dimLinea"
           TopLeft="377.142851522991,245.714282052858" />
         <NodeLayout
-          Size="172.8,41.6"
-          Id="Package\Dimensiones Secundarias\dimCategoriaCliente"
-          TopLeft="951.846147897152,203.076920463489" />
+          Size="140,41.6"
+          Id="Package\Dimensiones Secundarias\dimCategoria"
+          TopLeft="373.571423004781,324.999996093767" />
         <NodeLayout
-          Size="158.4,41.6"
-          Id="Package\Dimensiones Secundarias\Leer TipoNomina"
-          TopLeft="147.999997794628,658.599991580844" />
+          Size="170.4,41.6"
+          Id="Package\Dimensiones Secundarias\Leer TipoProveedor"
+          TopLeft="694.199995782971,451.199997019768" />
         <NodeLayout
-          Size="165.6,41.6"
-          Id="Package\Dimensiones Secundarias\Leer SubCategoria"
-          TopLeft="141.714283602578,413.199994724989" />
+          Size="156.8,41.6"
+          Id="Package\Dimensiones Secundarias\Leer TipoArticulo"
+          TopLeft="160.999997600913,32.9999995082617" />
+        <NodeLayout
+          Size="172,41.6"
+          Id="Package\Dimensiones Secundarias\dimTipoContrato"
+          TopLeft="1527.57142174883,187.714283095939" />
         <NodeLayout
           Size="136.8,41.6"
           Id="Package\Dimensiones Secundarias\Leer Envase"
           TopLeft="157.999997645617,173.999997407198" />
         <NodeLayout
           Size="176,41.6"
-          Id="Package\Dimensiones Secundarias\Leer CanalComercial"
-          TopLeft="1253.77775909503,549.177771775921" />
+          Id="Package\Dimensiones Secundarias\dimTipoIdentificacion"
+          TopLeft="957.23076320153,278.461535871029" />
         <NodeLayout
           Size="173.6,41.6"
           Id="Package\Dimensiones Secundarias\dimEstadoEmpleado"
           TopLeft="381.999994307757,718.599992653728" />
         <NodeLayout
-          Size="140,41.6"
-          Id="Package\Dimensiones Secundarias\dimCategoria"
-          TopLeft="373.571423004781,324.999996093767" />
-        <NodeLayout
-          Size="135.2,41.6"
-          Id="Package\Dimensiones Secundarias\Leer Unidad"
-          TopLeft="152.999997720122,99.9999985098839" />
-        <NodeLayout
-          Size="183.2,41.6"
-          Id="Package\Dimensiones Secundarias\Leer TipoIdentificacion"
-          TopLeft="677.974348871754,274.692303599073" />
-        <NodeLayout
-          Size="148,41.6"
-          Id="Package\Dimensiones Secundarias\dimTipoCliente"
-          TopLeft="936.068243008857,40.872818759792" />
-        <NodeLayout
-          Size="172,41.6"
-          Id="Package\Dimensiones Secundarias\dimTipoContrato"
-          TopLeft="1527.57142174883,187.714283095939" />
-        <NodeLayout
-          Size="127.2,41.6"
-          Id="Package\Dimensiones Secundarias\Leer Linea"
-          TopLeft="162.999997571111,252.999996230006" />
-        <NodeLayout
-          Size="143.2,41.6"
-          Id="Package\Dimensiones Secundarias\Leer Empresa"
-          TopLeft="1250.66664803028,479.066660994291" />
-        <NodeLayout
           Size="123.2,41.6"
           Id="Package\Dimensiones Secundarias\dimCargo"
           TopLeft="1527.71427828499,118.428569842662" />
         <NodeLayout
-          Size="186.4,41.6"
-          Id="Package\Dimensiones Secundarias\dimTipoUnidadNegocio"
-          TopLeft="1525.59999382099,414.399999562899" />
-        <NodeLayout
-          Size="180,41.6"
-          Id="Package\Dimensiones Secundarias\Leer EstadoEmpleado"
-          TopLeft="150.999997749924,717.799991044402" />
-        <NodeLayout
-          Size="167.2,41.6"
-          Id="Package\Dimensiones Secundarias\Leer TipoVendedor"
-          TopLeft="1245.42855287024,45.685715130823" />
-        <NodeLayout
           Size="160.8,41.6"
           Id="Package\Dimensiones Secundarias\dimTipoVendedor"
           TopLeft="1523.14284894722,46.2857137748174" />
+        <NodeLayout
+          Size="158.4,41.6"
+          Id="Package\Dimensiones Secundarias\Leer TipoNomina"
+          TopLeft="147.999997794628,658.599991580844" />
+        <NodeLayout
+          Size="128,41.6"
+          Id="Package\Dimensiones Secundarias\dimUnidad"
+          TopLeft="377.857137226633,97.8571413989578" />
+        <NodeLayout
+          Size="165.6,41.6"
+          Id="Package\Dimensiones Secundarias\Leer SubCategoria"
+          TopLeft="141.714283602578,413.199994724989" />
+        <NodeLayout
+          Size="143.2,41.6"
+          Id="Package\Dimensiones Secundarias\Leer Empresa"
+          TopLeft="1250.66664803028,479.066660994291" />
         <NodeLayout
           Size="127.2,41.6"
           Id="Package\Dimensiones Secundarias\dimEstado"
@@ -10411,10 +9807,6 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
           Size="169.6,41.6"
           Id="Package\Dimensiones Secundarias\dimCanalComercial"
           TopLeft="1526.13332755168,548.399997566144" />
-        <NodeLayout
-          Size="180,41.6"
-          Id="Package\Dimensiones Secundarias\Leer CategoriaCliente"
-          TopLeft="674.238085191165,196.142854220101" />
         <EdgeLayout
           Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET18]"
           TopLeft="330.999997749924,738.999991849065">
@@ -10434,183 +9826,201 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET17]"
-          TopLeft="306.399997794628,679.39999256432">
+          TopLeft="854.238085191165,220.409887341795">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="73.5999965429307,0"
+              EndConnector="97.608062705987,0"
               Start="0,0"
-              End="66.0999965429307,0">
+              End="90.108062705987,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="66.0999965429307,0" />
+                    End="90.108062705987,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET16]"
-          TopLeft="864.599995782971,469.99999704957">
+          TopLeft="288.199997720122,119.728569954421">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="106.599995872378,0"
+              EndConnector="89.6571395065104,0"
               Start="0,0"
-              End="99.0999958723785,0">
+              End="82.1571395065104,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="99.0999958723785,0" />
+                    End="82.1571395065104,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET15]"
-          TopLeft="1429.77775909503,569.588884671032">
+          TopLeft="294.799997645617,192.799997437">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="96.3555684566497,0"
+              EndConnector="78.057139655522,0"
               Start="0,0"
-              End="88.8555684566497,0">
+              End="70.557139655522,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="88.8555684566497,0" />
+                    End="70.557139655522,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET14]"
-          TopLeft="1393.86664803028,499.533329801758">
+          TopLeft="290.199997571111,270.157139141432">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="131.866679352521,0"
+              EndConnector="86.9428539518801,0"
               Start="0,0"
-              End="124.366679352521,0">
+              End="79.4428539518801,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="124.366679352521,0" />
+                    End="79.4428539518801,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET13]"
-          TopLeft="1442.26664806008,433.633330449959">
+          TopLeft="301.199997705221,348.899995603093">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="83.3333457609015,0"
+              EndConnector="72.3714252995595,0"
               Start="0,0"
-              End="75.8333457609015,0">
+              End="64.8714252995595,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="75.8333457609015,0" />
+                    End="64.8714252995595,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET12]"
-          TopLeft="1413.78093373392,206.799997317791">
+          TopLeft="307.314283602578,431.828567992789">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="113.79048801491,0"
+              EndConnector="72.6857107349806,0"
               Start="0,0"
-              End="106.29048801491,0">
+              End="65.1857107349806,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="106.29048801491,0" />
+                    End="65.1857107349806,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET11]"
-          TopLeft="1379.25712424772,137.457142412237">
+          TopLeft="830.209513739177,61.7364090744222">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="148.457154037271,0"
+              EndConnector="105.858729269679,0"
               Start="0,0"
-              End="140.957154037271,0">
+              End="98.3587292696794,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="140.957154037271,0" />
+                    End="98.3587292696794,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET10]"
-          TopLeft="1412.62855287024,66.7857144528202">
+          TopLeft="814.638085101758,140.069229198305">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="110.514296076979,0"
+              EndConnector="132.592678248784,0"
               Start="0,0"
-              End="103.014296076979,0">
+              End="125.092678248784,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="103.014296076979,0" />
+                    End="125.092678248784,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10632,183 +10042,201 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET8]"
-          TopLeft="854.238085191165,220.409887341795">
+          TopLeft="306.399997794628,679.39999256432">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="97.608062705987,0"
+              EndConnector="73.5999965429307,0"
               Start="0,0"
-              End="90.108062705987,0">
+              End="66.0999965429307,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="90.108062705987,0" />
+                    End="66.0999965429307,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET7]"
-          TopLeft="814.638085101758,140.069229198305">
+          TopLeft="1412.62855287024,66.7857144528202">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="132.592678248784,0"
+              EndConnector="110.514296076979,0"
               Start="0,0"
-              End="125.092678248784,0">
+              End="103.014296076979,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="125.092678248784,0" />
+                    End="103.014296076979,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET6]"
-          TopLeft="830.209513739177,61.7364090744222">
+          TopLeft="1379.25712424772,137.457142412237">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="105.858729269679,0"
+              EndConnector="148.457154037271,0"
               Start="0,0"
-              End="98.3587292696794,0">
+              End="140.957154037271,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="98.3587292696794,0" />
+                    End="140.957154037271,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET5]"
-          TopLeft="307.314283602578,431.828567992789">
+          TopLeft="1413.78093373392,206.799997317791">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="72.6857107349806,0"
+              EndConnector="113.79048801491,0"
               Start="0,0"
-              End="65.1857107349806,0">
+              End="106.29048801491,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="65.1857107349806,0" />
+                    End="106.29048801491,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET4]"
-          TopLeft="301.199997705221,348.899995603093">
+          TopLeft="1442.26664806008,433.633330449959">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="72.3714252995595,0"
+              EndConnector="83.3333457609015,0"
               Start="0,0"
-              End="64.8714252995595,0">
+              End="75.8333457609015,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="64.8714252995595,0" />
+                    End="75.8333457609015,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET3]"
-          TopLeft="290.199997571111,270.157139141432">
+          TopLeft="1393.86664803028,499.533329801758">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="86.9428539518801,0"
+              EndConnector="131.866679352521,0"
               Start="0,0"
-              End="79.4428539518801,0">
+              End="124.366679352521,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="79.4428539518801,0" />
+                    End="124.366679352521,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET2]"
-          TopLeft="294.799997645617,192.799997437">
+          TopLeft="1429.77775909503,569.588884671032">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="78.057139655522,0"
+              EndConnector="96.3555684566497,0"
               Start="0,0"
-              End="70.557139655522,0">
+              End="88.8555684566497,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="70.557139655522,0" />
+                    End="88.8555684566497,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET1]"
-          TopLeft="288.199997720122,119.728569954421">
+          TopLeft="864.599995782971,469.99999704957">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="89.6571395065104,0"
+              EndConnector="106.599995872378,0"
               Start="0,0"
-              End="82.1571395065104,0">
+              End="99.0999958723785,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="82.1571395065104,0" />
+                    End="99.0999958723785,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10830,14 +10258,16 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Dimensiones Secundarias\Leer TipoCliente">
+    design-time-name="Package\Dimensiones Secundarias\Leer Unidad">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -10845,15 +10275,7 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Dimensiones Secundarias\dimTipoArticulo">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Dimensiones Secundarias\Leer TipoUnidadNegocio">
+    design-time-name="Package\Dimensiones Secundarias\dimTipoCliente">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -10869,7 +10291,55 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Dimensiones Secundarias\Leer TipoContrato">
+    design-time-name="Package\Dimensiones Secundarias\Leer Linea">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Dimensiones Secundarias\Leer CategoriaCliente">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Dimensiones Secundarias\Leer CanalComercial">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Dimensiones Secundarias\dimTipoArticulo">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Dimensiones Secundarias\Leer TipoVendedor">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Dimensiones Secundarias\dimEmpresa">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Dimensiones Secundarias\Leer EstadoEmpleado">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -10885,7 +10355,15 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Dimensiones Secundarias\dimUnidad">
+    design-time-name="Package\Dimensiones Secundarias\dimTipoUnidadNegocio">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Dimensiones Secundarias\Leer TipoContrato">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -10909,7 +10387,7 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Dimensiones Secundarias\dimEmpresa">
+    design-time-name="Package\Dimensiones Secundarias\dimCategoriaCliente">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -10917,7 +10395,7 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Dimensiones Secundarias\Leer TipoProveedor">
+    design-time-name="Package\Dimensiones Secundarias\Leer TipoUnidadNegocio">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -10925,7 +10403,7 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Dimensiones Secundarias\Leer TipoArticulo">
+    design-time-name="Package\Dimensiones Secundarias\Leer TipoCliente">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -10933,7 +10411,7 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Dimensiones Secundarias\dimTipoIdentificacion">
+    design-time-name="Package\Dimensiones Secundarias\Leer TipoIdentificacion">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -10973,54 +10451,6 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Dimensiones Secundarias\dimCategoriaCliente">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Dimensiones Secundarias\Leer TipoNomina">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Dimensiones Secundarias\Leer SubCategoria">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Dimensiones Secundarias\Leer Envase">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Dimensiones Secundarias\Leer CanalComercial">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Dimensiones Secundarias\dimEstadoEmpleado">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Dimensiones Secundarias\dimCategoria">
     <Properties>
       <Property>
@@ -11029,7 +10459,7 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Dimensiones Secundarias\Leer Unidad">
+    design-time-name="Package\Dimensiones Secundarias\Leer TipoProveedor">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -11037,15 +10467,7 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Dimensiones Secundarias\Leer TipoIdentificacion">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Dimensiones Secundarias\dimTipoCliente">
+    design-time-name="Package\Dimensiones Secundarias\Leer TipoArticulo">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -11061,7 +10483,7 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Dimensiones Secundarias\Leer Linea">
+    design-time-name="Package\Dimensiones Secundarias\Leer Envase">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -11069,7 +10491,15 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Dimensiones Secundarias\Leer Empresa">
+    design-time-name="Package\Dimensiones Secundarias\dimTipoIdentificacion">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Dimensiones Secundarias\dimEstadoEmpleado">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -11085,31 +10515,39 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Dimensiones Secundarias\dimTipoUnidadNegocio">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Dimensiones Secundarias\Leer EstadoEmpleado">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Dimensiones Secundarias\Leer TipoVendedor">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Dimensiones Secundarias\dimTipoVendedor">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Dimensiones Secundarias\Leer TipoNomina">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Dimensiones Secundarias\dimUnidad">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Dimensiones Secundarias\Leer SubCategoria">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Dimensiones Secundarias\Leer Empresa">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -11132,14 +10570,6 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Dimensiones Secundarias\Leer CategoriaCliente">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\DimensionesPrincipales">
     <LayoutInfo>
@@ -11153,10 +10583,6 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
           Size="140,41.6"
           Id="Package\DimensionesPrincipales\dimVendedor"
           TopLeft="359.999980330468,144.466665901276" />
-        <NodeLayout
-          Size="129.6,41.6"
-          Id="Package\DimensionesPrincipales\Leer Turno"
-          TopLeft="152.142857466729,472.352940864113" />
         <NodeLayout
           Size="149.6,41.6"
           Id="Package\DimensionesPrincipales\Leer Proveedor"
@@ -11190,10 +10616,6 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
           Id="Package\DimensionesPrincipales\dimCliente"
           TopLeft="361.868126402892,81.533935447358" />
         <NodeLayout
-          Size="123.2,41.6"
-          Id="Package\DimensionesPrincipales\dimTurno"
-          TopLeft="355.714286641807,472.588234971036" />
-        <NodeLayout
           Size="131.2,41.6"
           Id="Package\DimensionesPrincipales\dimUsuario"
           TopLeft="367.857137254003,401.999994844198" />
@@ -11202,14 +10624,6 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
           Id="Package\DimensionesPrincipales\Leer Unidad Negocio"
           TopLeft="101.547611269197,212.129410298879" />
         <NodeLayout
-          Size="148,41.6"
-          Id="Package\DimensionesPrincipales\Leer Empleado"
-          TopLeft="132.142857424155,542.105881921942" />
-        <NodeLayout
-          Size="141.6,41.6"
-          Id="Package\DimensionesPrincipales\dimEmpleado"
-          TopLeft="365.714286492795,546.341176120024" />
-        <NodeLayout
           Size="136.8,41.6"
           Id="Package\DimensionesPrincipales\Leer Articulo"
           TopLeft="140.000001092752,16.7999993983905" />
@@ -11217,50 +10631,6 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
           Size="136,41.6"
           Id="Package\DimensionesPrincipales\dimAlmacen"
           TopLeft="362.857122909861,272.733331675993" />
-        <EdgeLayout
-          Id="Package\DimensionesPrincipales.Paths[Salida de origen de ADO NET8]"
-          TopLeft="280.142857424155,565.023529020983">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="85.5714290686408,0"
-              Start="0,0"
-              End="78.0714290686408,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="78.0714290686408,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DimensionesPrincipales.Paths[Salida de origen de ADO NET7]"
-          TopLeft="281.742857466729,493.270587917575">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="73.9714291750776,0"
-              Start="0,0"
-              End="66.4714291750776,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="66.4714291750776,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\DimensionesPrincipales.Paths[Salida de origen de ADO NET6]"
           TopLeft="280.599997869134,421.699994628132">
@@ -11435,14 +10805,6 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DimensionesPrincipales\Leer Turno">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\DimensionesPrincipales\Leer Proveedor">
     <Properties>
       <Property>
@@ -11507,14 +10869,6 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DimensionesPrincipales\dimTurno">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\DimensionesPrincipales\dimUsuario">
     <Properties>
       <Property>
@@ -11524,22 +10878,6 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\DimensionesPrincipales\Leer Unidad Negocio">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DimensionesPrincipales\Leer Empleado">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DimensionesPrincipales\dimEmpleado">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -11566,7 +10904,7 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
     design-time-name="Package\Fact Compras">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="144,41.6"
           Id="Package\Fact Compras\Leer Compras"
@@ -11594,7 +10932,9 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -11620,7 +10960,7 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
     design-time-name="Package\Fact CxC">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="120,41.6"
           Id="Package\Fact CxC\Leer CxC"
@@ -11648,9 +10988,7 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -11676,7 +11014,7 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
     design-time-name="Package\fact CxP">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="121.6,41.6"
           Id="Package\fact CxP\Leer CxP"
@@ -11704,9 +11042,7 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -11732,7 +11068,7 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
     design-time-name="Package\Fact Inventario">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="148,41.6"
           Id="Package\Fact Inventario\Leer Inventario"
@@ -11760,7 +11096,9 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -11786,7 +11124,7 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
     design-time-name="Package\Fact Ventas">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="134.4,41.6"
           Id="Package\Fact Ventas\Leer Ventas"
@@ -11814,9 +11152,7 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
