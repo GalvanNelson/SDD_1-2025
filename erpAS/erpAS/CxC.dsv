@@ -1,4 +1,4 @@
-﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="c6db9424-8f0e-4fe3-b309-d81046ff8d3c" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="70ed63c2-763b-4826-a734-a608325784f6" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>CxC</ID>
   <Name>CxC</Name>
   <CreatedTimestamp>0001-01-01T04:00:00Z</CreatedTimestamp>
@@ -27,7 +27,7 @@
             <Name>_ALL_TABLES_</Name>
             <DiagramLayout>
               <dds>
-                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="60" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="4211" scrolltop="9417" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="135" x="21569" y="16933" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="60" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="4211" scrolltop="9417" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="135" x="20468" y="16933" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                   <font>
                     <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
                   </font>
@@ -517,11 +517,11 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="pagada_a_tiempo" msdata:ReadOnly="true" msprop:DbColumnName="pagada_a_tiempo" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE &#xD;&#xA;    WHEN [fecha_pagada] &lt; [fecha_vencimiento] THEN 1 &#xD;&#xA;    ELSE 0 &#xD;&#xA;END" msprop:design-time-name="a881165e-fe22-457e-bada-3476c5cb0c18" msprop:Description="" type="xs:int" />
-                  <xs:element name="pagada" msdata:ReadOnly="true" msprop:DbColumnName="pagada" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE &#xD;&#xA;    WHEN [fecha_pagada] IS NOT NULL THEN 1 &#xD;&#xA;    ELSE 0 &#xD;&#xA;END" msprop:design-time-name="cd25af00-72f5-4326-8ee8-da7f4984bc58" msprop:Description="" type="xs:int" />
-                  <xs:element name="dias_x0020_de_x0020_morosidad" msdata:ReadOnly="true" msprop:DbColumnName="dias de morosidad" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE &#xD;&#xA;    WHEN [fecha_pagada] &gt; [fecha_vencimiento] &#xD;&#xA;    THEN DATEDIFF(day, [fecha_vencimiento], [fecha_pagada]) &#xD;&#xA;    ELSE 0 &#xD;&#xA;END" msprop:design-time-name="18e7daff-e37e-452f-9d64-e2b39618f9b2" msprop:Description="" type="xs:int" minOccurs="0" />
-                  <xs:element name="morosidad" msdata:ReadOnly="true" msprop:DbColumnName="morosidad" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE &#xD;&#xA;    WHEN [fecha_pagada] &gt; [fecha_vencimiento] THEN 1 &#xD;&#xA;    ELSE 0 &#xD;&#xA;END" msprop:design-time-name="132fad29-48e1-429b-8b1c-a5448755d28d" msprop:Description="" msprop:FriendlyName="morosidad" type="xs:int" />
-                  <xs:element name="dias_x0020_de_x0020_recaudacion" msdata:ReadOnly="true" msprop:DbColumnName="dias de recaudacion" msprop:IsLogical="True" msprop:ComputedColumnExpression="DATEDIFF(day, [fecha], [fecha_pagada])" msprop:design-time-name="7070ee99-a521-476d-978a-2daf42443e72" msprop:Description="" type="xs:int" minOccurs="0" />
+                  <xs:element name="pagada_a_tiempo" msdata:ReadOnly="true" msprop:DbColumnName="pagada_a_tiempo" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE &#xD;&#xA;    WHEN [fecha_pagada] &lt; [fecha_vencimiento] AND [fecha_pagada]&gt;'1900-01-01' THEN 1 &#xD;&#xA;    ELSE 0 &#xD;&#xA;END" msprop:design-time-name="a881165e-fe22-457e-bada-3476c5cb0c18" msprop:Description="" type="xs:int" />
+                  <xs:element name="pagada" msdata:ReadOnly="true" msprop:DbColumnName="pagada" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE &#xD;&#xA;    WHEN [fecha_pagada] IS NOT NULL AND [fecha_pagada]&gt;'1900-01-01' THEN 1 &#xD;&#xA;    ELSE 0 &#xD;&#xA;END" msprop:design-time-name="cd25af00-72f5-4326-8ee8-da7f4984bc58" msprop:Description="" type="xs:int" />
+                  <xs:element name="dias_x0020_de_x0020_morosidad" msdata:ReadOnly="true" msprop:DbColumnName="dias de morosidad" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE &#xD;&#xA;    WHEN [fecha_pagada] &gt; [fecha_vencimiento] AND [fecha_pagada]&gt;'1900-01-01'&#xD;&#xA;    THEN DATEDIFF(day, [fecha_vencimiento], [fecha_pagada]) &#xD;&#xA;    ELSE 0 &#xD;&#xA;END" msprop:design-time-name="18e7daff-e37e-452f-9d64-e2b39618f9b2" msprop:Description="" type="xs:int" minOccurs="0" />
+                  <xs:element name="morosidad" msdata:ReadOnly="true" msprop:DbColumnName="morosidad" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE &#xD;&#xA;    WHEN [fecha_pagada] &gt; [fecha_vencimiento] AND [fecha_pagada]&gt;'1900-01-01' THEN 1 &#xD;&#xA;    ELSE 0 &#xD;&#xA;END" msprop:design-time-name="132fad29-48e1-429b-8b1c-a5448755d28d" msprop:Description="" msprop:FriendlyName="morosidad" type="xs:int" />
+                  <xs:element name="dias_x0020_de_x0020_recaudacion" msdata:ReadOnly="true" msprop:DbColumnName="dias de recaudacion" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE WHEN [fecha_pagada]&gt;'1900-01-01' THEN DATEDIFF(day, [fecha], [fecha_pagada]) ELSE 0 END" msprop:design-time-name="7070ee99-a521-476d-978a-2daf42443e72" msprop:Description="" type="xs:int" minOccurs="0" />
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
@@ -834,61 +834,61 @@
           <xs:selector xpath=".//dbo_dimCategoriaCliente" />
           <xs:field xpath="idCategoriaCliente" />
         </xs:unique>
-        <xs:keyref name="FK_dimCliente_dimEstado" refer="dbo_dimEstado_Constraint1">
+        <xs:keyref name="FK_dimCliente_dimCategoriaCliente" refer="dbo_dimCategoriaCliente_Constraint1">
           <xs:selector xpath=".//dbo_dimCliente" />
-          <xs:field xpath="idEstado" />
-        </xs:keyref>
-        <xs:keyref name="FK_dimCliente_dimTipoCliente" refer="dbo_dimTipoCliente_Constraint1">
-          <xs:selector xpath=".//dbo_dimCliente" />
-          <xs:field xpath="idTipoCliente" />
+          <xs:field xpath="idCategoriaCliente" />
         </xs:keyref>
         <xs:keyref name="FK_dimCliente_dimTipoIdentificacion" refer="dbo_dimTipoIdentificacion_Constraint1">
           <xs:selector xpath=".//dbo_dimCliente" />
           <xs:field xpath="idTipoIdentificacion" />
         </xs:keyref>
-        <xs:keyref name="FK_dimCliente_dimCategoriaCliente" refer="dbo_dimCategoriaCliente_Constraint1">
+        <xs:keyref name="FK_dimCliente_dimTipoCliente" refer="dbo_dimTipoCliente_Constraint1">
           <xs:selector xpath=".//dbo_dimCliente" />
-          <xs:field xpath="idCategoriaCliente" />
+          <xs:field xpath="idTipoCliente" />
         </xs:keyref>
-        <xs:keyref name="FK_dimVendedor_dimTipoContrato" refer="dbo_dimTipoContrato_Constraint1">
-          <xs:selector xpath=".//dbo_dimVendedor" />
-          <xs:field xpath="idTipoContrato" />
-        </xs:keyref>
-        <xs:keyref name="FK_dimVendedor_dimTipoVendedor" refer="dbo_dimTipoVendedor_Constraint1">
-          <xs:selector xpath=".//dbo_dimVendedor" />
-          <xs:field xpath="idTipoVendedor" />
+        <xs:keyref name="FK_dimCliente_dimEstado" refer="dbo_dimEstado_Constraint1">
+          <xs:selector xpath=".//dbo_dimCliente" />
+          <xs:field xpath="idEstado" />
         </xs:keyref>
         <xs:keyref name="FK_dimVendedor_dimCargo" refer="dbo_dimCargo_Constraint1">
           <xs:selector xpath=".//dbo_dimVendedor" />
           <xs:field xpath="idCargo" />
         </xs:keyref>
-        <xs:keyref name="FK_dimUnidadNegocio_dimTipoUnidadNegocio" refer="dbo_dimTipoUnidadNegocio_Constraint1">
-          <xs:selector xpath=".//dbo_dimUnidadNegocio" />
-          <xs:field xpath="idTipoUnidadNegocio" />
+        <xs:keyref name="FK_dimVendedor_dimTipoVendedor" refer="dbo_dimTipoVendedor_Constraint1">
+          <xs:selector xpath=".//dbo_dimVendedor" />
+          <xs:field xpath="idTipoVendedor" />
         </xs:keyref>
-        <xs:keyref name="FK_dimUnidadNegocio_dimCanalComercial" refer="dbo_dimCanalComercial_Constraint1">
-          <xs:selector xpath=".//dbo_dimUnidadNegocio" />
-          <xs:field xpath="idCanalComercial" />
+        <xs:keyref name="FK_dimVendedor_dimTipoContrato" refer="dbo_dimTipoContrato_Constraint1">
+          <xs:selector xpath=".//dbo_dimVendedor" />
+          <xs:field xpath="idTipoContrato" />
         </xs:keyref>
         <xs:keyref name="FK_dimUnidadNegocio_dimEmpresa" refer="dbo_dimEmpresa_Constraint1">
           <xs:selector xpath=".//dbo_dimUnidadNegocio" />
           <xs:field xpath="idEmpresa" />
         </xs:keyref>
-        <xs:keyref name="FK_factCXC_dimVendedor" refer="dbo_dimVendedor_Constraint1">
-          <xs:selector xpath=".//dbo_factCxC" />
-          <xs:field xpath="idVendedor" />
+        <xs:keyref name="FK_dimUnidadNegocio_dimCanalComercial" refer="dbo_dimCanalComercial_Constraint1">
+          <xs:selector xpath=".//dbo_dimUnidadNegocio" />
+          <xs:field xpath="idCanalComercial" />
         </xs:keyref>
-        <xs:keyref name="FK_factCXC_dimCliente" refer="dbo_dimCliente_Constraint1">
+        <xs:keyref name="FK_dimUnidadNegocio_dimTipoUnidadNegocio" refer="dbo_dimTipoUnidadNegocio_Constraint1">
+          <xs:selector xpath=".//dbo_dimUnidadNegocio" />
+          <xs:field xpath="idTipoUnidadNegocio" />
+        </xs:keyref>
+        <xs:keyref name="FK_factCXC_dimUnidadNegocio" refer="dbo_dimUnidadNegocio_Constraint1">
           <xs:selector xpath=".//dbo_factCxC" />
-          <xs:field xpath="idCliente" />
+          <xs:field xpath="idNegocio" />
         </xs:keyref>
         <xs:keyref name="FK_factCXC_dimFecha" refer="Constraint1">
           <xs:selector xpath=".//dbo_factCxC" />
           <xs:field xpath="Fecha" />
         </xs:keyref>
-        <xs:keyref name="FK_factCXC_dimUnidadNegocio" refer="dbo_dimUnidadNegocio_Constraint1">
+        <xs:keyref name="FK_factCXC_dimCliente" refer="dbo_dimCliente_Constraint1">
           <xs:selector xpath=".//dbo_factCxC" />
-          <xs:field xpath="idNegocio" />
+          <xs:field xpath="idCliente" />
+        </xs:keyref>
+        <xs:keyref name="FK_factCXC_dimVendedor" refer="dbo_dimVendedor_Constraint1">
+          <xs:selector xpath=".//dbo_factCxC" />
+          <xs:field xpath="idVendedor" />
         </xs:keyref>
       </xs:element>
     </xs:schema>

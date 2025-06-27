@@ -7464,7 +7464,7 @@
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="92" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="8239" scrolltop="7971" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="16870" y="15642" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="92" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="13525" scrolltop="12862" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="145" x="32830" y="15642" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
                 </font>
@@ -7662,7 +7662,7 @@
                 </layoutobject>
                 <shape groupshapeid="0" groupnode="0" />
               </ddscontrol>
-              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="dimLinea" left="5486" top="6701" logicalid="63" controlid="18" masterid="0" hint1="0" hint2="0" width="3000" height="1588" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" left="5486" top="6701" logicalid="63" controlid="18" masterid="0" hint1="0" hint2="0" width="3000" height="1588" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
                   <ddsxmlobjectstreaminitwrapper binary="000e0000b80b000034060000" />
                 </control>
@@ -8165,11 +8165,11 @@
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
-          <Value>8239</Value>
+          <Value>13525</Value>
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-          <Value>7971</Value>
+          <Value>12862</Value>
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
@@ -8181,7 +8181,7 @@
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
-          <Value>75</Value>
+          <Value>145</Value>
         </Annotation>
       </Annotations>
       <LastProcessed>0001-01-01T04:00:00Z</LastProcessed>
@@ -8722,9 +8722,9 @@ VISIBLE = 1; </Text>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="64" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="8178" scrolltop="-2949" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="115" x="17971" y="15642" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="64" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-12727" scrolltop="-6473" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="25442" y="15790" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
-                  <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+                  <ddsxmlobjectstreamwrapper binary="01010000900180380100065461686f6d61" />
                 </font>
                 <mouseicon>
                   <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
@@ -8810,7 +8810,7 @@ VISIBLE = 1; </Text>
                 </layoutobject>
                 <shape groupshapeid="0" groupnode="0" />
               </ddscontrol>
-              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="dimUnidad" left="5486" top="1274" logicalid="39" controlid="8" masterid="0" hint1="0" hint2="0" width="3000" height="1588" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" left="5486" top="1274" logicalid="39" controlid="8" masterid="0" hint1="0" hint2="0" width="3000" height="1588" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
                   <ddsxmlobjectstreaminitwrapper binary="000e0000b80b000034060000" />
                 </control>
@@ -8865,7 +8865,7 @@ VISIBLE = 1; </Text>
                 </layoutobject>
                 <shape groupshapeid="0" groupnode="0" />
               </ddscontrol>
-              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="dimFecha" left="13859" top="1" logicalid="44" controlid="13" masterid="0" hint1="0" hint2="0" width="3000" height="3387" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" left="13859" top="1" logicalid="44" controlid="13" masterid="0" hint1="0" hint2="0" width="3000" height="3387" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
                   <ddsxmlobjectstreaminitwrapper binary="000e0000b80b00003b0d0000" />
                 </control>
@@ -9212,11 +9212,11 @@ VISIBLE = 1; </Text>
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
-          <Value>8178</Value>
+          <Value>-12727</Value>
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-          <Value>-2949</Value>
+          <Value>-6473</Value>
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
@@ -9228,7 +9228,7 @@ VISIBLE = 1; </Text>
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
-          <Value>115</Value>
+          <Value>75</Value>
         </Annotation>
       </Annotations>
       <LastProcessed>0001-01-01T04:00:00Z</LastProcessed>
@@ -10345,7 +10345,7 @@ VISIBLE = 1; </Text>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="56" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-572" scrolltop="1352" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="25442" y="15642" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="56" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="2694" scrolltop="4247" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="105" x="17590" y="15642" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
                 </font>
@@ -10771,11 +10771,11 @@ VISIBLE = 1; </Text>
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
-          <Value>-572</Value>
+          <Value>2694</Value>
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-          <Value>1352</Value>
+          <Value>4247</Value>
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
@@ -10787,7 +10787,7 @@ VISIBLE = 1; </Text>
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
-          <Value>75</Value>
+          <Value>105</Value>
         </Annotation>
       </Annotations>
       <LastProcessed>0001-01-01T04:00:00Z</LastProcessed>
@@ -10994,17 +10994,6 @@ VISIBLE = 1; </Text>
               </Source>
             </Measure>
             <Measure>
-              <ID>Quiebre</ID>
-              <Name>Quiebre</Name>
-              <Source>
-                <DataType>Integer</DataType>
-                <Source xsi:type="ColumnBinding">
-                  <TableID>dbo_factInventario</TableID>
-                  <ColumnID>quiebre</ColumnID>
-                </Source>
-              </Source>
-            </Measure>
-            <Measure>
               <ID>Recuento Fact Inventario</ID>
               <Name>Recuento Fact Inventario</Name>
               <AggregateFunction>Count</AggregateFunction>
@@ -11133,21 +11122,17 @@ El comando CALCULATE controla la agregación de celdas hoja en el cubo.
 Si se elimina o modifica el comando CALCULATE, se ven afectados los datos del cubo.
 Solo debe editar este comando si especifica manualmente cómo se agrega el cubo.
 */
-CALCULATE;  
+CALCULATE;   
 CREATE MEMBER CURRENTCUBE.[Measures].[Cantidad de unidades existentes]
  AS [Measures].[Cantidad], 
 FORMAT_STRING = "Standard", 
-VISIBLE = 1;  
+VISIBLE = 1;   
 CREATE MEMBER CURRENTCUBE.[Measures].[Cantidad de unidades en sobre stock]
  AS [Measures].[Sobre Stock], 
 FORMAT_STRING = "Standard", 
-VISIBLE = 1;  
+VISIBLE = 1;   
 CREATE MEMBER CURRENTCUBE.[Measures].[Valor economico]
  AS ROUND([Measures].[Total],2), 
-FORMAT_STRING = "Standard", 
-VISIBLE = 1  ;  
-CREATE MEMBER CURRENTCUBE.[Measures].[Numero de quiebres]
- AS [Measures].[Quiebre], 
 FORMAT_STRING = "Standard", 
 VISIBLE = 1; </Text>
             </Command>
@@ -11165,7 +11150,7 @@ VISIBLE = 1; </Text>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="60" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="393" scrolltop="6027" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="115" x="16870" y="15642" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="60" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="118" scrolltop="2503" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="17590" y="15642" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
                 </font>
@@ -11622,11 +11607,11 @@ VISIBLE = 1; </Text>
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
-          <Value>393</Value>
+          <Value>118</Value>
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-          <Value>6027</Value>
+          <Value>2503</Value>
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
@@ -11638,7 +11623,7 @@ VISIBLE = 1; </Text>
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
-          <Value>115</Value>
+          <Value>75</Value>
         </Annotation>
       </Annotations>
       <LastProcessed>0001-01-01T04:00:00Z</LastProcessed>
@@ -13438,7 +13423,7 @@ VISIBLE = 1; </Text>
                 <Name>_ALL_TABLES_</Name>
                 <DiagramLayout>
                   <dds>
-                    <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="56" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="5065" scrolltop="2903" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="155" x="21569" y="16933" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                    <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="56" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="11965" scrolltop="3446" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="155" x="20468" y="16933" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                       <font>
                         <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
                       </font>
@@ -13854,11 +13839,11 @@ VISIBLE = 1; </Text>
                       </connector>
                     </ddscontrol>
                   </dds>
-                </DiagramLayout>
+</DiagramLayout>
                 <ShowRelationshipNames>False</ShowRelationshipNames>
                 <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
-                <DiagramViewPortLeft>5065</DiagramViewPortLeft>
-                <DiagramViewPortTop>2903</DiagramViewPortTop>
+                <DiagramViewPortLeft>11965</DiagramViewPortLeft>
+                <DiagramViewPortTop>3446</DiagramViewPortTop>
                 <DiagramBoundingLeft>0</DiagramBoundingLeft>
                 <DiagramBoundingTop>0</DiagramBoundingTop>
                 <DiagramZoom>155</DiagramZoom>
@@ -13891,7 +13876,6 @@ VISIBLE = 1; </Text>
                       <xs:element name="cantidad" msprop:FriendlyName="cantidad" msprop:DbColumnName="cantidad" msprop:design-time-name="0a01549c-b410-499a-b56d-81bf6f9b819f" type="xs:double" minOccurs="0" />
                       <xs:element name="sobre_stock" msdata:ReadOnly="true" msprop:DbColumnName="sobre_stock" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE &#xD;&#xA;    WHEN [cantidad] &gt; [stock_maximo] THEN [cantidad] - [stock_maximo]&#xD;&#xA;    ELSE 0&#xD;&#xA;END" msprop:design-time-name="e364ab69-2852-41d6-9ca7-b64e8c742342" msprop:Description="" msprop:FriendlyName="sobre_stock" type="xs:double" minOccurs="0" />
                       <xs:element name="total" msdata:ReadOnly="true" msprop:DbColumnName="total" msprop:IsLogical="True" msprop:ComputedColumnExpression="cantidad*costo_unitario" msprop:design-time-name="cbf1f0b8-9254-4e7b-b54d-882f57b0de71" msprop:Description="" msprop:FriendlyName="total" type="xs:double" minOccurs="0" />
-                      <xs:element name="quiebre" msdata:ReadOnly="true" msprop:DbColumnName="quiebre" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE &#xD;&#xA;    WHEN [cantidad] = 0 THEN 1&#xD;&#xA;    ELSE 0&#xD;&#xA;END" msprop:design-time-name="64e317e8-6c5d-4f07-9992-b29ffdadfb67" msprop:Description="" msprop:FriendlyName="quiebre" type="xs:int" />
                     </xs:sequence>
                   </xs:complexType>
                 </xs:element>
@@ -14189,53 +14173,53 @@ VISIBLE = 1; </Text>
               <xs:selector xpath=".//dbo_dimSubCategoria" />
               <xs:field xpath="idCategoria" />
             </xs:keyref>
-            <xs:keyref name="FK_dimUnidadNegocio_dimEmpresa" refer="dbo_dimEmpresa_Constraint1">
+            <xs:keyref name="FK_dimUnidadNegocio_dimTipoUnidadNegocio" refer="dbo_dimTipoUnidadNegocio_Constraint1">
               <xs:selector xpath=".//dbo_dimUnidadNegocio" />
-              <xs:field xpath="idEmpresa" />
+              <xs:field xpath="idTipoUnidadNegocio" />
             </xs:keyref>
             <xs:keyref name="FK_dimUnidadNegocio_dimCanalComercial" refer="dbo_dimCanalComercial_Constraint1">
               <xs:selector xpath=".//dbo_dimUnidadNegocio" />
               <xs:field xpath="idCanalComercial" />
             </xs:keyref>
-            <xs:keyref name="FK_dimUnidadNegocio_dimTipoUnidadNegocio" refer="dbo_dimTipoUnidadNegocio_Constraint1">
+            <xs:keyref name="FK_dimUnidadNegocio_dimEmpresa" refer="dbo_dimEmpresa_Constraint1">
               <xs:selector xpath=".//dbo_dimUnidadNegocio" />
-              <xs:field xpath="idTipoUnidadNegocio" />
-            </xs:keyref>
-            <xs:keyref name="FK_dimArticulo_dimUnidad" refer="dbo_dimUnidad_Constraint1">
-              <xs:selector xpath=".//dbo_dimArticulo" />
-              <xs:field xpath="idUnidad" />
-            </xs:keyref>
-            <xs:keyref name="FK_dimArticulo_dimTipoArticulo" refer="dbo_dimTipoArticulo_Constraint1">
-              <xs:selector xpath=".//dbo_dimArticulo" />
-              <xs:field xpath="idTipoArticulo" />
-            </xs:keyref>
-            <xs:keyref name="FK_dimArticulo_dimLinea" refer="dbo_dimLinea_Constraint1">
-              <xs:selector xpath=".//dbo_dimArticulo" />
-              <xs:field xpath="idLinea" />
-            </xs:keyref>
-            <xs:keyref name="FK_dimArticulo_dimSubCategoria" refer="dbo_dimSubCategoria_Constraint1">
-              <xs:selector xpath=".//dbo_dimArticulo" />
-              <xs:field xpath="idSubCategoria" />
+              <xs:field xpath="idEmpresa" />
             </xs:keyref>
             <xs:keyref name="FK_dimArticulo_dimEnvase" refer="dbo_dimEnvase_Constraint1">
               <xs:selector xpath=".//dbo_dimArticulo" />
               <xs:field xpath="idEnvase" />
             </xs:keyref>
-            <xs:keyref name="FK_factInventario_dimUnidadNegocio" refer="dbo_dimUnidadNegocio_Constraint1">
-              <xs:selector xpath=".//dbo_factInventario" />
-              <xs:field xpath="idNegocio" />
+            <xs:keyref name="FK_dimArticulo_dimSubCategoria" refer="dbo_dimSubCategoria_Constraint1">
+              <xs:selector xpath=".//dbo_dimArticulo" />
+              <xs:field xpath="idSubCategoria" />
             </xs:keyref>
-            <xs:keyref name="FK_factInventario_dimAlmacen" refer="dbo_dimAlmacen_Constraint1">
+            <xs:keyref name="FK_dimArticulo_dimLinea" refer="dbo_dimLinea_Constraint1">
+              <xs:selector xpath=".//dbo_dimArticulo" />
+              <xs:field xpath="idLinea" />
+            </xs:keyref>
+            <xs:keyref name="FK_dimArticulo_dimTipoArticulo" refer="dbo_dimTipoArticulo_Constraint1">
+              <xs:selector xpath=".//dbo_dimArticulo" />
+              <xs:field xpath="idTipoArticulo" />
+            </xs:keyref>
+            <xs:keyref name="FK_dimArticulo_dimUnidad" refer="dbo_dimUnidad_Constraint1">
+              <xs:selector xpath=".//dbo_dimArticulo" />
+              <xs:field xpath="idUnidad" />
+            </xs:keyref>
+            <xs:keyref name="FK_factInventario_dimArticulo" refer="dbo_dimArticulo_Constraint1">
               <xs:selector xpath=".//dbo_factInventario" />
-              <xs:field xpath="idAlmacen" />
+              <xs:field xpath="idArticulo" />
             </xs:keyref>
             <xs:keyref name="FK_factInventario_dimFecha" refer="Constraint1">
               <xs:selector xpath=".//dbo_factInventario" />
               <xs:field xpath="Fecha" />
             </xs:keyref>
-            <xs:keyref name="FK_factInventario_dimArticulo" refer="dbo_dimArticulo_Constraint1">
+            <xs:keyref name="FK_factInventario_dimAlmacen" refer="dbo_dimAlmacen_Constraint1">
               <xs:selector xpath=".//dbo_factInventario" />
-              <xs:field xpath="idArticulo" />
+              <xs:field xpath="idAlmacen" />
+            </xs:keyref>
+            <xs:keyref name="FK_factInventario_dimUnidadNegocio" refer="dbo_dimUnidadNegocio_Constraint1">
+              <xs:selector xpath=".//dbo_factInventario" />
+              <xs:field xpath="idNegocio" />
             </xs:keyref>
           </xs:element>
         </xs:schema>
@@ -14271,7 +14255,7 @@ VISIBLE = 1; </Text>
                 <Name>_ALL_TABLES_</Name>
                 <DiagramLayout>
                   <dds>
-                    <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="64" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="15911" scrolltop="4480" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="195" x="18563" y="16933" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                    <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="64" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="15911" scrolltop="4480" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="195" x="25400" y="12361" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                       <font>
                         <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
                       </font>
@@ -14747,7 +14731,7 @@ VISIBLE = 1; </Text>
                       </connector>
                     </ddscontrol>
                   </dds>
-</DiagramLayout>
+                </DiagramLayout>
                 <ShowRelationshipNames>False</ShowRelationshipNames>
                 <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
                 <DiagramViewPortLeft>15911</DiagramViewPortLeft>
@@ -15218,7 +15202,7 @@ VISIBLE = 1; </Text>
                 <Name>_ALL_TABLES_</Name>
                 <DiagramLayout>
                   <dds>
-                    <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="60" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="4211" scrolltop="9417" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="135" x="18563" y="16933" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                    <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="60" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="4211" scrolltop="9417" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="135" x="20468" y="16933" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                       <font>
                         <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
                       </font>
@@ -15708,11 +15692,11 @@ VISIBLE = 1; </Text>
                           </xs:restriction>
                         </xs:simpleType>
                       </xs:element>
-                      <xs:element name="pagada_a_tiempo" msdata:ReadOnly="true" msprop:DbColumnName="pagada_a_tiempo" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE &#xD;&#xA;    WHEN [fecha_pagada] &lt; [fecha_vencimiento] THEN 1 &#xD;&#xA;    ELSE 0 &#xD;&#xA;END" msprop:design-time-name="a881165e-fe22-457e-bada-3476c5cb0c18" msprop:Description="" type="xs:int" />
-                      <xs:element name="pagada" msdata:ReadOnly="true" msprop:DbColumnName="pagada" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE &#xD;&#xA;    WHEN [fecha_pagada] IS NOT NULL THEN 1 &#xD;&#xA;    ELSE 0 &#xD;&#xA;END" msprop:design-time-name="cd25af00-72f5-4326-8ee8-da7f4984bc58" msprop:Description="" type="xs:int" />
-                      <xs:element name="dias_x0020_de_x0020_morosidad" msdata:ReadOnly="true" msprop:DbColumnName="dias de morosidad" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE &#xD;&#xA;    WHEN [fecha_pagada] &gt; [fecha_vencimiento] &#xD;&#xA;    THEN DATEDIFF(day, [fecha_vencimiento], [fecha_pagada]) &#xD;&#xA;    ELSE 0 &#xD;&#xA;END" msprop:design-time-name="18e7daff-e37e-452f-9d64-e2b39618f9b2" msprop:Description="" type="xs:int" minOccurs="0" />
-                      <xs:element name="morosidad" msdata:ReadOnly="true" msprop:DbColumnName="morosidad" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE &#xD;&#xA;    WHEN [fecha_pagada] &gt; [fecha_vencimiento] THEN 1 &#xD;&#xA;    ELSE 0 &#xD;&#xA;END" msprop:design-time-name="132fad29-48e1-429b-8b1c-a5448755d28d" msprop:Description="" msprop:FriendlyName="morosidad" type="xs:int" />
-                      <xs:element name="dias_x0020_de_x0020_recaudacion" msdata:ReadOnly="true" msprop:DbColumnName="dias de recaudacion" msprop:IsLogical="True" msprop:ComputedColumnExpression="DATEDIFF(day, [fecha], [fecha_pagada])" msprop:design-time-name="7070ee99-a521-476d-978a-2daf42443e72" msprop:Description="" type="xs:int" minOccurs="0" />
+                      <xs:element name="pagada_a_tiempo" msdata:ReadOnly="true" msprop:DbColumnName="pagada_a_tiempo" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE &#xD;&#xA;    WHEN [fecha_pagada] &lt; [fecha_vencimiento] AND [fecha_pagada]&gt;'1900-01-01' THEN 1 &#xD;&#xA;    ELSE 0 &#xD;&#xA;END" msprop:design-time-name="a881165e-fe22-457e-bada-3476c5cb0c18" msprop:Description="" type="xs:int" />
+                      <xs:element name="pagada" msdata:ReadOnly="true" msprop:DbColumnName="pagada" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE &#xD;&#xA;    WHEN [fecha_pagada] IS NOT NULL AND [fecha_pagada]&gt;'1900-01-01' THEN 1 &#xD;&#xA;    ELSE 0 &#xD;&#xA;END" msprop:design-time-name="cd25af00-72f5-4326-8ee8-da7f4984bc58" msprop:Description="" type="xs:int" />
+                      <xs:element name="dias_x0020_de_x0020_morosidad" msdata:ReadOnly="true" msprop:DbColumnName="dias de morosidad" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE &#xD;&#xA;    WHEN [fecha_pagada] &gt; [fecha_vencimiento] AND [fecha_pagada]&gt;'1900-01-01'&#xD;&#xA;    THEN DATEDIFF(day, [fecha_vencimiento], [fecha_pagada]) &#xD;&#xA;    ELSE 0 &#xD;&#xA;END" msprop:design-time-name="18e7daff-e37e-452f-9d64-e2b39618f9b2" msprop:Description="" type="xs:int" minOccurs="0" />
+                      <xs:element name="morosidad" msdata:ReadOnly="true" msprop:DbColumnName="morosidad" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE &#xD;&#xA;    WHEN [fecha_pagada] &gt; [fecha_vencimiento] AND [fecha_pagada]&gt;'1900-01-01' THEN 1 &#xD;&#xA;    ELSE 0 &#xD;&#xA;END" msprop:design-time-name="132fad29-48e1-429b-8b1c-a5448755d28d" msprop:Description="" msprop:FriendlyName="morosidad" type="xs:int" />
+                      <xs:element name="dias_x0020_de_x0020_recaudacion" msdata:ReadOnly="true" msprop:DbColumnName="dias de recaudacion" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE WHEN [fecha_pagada]&gt;'1900-01-01' THEN DATEDIFF(day, [fecha], [fecha_pagada]) ELSE 0 END" msprop:design-time-name="7070ee99-a521-476d-978a-2daf42443e72" msprop:Description="" type="xs:int" minOccurs="0" />
                     </xs:sequence>
                   </xs:complexType>
                 </xs:element>
@@ -16115,7 +16099,7 @@ VISIBLE = 1; </Text>
                 <Name>_ALL_TABLES_</Name>
                 <DiagramLayout>
                   <dds>
-                    <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="36" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="1751" scrolltop="153" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="142" x="19791" y="16933" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                    <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="36" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="1751" scrolltop="153" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="142" x="20468" y="16933" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                       <font>
                         <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
                       </font>
@@ -16376,7 +16360,7 @@ VISIBLE = 1; </Text>
                       </connector>
                     </ddscontrol>
                   </dds>
-                </DiagramLayout>
+</DiagramLayout>
                 <ShowRelationshipNames>False</ShowRelationshipNames>
                 <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
                 <DiagramViewPortLeft>1751</DiagramViewPortLeft>
@@ -16425,11 +16409,11 @@ VISIBLE = 1; </Text>
                           </xs:restriction>
                         </xs:simpleType>
                       </xs:element>
-                      <xs:element name="pagada_x0020_a_x0020_tiempo" msdata:ReadOnly="true" msprop:DbColumnName="pagada a tiempo" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE &#xD;&#xA;    WHEN [fecha_pagada] &lt; [fecha_vencimiento] THEN 1 &#xD;&#xA;    ELSE 0 &#xD;&#xA;END" msprop:design-time-name="e4c0d74f-717f-4f70-9185-2399eaa3d29a" msprop:Description="" type="xs:int" />
-                      <xs:element name="pagada" msdata:ReadOnly="true" msprop:DbColumnName="pagada" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE &#xD;&#xA;    WHEN [fecha_pagada] IS NOT NULL THEN 1 &#xD;&#xA;    ELSE 0 &#xD;&#xA;END" msprop:design-time-name="29b26604-1c88-4656-82b9-95f3b02e260c" msprop:Description="" type="xs:int" />
-                      <xs:element name="dias_x0020_de_x0020_morosidad" msdata:ReadOnly="true" msprop:DbColumnName="dias de morosidad" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE &#xD;&#xA;    WHEN [fecha_pagada] &gt; [fecha_vencimiento] &#xD;&#xA;    THEN DATEDIFF(day, [fecha_vencimiento], [fecha_pagada]) &#xD;&#xA;    ELSE 0 &#xD;&#xA;END" msprop:design-time-name="1e1d71cf-b687-4d39-bec2-2eb7a87d08de" msprop:Description="" type="xs:int" minOccurs="0" />
-                      <xs:element name="morosidad" msdata:ReadOnly="true" msprop:DbColumnName="morosidad" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE &#xD;&#xA;    WHEN [fecha_pagada] &gt; [fecha_vencimiento] THEN 1 &#xD;&#xA;    ELSE 0 &#xD;&#xA;END" msprop:design-time-name="df0f9d2d-aa0a-4909-8095-5b9387f3c121" msprop:Description="" type="xs:int" />
-                      <xs:element name="dias_x0020_de_x0020_cancelacion" msdata:ReadOnly="true" msprop:DbColumnName="dias de cancelacion" msprop:IsLogical="True" msprop:ComputedColumnExpression="DATEDIFF(day, [fecha], [fecha_pagada])" msprop:design-time-name="981e9459-dbe0-4b05-bb9f-1d7c80ba74c7" msprop:Description="" type="xs:int" minOccurs="0" />
+                      <xs:element name="pagada_x0020_a_x0020_tiempo" msdata:ReadOnly="true" msprop:DbColumnName="pagada a tiempo" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE &#xD;&#xA;    WHEN [fecha_pagada] &lt; [fecha_vencimiento] AND [fecha_pagada]&gt;'1900-01-01' THEN 1 &#xD;&#xA;    ELSE 0 &#xD;&#xA;END" msprop:design-time-name="e4c0d74f-717f-4f70-9185-2399eaa3d29a" msprop:Description="" type="xs:int" />
+                      <xs:element name="pagada" msdata:ReadOnly="true" msprop:DbColumnName="pagada" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE &#xD;&#xA;    WHEN [fecha_pagada] IS NOT NULL AND [fecha_pagada]&gt;'1900-01-01' THEN 1 &#xD;&#xA;    ELSE 0 &#xD;&#xA;END" msprop:design-time-name="29b26604-1c88-4656-82b9-95f3b02e260c" msprop:Description="" type="xs:int" />
+                      <xs:element name="dias_x0020_de_x0020_morosidad" msdata:ReadOnly="true" msprop:DbColumnName="dias de morosidad" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE &#xD;&#xA;    WHEN [fecha_pagada] &gt; [fecha_vencimiento] AND [fecha_pagada]&gt;'1900-01-01'&#xD;&#xA;    THEN DATEDIFF(day, [fecha_vencimiento], [fecha_pagada]) &#xD;&#xA;    ELSE 0 &#xD;&#xA;END" msprop:design-time-name="1e1d71cf-b687-4d39-bec2-2eb7a87d08de" msprop:Description="" type="xs:int" minOccurs="0" />
+                      <xs:element name="morosidad" msdata:ReadOnly="true" msprop:DbColumnName="morosidad" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE &#xD;&#xA;    WHEN [fecha_pagada] &gt; [fecha_vencimiento]  AND [fecha_pagada]&gt;'1900-01-01' THEN 1 &#xD;&#xA;    ELSE 0 &#xD;&#xA;END" msprop:design-time-name="df0f9d2d-aa0a-4909-8095-5b9387f3c121" msprop:Description="" type="xs:int" />
+                      <xs:element name="dias_x0020_de_x0020_cancelacion" msdata:ReadOnly="true" msprop:DbColumnName="dias de cancelacion" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE WHEN [fecha_pagada]&gt;'1900-01-01' THEN DATEDIFF(day, [fecha], [fecha_pagada]) ELSE 0 END" msprop:design-time-name="981e9459-dbe0-4b05-bb9f-1d7c80ba74c7" msprop:Description="" type="xs:int" minOccurs="0" />
                     </xs:sequence>
                   </xs:complexType>
                 </xs:element>

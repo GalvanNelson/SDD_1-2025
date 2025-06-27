@@ -33,7 +33,7 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>qxCTQSOeZE81L5/y6EHb8roCVpc=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
+        <TimeStamp>OGEWTG808KJnwdFyJ7Pf9YX6hi4=27/06/2025 03:19:04 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
         <ID>
           <String>INVENTARIO</String>
         </ID>
@@ -47,14 +47,14 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>wZQMEOjtMDdeX+ZXPZO0NoczeL8=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
+        <TimeStamp>QoCweIpYqqtH7Gklt80MLK5RWk0=27/06/2025 03:51:03 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
         <ID>
           <String>CxC</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>Mm3Q6qT7q+UTdx1b9Lekdi+DyKM=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
+        <TimeStamp>dfseavz9lEu5ekiJZ4WiSPN7gBs=27/06/2025 03:53:41 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
         <ID>
           <String>CxP</String>
         </ID>
@@ -243,7 +243,7 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>lCLNE/wXN/nnah9SZLpSVqenJ7U=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.dZhOw0QSWZkdv2KfmTclzHZF0JQ=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
+        <TimeStamp>DWLqVwLErO6+0nfEtq+LxJVLdB0=27/06/2025 03:20:24 p. m.13/06/2025 10:04:15 p. m.dZhOw0QSWZkdv2KfmTclzHZF0JQ=13/06/2025 10:04:15 p. m.13/06/2025 10:04:15 p. m.</TimeStamp>
         <ID>
           <String>INVENTARIO</String>
         </ID>
@@ -267,5 +267,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2025-06-16T22:34:09.55Z</LastDeployed>
+  <LastDeployed>2025-06-27T19:54:26.513333Z</LastDeployed>
 </DeploymentSnapshot>

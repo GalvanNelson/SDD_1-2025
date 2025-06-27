@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\SDD_1-2025\\erpAS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C4B9A400-7805-E57E-594E-8D53449F1FFB}|erpAS\\erpAS.dwproj|D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\SDD_1-2025\\erpAS\\erpAS\\CxC.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
-      "RelativeMoniker": "D:0:0:{C4B9A400-7805-E57E-594E-8D53449F1FFB}|erpAS\\erpAS.dwproj|solutionrelative:erpAS\\CxC.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+      "AbsoluteMoniker": "D:0:0:{C4B9A400-7805-E57E-594E-8D53449F1FFB}|erpAS\\erpAS.dwproj|D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\SDD_1-2025\\erpAS\\erpAS\\CxP.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{C4B9A400-7805-E57E-594E-8D53449F1FFB}|erpAS\\erpAS.dwproj|solutionrelative:erpAS\\CxP.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,13 +35,13 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CxC.cube [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\SDD_1-2025\\erpAS\\erpAS\\CxC.cube",
-              "RelativeDocumentMoniker": "erpAS\\CxC.cube",
-              "ToolTip": "D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\SDD_1-2025\\erpAS\\erpAS\\CxC.cube [Dise\u00F1o]",
-              "RelativeToolTip": "erpAS\\CxC.cube [Dise\u00F1o]",
+              "Title": "CxP.dsv [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\SDD_1-2025\\erpAS\\erpAS\\CxP.dsv",
+              "RelativeDocumentMoniker": "erpAS\\CxP.dsv",
+              "ToolTip": "D:\\Ayrton\\Universidad\\Eli\u0027s carpet\\Sistema para la toma\\SDD_1-2025\\erpAS\\erpAS\\CxP.dsv [Dise\u00F1o]",
+              "RelativeToolTip": "erpAS\\CxP.dsv [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-06-27T02:02:43.494Z",
+              "WhenOpened": "2025-06-27T19:51:42.665Z",
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]

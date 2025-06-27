@@ -11,8 +11,8 @@
   DTS:LocaleID="2058"
   DTS:ObjectName="ERP"
   DTS:PackageType="5"
-  DTS:VersionBuild="186"
-  DTS:VersionGUID="{ADB44895-5DBA-4C21-BF4A-1228FF2BBA2D}">
+  DTS:VersionBuild="192"
+  DTS:VersionGUID="{404114BC-6498-423F-95DE-E23A9948F883}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -4281,44 +4281,44 @@ WHERE  (erpDM.dbo.dimUnidad.idUnidad IS NULL)</property>
               startId="Package\Dimensiones Secundarias\Leer TipoArticulo.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET16]"
-              endId="Package\Dimensiones Secundarias\dimTipoProveedor.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimUnidad.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer TipoProveedor.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer Unidad.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET15]"
-              endId="Package\Dimensiones Secundarias\dimCanalComercial.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimEnvase.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer CanalComercial.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer Envase.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET14]"
-              endId="Package\Dimensiones Secundarias\dimEmpresa.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimLinea.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer Empresa.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer Linea.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET13]"
-              endId="Package\Dimensiones Secundarias\dimTipoUnidadNegocio.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimCategoria.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer TipoUnidadNegocio.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer Categoria.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET12]"
-              endId="Package\Dimensiones Secundarias\dimTipoContrato.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimSubCategoria.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer TipoContrato.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer SubCategoria.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET11]"
-              endId="Package\Dimensiones Secundarias\dimCargo.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimTipoCliente.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer Cargo.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer TipoCliente.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET10]"
-              endId="Package\Dimensiones Secundarias\dimTipoVendedor.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimEstado.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer TipoVendedor.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer Estado.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET17]"
-              endId="Package\Dimensiones Secundarias\dimTipoNomina.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimCategoriaCliente.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer TipoNomina.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer CategoriaCliente.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET9]"
               endId="Package\Dimensiones Secundarias\dimTipoIdentificacion.Inputs[Entrada de destino de ADO NET]"
@@ -4326,44 +4326,44 @@ WHERE  (erpDM.dbo.dimUnidad.idUnidad IS NULL)</property>
               startId="Package\Dimensiones Secundarias\Leer TipoIdentificacion.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET7]"
-              endId="Package\Dimensiones Secundarias\dimEstado.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimTipoVendedor.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer Estado.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer TipoVendedor.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET6]"
-              endId="Package\Dimensiones Secundarias\dimTipoCliente.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimCargo.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer TipoCliente.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer Cargo.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET5]"
-              endId="Package\Dimensiones Secundarias\dimSubCategoria.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimTipoContrato.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer SubCategoria.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer TipoContrato.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET4]"
-              endId="Package\Dimensiones Secundarias\dimCategoria.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimTipoUnidadNegocio.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer Categoria.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer TipoUnidadNegocio.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET3]"
-              endId="Package\Dimensiones Secundarias\dimLinea.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimEmpresa.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer Linea.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer Empresa.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET2]"
-              endId="Package\Dimensiones Secundarias\dimEnvase.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimCanalComercial.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer Envase.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer CanalComercial.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET1]"
-              endId="Package\Dimensiones Secundarias\dimUnidad.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimTipoProveedor.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer Unidad.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer TipoProveedor.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET8]"
-              endId="Package\Dimensiones Secundarias\dimCategoriaCliente.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Dimensiones Secundarias\dimTipoNomina.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Dimensiones Secundarias\Leer CategoriaCliente.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Dimensiones Secundarias\Leer TipoNomina.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET18]"
               endId="Package\Dimensiones Secundarias\dimEstadoEmpleado.Inputs[Entrada de destino de ADO NET]"
@@ -7031,7 +7031,7 @@ WHERE  (erpDM.dbo.dimVendedor.idVendedor IS NULL)</property>
                   db_erp_sige.detalle_factura_suplidor.pendiente
 FROM     db_erp_sige.detalle_factura_suplidor INNER JOIN
                   db_erp_sige.factura_suplidor ON db_erp_sige.detalle_factura_suplidor.factura_suplidor = db_erp_sige.factura_suplidor.codigo INNER JOIN
-                  db_erp_sige.almacen ON db_erp_sige.detalle_factura_suplidor.codigo = db_erp_sige.almacen.codigo INNER JOIN
+                  db_erp_sige.almacen ON db_erp_sige.detalle_factura_suplidor.almacen = db_erp_sige.almacen.codigo INNER JOIN
                   db_erp_sige.articulo ON db_erp_sige.detalle_factura_suplidor.articulo = db_erp_sige.articulo.codigo INNER JOIN
                   db_erp_sige.suplidor ON db_erp_sige.factura_suplidor.suplidor = db_erp_sige.suplidor.codigo INNER JOIN
                   db_erp_sige.unidad_de_negocio ON db_erp_sige.factura_suplidor.unidad_de_negocio = db_erp_sige.unidad_de_negocio.codigo LEFT OUTER JOIN
@@ -7495,7 +7495,7 @@ WHERE  (erpDM.dbo.factCompras.idArticulo IS NULL) OR
                   expressionType="Notify"
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT db_erp_sige.factura.codigo AS idCxC, db_erp_sige.cliente.codigo AS idCliente, db_erp_sige.ejecutivo_de_venta.codigo AS idVendedor, db_erp_sige.unidad_de_negocio.codigo AS idNegocio, db_erp_sige.factura.fecha, 
-                  db_erp_sige.factura.venta_a_credito, db_erp_sige.factura.pendiente, db_erp_sige.factura.fecha_vencimiento, db_erp_sige.factura.fecha_pagada
+                  db_erp_sige.factura.venta_a_credito, db_erp_sige.factura.pendiente, db_erp_sige.factura.fecha_vencimiento, isnull(db_erp_sige.factura.fecha_pagada,'1900-01-01') AS fecha_pagada
 FROM     db_erp_sige.factura INNER JOIN
                   db_erp_sige.cliente ON db_erp_sige.factura.cliente = db_erp_sige.cliente.codigo INNER JOIN
                   db_erp_sige.ejecutivo_de_venta ON db_erp_sige.factura.vendedor = db_erp_sige.ejecutivo_de_venta.codigo INNER JOIN
@@ -7942,7 +7942,7 @@ WHERE  (db_erp_sige.factura.venta_a_credito IS NOT NULL) AND (erpDM.dbo.factCxC.
                   expressionType="Notify"
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT db_erp_sige.factura_suplidor.codigo AS idCxP, db_erp_sige.usuario.codigo AS idUsuario, db_erp_sige.suplidor.codigo AS idProveedor, db_erp_sige.unidad_de_negocio.codigo AS idNegocio, db_erp_sige.factura_suplidor.fecha, 
-                  db_erp_sige.factura_suplidor.total_a_pagar, db_erp_sige.factura_suplidor.total_pendiente, db_erp_sige.factura_suplidor.fecha_vencimiento, db_erp_sige.factura_suplidor.fecha_pagada
+                  db_erp_sige.factura_suplidor.total_a_pagar, db_erp_sige.factura_suplidor.total_pendiente, db_erp_sige.factura_suplidor.fecha_vencimiento, isnull(db_erp_sige.factura_suplidor.fecha_pagada,'1900-01-01') AS fecha_pagada
 FROM     db_erp_sige.factura_suplidor INNER JOIN
                   db_erp_sige.usuario ON db_erp_sige.factura_suplidor.usuario = db_erp_sige.usuario.codigo INNER JOIN
                   db_erp_sige.suplidor ON db_erp_sige.factura_suplidor.suplidor = db_erp_sige.suplidor.codigo INNER JOIN
@@ -9833,18 +9833,18 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET8]"
-          TopLeft="854.238085191165,220.409887341795">
+          TopLeft="306.399997794628,679.39999256432">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="97.608062705987,0"
+              EndConnector="73.5999965429307,0"
               Start="0,0"
-              End="90.108062705987,0">
+              End="66.0999965429307,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="90.108062705987,0" />
+                    End="66.0999965429307,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9857,18 +9857,18 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET1]"
-          TopLeft="288.199997720122,119.728569954421">
+          TopLeft="864.599995782971,469.99999704957">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="89.6571395065104,0"
+              EndConnector="106.599995872378,0"
               Start="0,0"
-              End="82.1571395065104,0">
+              End="99.0999958723785,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="82.1571395065104,0" />
+                    End="99.0999958723785,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9881,18 +9881,18 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET2]"
-          TopLeft="294.799997645617,192.799997437">
+          TopLeft="1429.77775909503,569.588884671032">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="78.057139655522,0"
+              EndConnector="96.3555684566497,0"
               Start="0,0"
-              End="70.557139655522,0">
+              End="88.8555684566497,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="70.557139655522,0" />
+                    End="88.8555684566497,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9905,18 +9905,18 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET3]"
-          TopLeft="290.199997571111,270.157139141432">
+          TopLeft="1393.86664803028,499.533329801758">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="86.9428539518801,0"
+              EndConnector="131.866679352521,0"
               Start="0,0"
-              End="79.4428539518801,0">
+              End="124.366679352521,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="79.4428539518801,0" />
+                    End="124.366679352521,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9929,18 +9929,18 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET4]"
-          TopLeft="301.199997705221,348.899995603093">
+          TopLeft="1442.26664806008,433.633330449959">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="72.3714252995595,0"
+              EndConnector="83.3333457609015,0"
               Start="0,0"
-              End="64.8714252995595,0">
+              End="75.8333457609015,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="64.8714252995595,0" />
+                    End="75.8333457609015,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9953,18 +9953,18 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET5]"
-          TopLeft="307.314283602578,431.828567992789">
+          TopLeft="1413.78093373392,206.799997317791">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="72.6857107349806,0"
+              EndConnector="113.79048801491,0"
               Start="0,0"
-              End="65.1857107349806,0">
+              End="106.29048801491,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="65.1857107349806,0" />
+                    End="106.29048801491,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9977,18 +9977,18 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET6]"
-          TopLeft="830.209513739177,61.7364090744222">
+          TopLeft="1379.25712424772,137.457142412237">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="105.858729269679,0"
+              EndConnector="148.457154037271,0"
               Start="0,0"
-              End="98.3587292696794,0">
+              End="140.957154037271,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="98.3587292696794,0" />
+                    End="140.957154037271,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10001,18 +10001,18 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET7]"
-          TopLeft="814.638085101758,140.069229198305">
+          TopLeft="1412.62855287024,66.7857144528202">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="132.592678248784,0"
+              EndConnector="110.514296076979,0"
               Start="0,0"
-              End="125.092678248784,0">
+              End="103.014296076979,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="125.092678248784,0" />
+                    End="103.014296076979,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10049,18 +10049,18 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET17]"
-          TopLeft="306.399997794628,679.39999256432">
+          TopLeft="854.238085191165,220.409887341795">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="73.5999965429307,0"
+              EndConnector="97.608062705987,0"
               Start="0,0"
-              End="66.0999965429307,0">
+              End="90.108062705987,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="66.0999965429307,0" />
+                    End="90.108062705987,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10073,18 +10073,18 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET10]"
-          TopLeft="1412.62855287024,66.7857144528202">
+          TopLeft="814.638085101758,140.069229198305">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="110.514296076979,0"
+              EndConnector="132.592678248784,0"
               Start="0,0"
-              End="103.014296076979,0">
+              End="125.092678248784,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="103.014296076979,0" />
+                    End="125.092678248784,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10097,18 +10097,18 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET11]"
-          TopLeft="1379.25712424772,137.457142412237">
+          TopLeft="830.209513739177,61.7364090744222">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="148.457154037271,0"
+              EndConnector="105.858729269679,0"
               Start="0,0"
-              End="140.957154037271,0">
+              End="98.3587292696794,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="140.957154037271,0" />
+                    End="98.3587292696794,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10121,18 +10121,18 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET12]"
-          TopLeft="1413.78093373392,206.799997317791">
+          TopLeft="307.314283602578,431.828567992789">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="113.79048801491,0"
+              EndConnector="72.6857107349806,0"
               Start="0,0"
-              End="106.29048801491,0">
+              End="65.1857107349806,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="106.29048801491,0" />
+                    End="65.1857107349806,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10145,18 +10145,18 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET13]"
-          TopLeft="1442.26664806008,433.633330449959">
+          TopLeft="301.199997705221,348.899995603093">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="83.3333457609015,0"
+              EndConnector="72.3714252995595,0"
               Start="0,0"
-              End="75.8333457609015,0">
+              End="64.8714252995595,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="75.8333457609015,0" />
+                    End="64.8714252995595,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10169,18 +10169,18 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET14]"
-          TopLeft="1393.86664803028,499.533329801758">
+          TopLeft="290.199997571111,270.157139141432">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="131.866679352521,0"
+              EndConnector="86.9428539518801,0"
               Start="0,0"
-              End="124.366679352521,0">
+              End="79.4428539518801,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="124.366679352521,0" />
+                    End="79.4428539518801,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10193,18 +10193,18 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET15]"
-          TopLeft="1429.77775909503,569.588884671032">
+          TopLeft="294.799997645617,192.799997437">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="96.3555684566497,0"
+              EndConnector="78.057139655522,0"
               Start="0,0"
-              End="88.8555684566497,0">
+              End="70.557139655522,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="88.8555684566497,0" />
+                    End="70.557139655522,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10217,18 +10217,18 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dimensiones Secundarias.Paths[Salida de origen de ADO NET16]"
-          TopLeft="864.599995782971,469.99999704957">
+          TopLeft="288.199997720122,119.728569954421">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="106.599995872378,0"
+              EndConnector="89.6571395065104,0"
               Start="0,0"
-              End="99.0999958723785,0">
+              End="82.1571395065104,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="99.0999958723785,0" />
+                    End="82.1571395065104,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10574,27 +10574,23 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
     design-time-name="Package\DimensionesPrincipales">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="137.6,41.6"
-          Id="Package\DimensionesPrincipales\Leer Usuario"
-          TopLeft="142.999997869134,399.799994412065" />
+          Size="128,41.6"
+          Id="Package\DimensionesPrincipales\dimCliente"
+          TopLeft="361.868126402892,81.533935447358" />
+        <NodeLayout
+          Size="176,41.6"
+          Id="Package\DimensionesPrincipales\Leer Unidad Negocio"
+          TopLeft="101.547611269197,212.129410298879" />
         <NodeLayout
           Size="140,41.6"
           Id="Package\DimensionesPrincipales\dimVendedor"
           TopLeft="359.999980330468,144.466665901276" />
         <NodeLayout
-          Size="149.6,41.6"
-          Id="Package\DimensionesPrincipales\Leer Proveedor"
-          TopLeft="129.428569268815,337.999994963408" />
-        <NodeLayout
           Size="166.4,41.6"
           Id="Package\DimensionesPrincipales\dimUnidadNegocio"
           TopLeft="359.642837330649,211.199998770555" />
-        <NodeLayout
-          Size="143.2,41.6"
-          Id="Package\DimensionesPrincipales\dimProveedor"
-          TopLeft="365.857137283805,340.399995261431" />
         <NodeLayout
           Size="130.4,41.6"
           Id="Package\DimensionesPrincipales\dimArticulo"
@@ -10604,55 +10600,37 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
           Id="Package\DimensionesPrincipales\Leer Cliente"
           TopLeft="141.904754354165,79.7333327788773" />
         <NodeLayout
-          Size="142.4,41.6"
-          Id="Package\DimensionesPrincipales\Leer Almacen"
-          TopLeft="135.357135056082,273.164704471437" />
+          Size="137.6,41.6"
+          Id="Package\DimensionesPrincipales\Leer Usuario"
+          TopLeft="142.999997869134,399.799994412065" />
         <NodeLayout
           Size="147.2,41.6"
           Id="Package\DimensionesPrincipales\Leer Vendedor"
           TopLeft="128.333325753847,142.439214681828" />
         <NodeLayout
-          Size="128,41.6"
-          Id="Package\DimensionesPrincipales\dimCliente"
-          TopLeft="361.868126402892,81.533935447358" />
+          Size="142.4,41.6"
+          Id="Package\DimensionesPrincipales\Leer Almacen"
+          TopLeft="135.357135056082,273.164704471437" />
         <NodeLayout
           Size="131.2,41.6"
           Id="Package\DimensionesPrincipales\dimUsuario"
           TopLeft="367.857137254003,401.999994844198" />
         <NodeLayout
-          Size="176,41.6"
-          Id="Package\DimensionesPrincipales\Leer Unidad Negocio"
-          TopLeft="101.547611269197,212.129410298879" />
+          Size="143.2,41.6"
+          Id="Package\DimensionesPrincipales\dimProveedor"
+          TopLeft="365.857137283805,340.399995261431" />
         <NodeLayout
-          Size="136.8,41.6"
-          Id="Package\DimensionesPrincipales\Leer Articulo"
-          TopLeft="140.000001092752,16.7999993983905" />
+          Size="149.6,41.6"
+          Id="Package\DimensionesPrincipales\Leer Proveedor"
+          TopLeft="129.428569268815,337.999994963408" />
         <NodeLayout
           Size="136,41.6"
           Id="Package\DimensionesPrincipales\dimAlmacen"
           TopLeft="362.857122909861,272.733331675993" />
-        <EdgeLayout
-          Id="Package\DimensionesPrincipales.Paths[Salida de origen de ADO NET6]"
-          TopLeft="280.599997869134,421.699994628132">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="87.2571393848685,0"
-              Start="0,0"
-              End="79.7571393848685,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="79.7571393848685,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="136.8,41.6"
+          Id="Package\DimensionesPrincipales\Leer Articulo"
+          TopLeft="140.000001092752,16.7999993983905" />
         <EdgeLayout
           Id="Package\DimensionesPrincipales.Paths[Salida de origen de ADO NET5]"
           TopLeft="279.028569268815,359.99999511242">
@@ -10672,7 +10650,9 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10694,7 +10674,9 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10716,7 +10698,9 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10738,7 +10722,9 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10760,7 +10746,9 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10782,14 +10770,48 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DimensionesPrincipales.Paths[Salida de origen de ADO NET6]"
+          TopLeft="280.599997869134,421.699994628132">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="87.2571393848685,0"
+              Start="0,0"
+              End="79.7571393848685,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="79.7571393848685,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\DimensionesPrincipales\Leer Usuario">
+    design-time-name="Package\DimensionesPrincipales\dimCliente">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DimensionesPrincipales\Leer Unidad Negocio">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -10805,23 +10827,7 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DimensionesPrincipales\Leer Proveedor">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\DimensionesPrincipales\dimUnidadNegocio">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DimensionesPrincipales\dimProveedor">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -10845,7 +10851,7 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DimensionesPrincipales\Leer Almacen">
+    design-time-name="Package\DimensionesPrincipales\Leer Usuario">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -10861,7 +10867,7 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DimensionesPrincipales\dimCliente">
+    design-time-name="Package\DimensionesPrincipales\Leer Almacen">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -10877,7 +10883,7 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DimensionesPrincipales\Leer Unidad Negocio">
+    design-time-name="Package\DimensionesPrincipales\dimProveedor">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -10885,7 +10891,7 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DimensionesPrincipales\Leer Articulo">
+    design-time-name="Package\DimensionesPrincipales\Leer Proveedor">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -10900,11 +10906,19 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DimensionesPrincipales\Leer Articulo">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Fact Compras">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="144,41.6"
           Id="Package\Fact Compras\Leer Compras"
@@ -10932,9 +10946,7 @@ WHERE  (cl.es_laborable = 1) AND (cl.es_feriado = 0) AND (a.codigo IS NULL) AND 
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
